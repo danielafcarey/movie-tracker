@@ -11,7 +11,7 @@ describe('App', () => {
 
   describe('mapStateToProps', () => {
 
-    it('should update App props with movies from state', () => {
+    it('updates App props with movies from state', () => {
       const state = {
         movies: ['Life is Beautiful', 'Singing in the Rain'],
         puppies: 'are good'
@@ -22,5 +22,17 @@ describe('App', () => {
 
       expect(result.movies).toEqual(expected);
     })
+
+  })
+
+  describe('mapDispatchToProps', () => {
+
+    it('returns an object with a populateMovies function', () => {
+      const dispatch = jest.fn();
+      const result = mapDispatchToProps(dispatch);
+
+      expect(typeof result.populateMovies).toEqual('function');
+    })
+
   })
 })

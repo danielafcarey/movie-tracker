@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { dispatch } from 'redux';
+import { 
+  populateMovies
+} from '../../actions'
 import './App.css';
 
 class App extends Component {
@@ -23,8 +26,10 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = () => {
-
+const mapDispatchToProps = (dispatch) => {
+  return {
+    populateMovies: (movies) => dispatch(populateMovies(movies))
+  }
 }
 
 export {
