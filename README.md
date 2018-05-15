@@ -17,7 +17,7 @@ MovieMasher is an app allowing users to browse a database of movies. The user ca
 
 ## Contributors
 
-* Daniela Carey
+* [Daniela Carey](https://github.com/danielafcarey)
 * [Seamus Quinn](https://github.com/seamus-quinn)
 * [Austin Wiedenman](https://github.com/Awiedenman)
 
