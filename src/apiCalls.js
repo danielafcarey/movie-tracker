@@ -1,0 +1,7 @@
+const fetchMovies = () => {
+
+} 
+
+export {
+  fetchMovies,
+}
