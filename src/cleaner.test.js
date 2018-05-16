@@ -14,8 +14,6 @@ describe('Cleaner', () => {
         favorite: false
       }]
 
-      console.log(mockMovies.results)
-
       const result = cleanMovieData(mockMovies.results.slice(0, 1))
 
       expect(result).toEqual(expected)
