@@ -28,7 +28,7 @@ describe('apiCalls', () => {
 
     it('should return the correct data', async () => {
       const expected = mockMovies;
-      const result = fetchMovies();
+      const result =  await fetchMovies();
 
       expect(result).toEqual(expected);
     })
@@ -41,16 +41,18 @@ describe('apiCalls', () => {
       const expected = Error('Status failure: 500');
       const result = fetchMovies();
 
-      // expect(result).rejects.toEqual(expected); 
+      
+      expect(result).rejects.toEqual(expected); 
     })
-
+    
     it('should throw an error if the fetch failed', () => {
       window.fetch = jest.fn().mockImplementation(() => Promise.reject(Error('Fetch failed')))
-
-      const expected = Error('Error: Fetch failed');
+      
+      const expected = Error('Fetch failed');
       const result = fetchMovies();
-
-      // expect(result).rejects.toEqual(expected);
+      
+      console.log(result)
+      expect(result).rejects.toEqual(expected);
     })
 
   })

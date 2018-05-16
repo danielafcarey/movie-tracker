@@ -3,12 +3,20 @@ import { connect } from 'react-redux';
 import { dispatch } from 'redux';
 import { 
   populateMovies
-} from '../../actions'
+} from '../../actions';
+import { fetchMovies } from '../../apiCalls';
+import { cleanMovieData } from '../../cleaner'
 import './App.css';
 
 class App extends Component {
   constructor(props) {
     super(props)
+  }
+
+  async componentDidMount() {
+    const movieData = await fetchMovies();
+    const cleanedMovies = cleanMovieData(movieData.results);
+    this.props.populateMovies(cleanedMovies);
   }
 
   render() {
