@@ -9,7 +9,7 @@ describe('Cleaner', () => {
       const expected = [{
         id: 299536,
         title: 'Avengers: Infinity War',
-        image: 'https://themoviedb.org/documentation/api/299536/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg',
+        image: 'http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg',
         rating: 8.6,
         favorite: false
       }]
