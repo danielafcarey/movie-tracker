@@ -10,7 +10,7 @@ const Card = (props) => {
   } = props;
 
   return(
-    <div>
+    <div className='card'>
       <h1>{title}</h1>
       <img src={image} />
       <h3>Rating: {rating}</h3>
