@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Card from '../../components/Card/Card';
 
@@ -26,4 +27,4 @@ export {
   mapStateToProps
 };
 
-export default connect(mapStateToProps)(Movies)
+export default connect(mapStateToProps)(Movies);

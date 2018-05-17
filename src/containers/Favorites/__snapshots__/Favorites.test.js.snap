@@ -1,0 +1,1078 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Favorites matches the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Favorites
+    favorites={
+        Array [
+            Object {
+              "favorite": false,
+              "id": 299536,
+              "image": "http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+              "rating": 8.6,
+              "title": "Avengers: Infinity War",
+            },
+            Object {
+              "favorite": false,
+              "id": 427641,
+              "image": "http://image.tmdb.org/t/p/original/30oXQKwibh0uANGMs0Sytw3uN22.jpg",
+              "rating": 5.9,
+              "title": "Rampage",
+            },
+            Object {
+              "favorite": false,
+              "id": 333339,
+              "image": "http://image.tmdb.org/t/p/original/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg",
+              "rating": 7.8,
+              "title": "Ready Player One",
+            },
+            Object {
+              "favorite": false,
+              "id": 445571,
+              "image": "http://image.tmdb.org/t/p/original/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg",
+              "rating": 7.1,
+              "title": "Game Night",
+            },
+            Object {
+              "favorite": false,
+              "id": 401981,
+              "image": "http://image.tmdb.org/t/p/original/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg",
+              "rating": 6.5,
+              "title": "Red Sparrow",
+            },
+            Object {
+              "favorite": false,
+              "id": 447332,
+              "image": "http://image.tmdb.org/t/p/original/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
+              "rating": 7.3,
+              "title": "A Quiet Place",
+            },
+            Object {
+              "favorite": false,
+              "id": 399035,
+              "image": "http://image.tmdb.org/t/p/original/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg",
+              "rating": 5.8,
+              "title": "The Commuter",
+            },
+            Object {
+              "favorite": false,
+              "id": 353486,
+              "image": "http://image.tmdb.org/t/p/original/bXrZ5iHBEjH7WMidbUDQ0U2xbmr.jpg",
+              "rating": 6.6,
+              "title": "Jumanji: Welcome to the Jungle",
+            },
+            Object {
+              "favorite": false,
+              "id": 476926,
+              "image": "http://image.tmdb.org/t/p/original/qRmQazyIBZR4pQIk9VruiZul0Au.jpg",
+              "rating": 5.5,
+              "title": "The Titan",
+            },
+            Object {
+              "favorite": false,
+              "id": 396806,
+              "image": "http://image.tmdb.org/t/p/original/xhBTO9n3fxy3HJt7WlR9h9vvVmk.jpg",
+              "rating": 6,
+              "title": "Anon",
+            },
+            Object {
+              "favorite": false,
+              "id": 453201,
+              "image": "http://image.tmdb.org/t/p/original/qxJQ0VBCuJkJhJmuWzxI408ngwd.jpg",
+              "rating": 5.1,
+              "title": "The 15:17 to Paris",
+            },
+            Object {
+              "favorite": false,
+              "id": 429351,
+              "image": "http://image.tmdb.org/t/p/original/j18021qCeRi3yUBtqd2UFj1c0RQ.jpg",
+              "rating": 4.8,
+              "title": "12 Strong",
+            },
+            Object {
+              "favorite": false,
+              "id": 384680,
+              "image": "http://image.tmdb.org/t/p/original/rqoezyB51GfhiloOB5ZErg5HXas.jpg",
+              "rating": 6.4,
+              "title": "Hostiles",
+            },
+            Object {
+              "favorite": false,
+              "id": 449443,
+              "image": "http://image.tmdb.org/t/p/original/AfybH6GbGFw1F9bcETe2yu25mIE.jpg",
+              "rating": 6.4,
+              "title": "Den of Thieves",
+            },
+            Object {
+              "favorite": false,
+              "id": 437557,
+              "image": "http://image.tmdb.org/t/p/original/cx0LpfM6Drla8uzFfMT09uqKPRu.jpg",
+              "rating": 6.5,
+              "title": "Blockers",
+            },
+            Object {
+              "favorite": false,
+              "id": 446354,
+              "image": "http://image.tmdb.org/t/p/original/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg",
+              "rating": 7,
+              "title": "The Post",
+            },
+            Object {
+              "favorite": false,
+              "id": 460019,
+              "image": "http://image.tmdb.org/t/p/original/zbvziwnZa91AJD78Si0hUb5JP5X.jpg",
+              "rating": 6.1,
+              "title": "Truth or Dare",
+            },
+            Object {
+              "favorite": false,
+              "id": 396371,
+              "image": "http://image.tmdb.org/t/p/original/h9hUP5ZJGsjL2wbERrGlj4dMjZq.jpg",
+              "rating": 7,
+              "title": "Molly's Game",
+            },
+            Object {
+              "favorite": false,
+              "id": 268896,
+              "image": "http://image.tmdb.org/t/p/original/v5HlmJK9bdeHxN2QhaFP1ivjX3U.jpg",
+              "rating": 5.9,
+              "title": "Pacific Rim: Uprising",
+            },
+            Object {
+              "favorite": false,
+              "id": 300668,
+              "image": "http://image.tmdb.org/t/p/original/d3qcpfNwbAMCNqWDHzPQsUYiUgS.jpg",
+              "rating": 6.3,
+              "title": "Annihilation",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          favorite={false}
+          id={299536}
+          image="http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
+          rating={8.6}
+          title="Avengers: Infinity War"
+/>,
+        <Card
+          favorite={false}
+          id={427641}
+          image="http://image.tmdb.org/t/p/original/30oXQKwibh0uANGMs0Sytw3uN22.jpg"
+          rating={5.9}
+          title="Rampage"
+/>,
+        <Card
+          favorite={false}
+          id={333339}
+          image="http://image.tmdb.org/t/p/original/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg"
+          rating={7.8}
+          title="Ready Player One"
+/>,
+        <Card
+          favorite={false}
+          id={445571}
+          image="http://image.tmdb.org/t/p/original/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg"
+          rating={7.1}
+          title="Game Night"
+/>,
+        <Card
+          favorite={false}
+          id={401981}
+          image="http://image.tmdb.org/t/p/original/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg"
+          rating={6.5}
+          title="Red Sparrow"
+/>,
+        <Card
+          favorite={false}
+          id={447332}
+          image="http://image.tmdb.org/t/p/original/nAU74GmpUk7t5iklEp3bufwDq4n.jpg"
+          rating={7.3}
+          title="A Quiet Place"
+/>,
+        <Card
+          favorite={false}
+          id={399035}
+          image="http://image.tmdb.org/t/p/original/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg"
+          rating={5.8}
+          title="The Commuter"
+/>,
+        <Card
+          favorite={false}
+          id={353486}
+          image="http://image.tmdb.org/t/p/original/bXrZ5iHBEjH7WMidbUDQ0U2xbmr.jpg"
+          rating={6.6}
+          title="Jumanji: Welcome to the Jungle"
+/>,
+        <Card
+          favorite={false}
+          id={476926}
+          image="http://image.tmdb.org/t/p/original/qRmQazyIBZR4pQIk9VruiZul0Au.jpg"
+          rating={5.5}
+          title="The Titan"
+/>,
+        <Card
+          favorite={false}
+          id={396806}
+          image="http://image.tmdb.org/t/p/original/xhBTO9n3fxy3HJt7WlR9h9vvVmk.jpg"
+          rating={6}
+          title="Anon"
+/>,
+        <Card
+          favorite={false}
+          id={453201}
+          image="http://image.tmdb.org/t/p/original/qxJQ0VBCuJkJhJmuWzxI408ngwd.jpg"
+          rating={5.1}
+          title="The 15:17 to Paris"
+/>,
+        <Card
+          favorite={false}
+          id={429351}
+          image="http://image.tmdb.org/t/p/original/j18021qCeRi3yUBtqd2UFj1c0RQ.jpg"
+          rating={4.8}
+          title="12 Strong"
+/>,
+        <Card
+          favorite={false}
+          id={384680}
+          image="http://image.tmdb.org/t/p/original/rqoezyB51GfhiloOB5ZErg5HXas.jpg"
+          rating={6.4}
+          title="Hostiles"
+/>,
+        <Card
+          favorite={false}
+          id={449443}
+          image="http://image.tmdb.org/t/p/original/AfybH6GbGFw1F9bcETe2yu25mIE.jpg"
+          rating={6.4}
+          title="Den of Thieves"
+/>,
+        <Card
+          favorite={false}
+          id={437557}
+          image="http://image.tmdb.org/t/p/original/cx0LpfM6Drla8uzFfMT09uqKPRu.jpg"
+          rating={6.5}
+          title="Blockers"
+/>,
+        <Card
+          favorite={false}
+          id={446354}
+          image="http://image.tmdb.org/t/p/original/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg"
+          rating={7}
+          title="The Post"
+/>,
+        <Card
+          favorite={false}
+          id={460019}
+          image="http://image.tmdb.org/t/p/original/zbvziwnZa91AJD78Si0hUb5JP5X.jpg"
+          rating={6.1}
+          title="Truth or Dare"
+/>,
+        <Card
+          favorite={false}
+          id={396371}
+          image="http://image.tmdb.org/t/p/original/h9hUP5ZJGsjL2wbERrGlj4dMjZq.jpg"
+          rating={7}
+          title="Molly's Game"
+/>,
+        <Card
+          favorite={false}
+          id={268896}
+          image="http://image.tmdb.org/t/p/original/v5HlmJK9bdeHxN2QhaFP1ivjX3U.jpg"
+          rating={5.9}
+          title="Pacific Rim: Uprising"
+/>,
+        <Card
+          favorite={false}
+          id={300668}
+          image="http://image.tmdb.org/t/p/original/d3qcpfNwbAMCNqWDHzPQsUYiUgS.jpg"
+          rating={6.3}
+          title="Annihilation"
+/>,
+      ],
+      "className": "favorites-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "299536",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 299536,
+          "image": "http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+          "rating": 8.6,
+          "title": "Avengers: Infinity War",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "427641",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 427641,
+          "image": "http://image.tmdb.org/t/p/original/30oXQKwibh0uANGMs0Sytw3uN22.jpg",
+          "rating": 5.9,
+          "title": "Rampage",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "333339",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 333339,
+          "image": "http://image.tmdb.org/t/p/original/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg",
+          "rating": 7.8,
+          "title": "Ready Player One",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "445571",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 445571,
+          "image": "http://image.tmdb.org/t/p/original/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg",
+          "rating": 7.1,
+          "title": "Game Night",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "401981",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 401981,
+          "image": "http://image.tmdb.org/t/p/original/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg",
+          "rating": 6.5,
+          "title": "Red Sparrow",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "447332",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 447332,
+          "image": "http://image.tmdb.org/t/p/original/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
+          "rating": 7.3,
+          "title": "A Quiet Place",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "399035",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 399035,
+          "image": "http://image.tmdb.org/t/p/original/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg",
+          "rating": 5.8,
+          "title": "The Commuter",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "353486",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 353486,
+          "image": "http://image.tmdb.org/t/p/original/bXrZ5iHBEjH7WMidbUDQ0U2xbmr.jpg",
+          "rating": 6.6,
+          "title": "Jumanji: Welcome to the Jungle",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "476926",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 476926,
+          "image": "http://image.tmdb.org/t/p/original/qRmQazyIBZR4pQIk9VruiZul0Au.jpg",
+          "rating": 5.5,
+          "title": "The Titan",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "396806",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 396806,
+          "image": "http://image.tmdb.org/t/p/original/xhBTO9n3fxy3HJt7WlR9h9vvVmk.jpg",
+          "rating": 6,
+          "title": "Anon",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "453201",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 453201,
+          "image": "http://image.tmdb.org/t/p/original/qxJQ0VBCuJkJhJmuWzxI408ngwd.jpg",
+          "rating": 5.1,
+          "title": "The 15:17 to Paris",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "429351",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 429351,
+          "image": "http://image.tmdb.org/t/p/original/j18021qCeRi3yUBtqd2UFj1c0RQ.jpg",
+          "rating": 4.8,
+          "title": "12 Strong",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "384680",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 384680,
+          "image": "http://image.tmdb.org/t/p/original/rqoezyB51GfhiloOB5ZErg5HXas.jpg",
+          "rating": 6.4,
+          "title": "Hostiles",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "449443",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 449443,
+          "image": "http://image.tmdb.org/t/p/original/AfybH6GbGFw1F9bcETe2yu25mIE.jpg",
+          "rating": 6.4,
+          "title": "Den of Thieves",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "437557",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 437557,
+          "image": "http://image.tmdb.org/t/p/original/cx0LpfM6Drla8uzFfMT09uqKPRu.jpg",
+          "rating": 6.5,
+          "title": "Blockers",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "446354",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 446354,
+          "image": "http://image.tmdb.org/t/p/original/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg",
+          "rating": 7,
+          "title": "The Post",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "460019",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 460019,
+          "image": "http://image.tmdb.org/t/p/original/zbvziwnZa91AJD78Si0hUb5JP5X.jpg",
+          "rating": 6.1,
+          "title": "Truth or Dare",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "396371",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 396371,
+          "image": "http://image.tmdb.org/t/p/original/h9hUP5ZJGsjL2wbERrGlj4dMjZq.jpg",
+          "rating": 7,
+          "title": "Molly's Game",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "268896",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 268896,
+          "image": "http://image.tmdb.org/t/p/original/v5HlmJK9bdeHxN2QhaFP1ivjX3U.jpg",
+          "rating": 5.9,
+          "title": "Pacific Rim: Uprising",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "300668",
+        "nodeType": "function",
+        "props": Object {
+          "favorite": false,
+          "id": 300668,
+          "image": "http://image.tmdb.org/t/p/original/d3qcpfNwbAMCNqWDHzPQsUYiUgS.jpg",
+          "rating": 6.3,
+          "title": "Annihilation",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            favorite={false}
+            id={299536}
+            image="http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
+            rating={8.6}
+            title="Avengers: Infinity War"
+/>,
+          <Card
+            favorite={false}
+            id={427641}
+            image="http://image.tmdb.org/t/p/original/30oXQKwibh0uANGMs0Sytw3uN22.jpg"
+            rating={5.9}
+            title="Rampage"
+/>,
+          <Card
+            favorite={false}
+            id={333339}
+            image="http://image.tmdb.org/t/p/original/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg"
+            rating={7.8}
+            title="Ready Player One"
+/>,
+          <Card
+            favorite={false}
+            id={445571}
+            image="http://image.tmdb.org/t/p/original/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg"
+            rating={7.1}
+            title="Game Night"
+/>,
+          <Card
+            favorite={false}
+            id={401981}
+            image="http://image.tmdb.org/t/p/original/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg"
+            rating={6.5}
+            title="Red Sparrow"
+/>,
+          <Card
+            favorite={false}
+            id={447332}
+            image="http://image.tmdb.org/t/p/original/nAU74GmpUk7t5iklEp3bufwDq4n.jpg"
+            rating={7.3}
+            title="A Quiet Place"
+/>,
+          <Card
+            favorite={false}
+            id={399035}
+            image="http://image.tmdb.org/t/p/original/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg"
+            rating={5.8}
+            title="The Commuter"
+/>,
+          <Card
+            favorite={false}
+            id={353486}
+            image="http://image.tmdb.org/t/p/original/bXrZ5iHBEjH7WMidbUDQ0U2xbmr.jpg"
+            rating={6.6}
+            title="Jumanji: Welcome to the Jungle"
+/>,
+          <Card
+            favorite={false}
+            id={476926}
+            image="http://image.tmdb.org/t/p/original/qRmQazyIBZR4pQIk9VruiZul0Au.jpg"
+            rating={5.5}
+            title="The Titan"
+/>,
+          <Card
+            favorite={false}
+            id={396806}
+            image="http://image.tmdb.org/t/p/original/xhBTO9n3fxy3HJt7WlR9h9vvVmk.jpg"
+            rating={6}
+            title="Anon"
+/>,
+          <Card
+            favorite={false}
+            id={453201}
+            image="http://image.tmdb.org/t/p/original/qxJQ0VBCuJkJhJmuWzxI408ngwd.jpg"
+            rating={5.1}
+            title="The 15:17 to Paris"
+/>,
+          <Card
+            favorite={false}
+            id={429351}
+            image="http://image.tmdb.org/t/p/original/j18021qCeRi3yUBtqd2UFj1c0RQ.jpg"
+            rating={4.8}
+            title="12 Strong"
+/>,
+          <Card
+            favorite={false}
+            id={384680}
+            image="http://image.tmdb.org/t/p/original/rqoezyB51GfhiloOB5ZErg5HXas.jpg"
+            rating={6.4}
+            title="Hostiles"
+/>,
+          <Card
+            favorite={false}
+            id={449443}
+            image="http://image.tmdb.org/t/p/original/AfybH6GbGFw1F9bcETe2yu25mIE.jpg"
+            rating={6.4}
+            title="Den of Thieves"
+/>,
+          <Card
+            favorite={false}
+            id={437557}
+            image="http://image.tmdb.org/t/p/original/cx0LpfM6Drla8uzFfMT09uqKPRu.jpg"
+            rating={6.5}
+            title="Blockers"
+/>,
+          <Card
+            favorite={false}
+            id={446354}
+            image="http://image.tmdb.org/t/p/original/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg"
+            rating={7}
+            title="The Post"
+/>,
+          <Card
+            favorite={false}
+            id={460019}
+            image="http://image.tmdb.org/t/p/original/zbvziwnZa91AJD78Si0hUb5JP5X.jpg"
+            rating={6.1}
+            title="Truth or Dare"
+/>,
+          <Card
+            favorite={false}
+            id={396371}
+            image="http://image.tmdb.org/t/p/original/h9hUP5ZJGsjL2wbERrGlj4dMjZq.jpg"
+            rating={7}
+            title="Molly's Game"
+/>,
+          <Card
+            favorite={false}
+            id={268896}
+            image="http://image.tmdb.org/t/p/original/v5HlmJK9bdeHxN2QhaFP1ivjX3U.jpg"
+            rating={5.9}
+            title="Pacific Rim: Uprising"
+/>,
+          <Card
+            favorite={false}
+            id={300668}
+            image="http://image.tmdb.org/t/p/original/d3qcpfNwbAMCNqWDHzPQsUYiUgS.jpg"
+            rating={6.3}
+            title="Annihilation"
+/>,
+        ],
+        "className": "favorites-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "299536",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 299536,
+            "image": "http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+            "rating": 8.6,
+            "title": "Avengers: Infinity War",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "427641",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 427641,
+            "image": "http://image.tmdb.org/t/p/original/30oXQKwibh0uANGMs0Sytw3uN22.jpg",
+            "rating": 5.9,
+            "title": "Rampage",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "333339",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 333339,
+            "image": "http://image.tmdb.org/t/p/original/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg",
+            "rating": 7.8,
+            "title": "Ready Player One",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "445571",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 445571,
+            "image": "http://image.tmdb.org/t/p/original/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg",
+            "rating": 7.1,
+            "title": "Game Night",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "401981",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 401981,
+            "image": "http://image.tmdb.org/t/p/original/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg",
+            "rating": 6.5,
+            "title": "Red Sparrow",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "447332",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 447332,
+            "image": "http://image.tmdb.org/t/p/original/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
+            "rating": 7.3,
+            "title": "A Quiet Place",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "399035",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 399035,
+            "image": "http://image.tmdb.org/t/p/original/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg",
+            "rating": 5.8,
+            "title": "The Commuter",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "353486",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 353486,
+            "image": "http://image.tmdb.org/t/p/original/bXrZ5iHBEjH7WMidbUDQ0U2xbmr.jpg",
+            "rating": 6.6,
+            "title": "Jumanji: Welcome to the Jungle",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "476926",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 476926,
+            "image": "http://image.tmdb.org/t/p/original/qRmQazyIBZR4pQIk9VruiZul0Au.jpg",
+            "rating": 5.5,
+            "title": "The Titan",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "396806",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 396806,
+            "image": "http://image.tmdb.org/t/p/original/xhBTO9n3fxy3HJt7WlR9h9vvVmk.jpg",
+            "rating": 6,
+            "title": "Anon",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "453201",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 453201,
+            "image": "http://image.tmdb.org/t/p/original/qxJQ0VBCuJkJhJmuWzxI408ngwd.jpg",
+            "rating": 5.1,
+            "title": "The 15:17 to Paris",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "429351",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 429351,
+            "image": "http://image.tmdb.org/t/p/original/j18021qCeRi3yUBtqd2UFj1c0RQ.jpg",
+            "rating": 4.8,
+            "title": "12 Strong",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "384680",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 384680,
+            "image": "http://image.tmdb.org/t/p/original/rqoezyB51GfhiloOB5ZErg5HXas.jpg",
+            "rating": 6.4,
+            "title": "Hostiles",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "449443",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 449443,
+            "image": "http://image.tmdb.org/t/p/original/AfybH6GbGFw1F9bcETe2yu25mIE.jpg",
+            "rating": 6.4,
+            "title": "Den of Thieves",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "437557",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 437557,
+            "image": "http://image.tmdb.org/t/p/original/cx0LpfM6Drla8uzFfMT09uqKPRu.jpg",
+            "rating": 6.5,
+            "title": "Blockers",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "446354",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 446354,
+            "image": "http://image.tmdb.org/t/p/original/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg",
+            "rating": 7,
+            "title": "The Post",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "460019",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 460019,
+            "image": "http://image.tmdb.org/t/p/original/zbvziwnZa91AJD78Si0hUb5JP5X.jpg",
+            "rating": 6.1,
+            "title": "Truth or Dare",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "396371",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 396371,
+            "image": "http://image.tmdb.org/t/p/original/h9hUP5ZJGsjL2wbERrGlj4dMjZq.jpg",
+            "rating": 7,
+            "title": "Molly's Game",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "268896",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 268896,
+            "image": "http://image.tmdb.org/t/p/original/v5HlmJK9bdeHxN2QhaFP1ivjX3U.jpg",
+            "rating": 5.9,
+            "title": "Pacific Rim: Uprising",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "300668",
+          "nodeType": "function",
+          "props": Object {
+            "favorite": false,
+            "id": 300668,
+            "image": "http://image.tmdb.org/t/p/original/d3qcpfNwbAMCNqWDHzPQsUYiUgS.jpg",
+            "rating": 6.3,
+            "title": "Annihilation",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
