@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Movies = () => {
+const Movies = ({ movies }) => {
 
   return (
     <div>
@@ -9,6 +9,11 @@ const Movies = () => {
   );
 };
 
+const mapStateToProps = (state) => ({
+  movies: state.movies
+})
+
 export {
-  Movies
+  Movies,
+  mapStateToProps
 };
