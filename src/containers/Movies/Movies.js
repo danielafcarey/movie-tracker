@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Card from '../../components/Card/Card';
-// import { withRouter } from 'react-router-dom';
 
 const Movies = ({ movies }) => {
   const movieCards = movies.map(movie => {
@@ -12,7 +11,7 @@ const Movies = ({ movies }) => {
   })
 
   return (
-    <div>
+    <div className='movie-container'>
       {movieCards}
     </div>
   )

@@ -1,2 +1,6 @@
 .card img {
   width: 200px; }
+
+.movie-container {
+  display: flex;
+  flex-wrap: wrap; }
