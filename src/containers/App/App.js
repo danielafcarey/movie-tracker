@@ -5,12 +5,18 @@ import {
   populateMovies
 } from '../../actions';
 import { fetchMovies } from '../../apiCalls';
-import { cleanMovieData } from '../../cleaner'
+import { cleanMovieData } from '../../cleaner';
 import './App.css';
+import { Favorites } from '../Favorites/Favorites';
+import { Movies } from '../Movies/Movies';
+import { Login } from '../Login/Login';
+import { SignUp } from '../SignUp/SignUp';
+import { Header } from '../Header/Header';
+import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   async componentDidMount() {
@@ -22,7 +28,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        REACT YO FACE!
+        <Header />
+        <Switch>
+          <Route exact path='/' component={ Movies }/>
+          <Route exact path='/favorites' component={ Favorites }/>
+          <Route exact path='/login' component={ Login }/>
+          <Route exact path='/signup' component={ SignUp }/>
+        </Switch>
+       
       </div>
     );
   }
