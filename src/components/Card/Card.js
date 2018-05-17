@@ -11,8 +11,8 @@ const Card = (props) => {
 
   return(
     <div className='card'>
-      <h1>{title}</h1>
       <img src={image} />
+      <h2>{title}</h2>
       <h3>Rating: {rating}</h3>
       <button>Favorite</button>
     </div>

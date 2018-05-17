@@ -1,6 +1,14 @@
-.card img {
-  width: 200px; }
+.card {
+  width: 200px;
+  border: 1px black solid;
+  display: flex;
+  flex-direction: column; }
+  .card img {
+    width: 200px; }
+  .card button {
+    margin: 0 auto; }
 
 .movie-container {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: space-around; }
