@@ -162,10 +162,10 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "Movies",
+      "children": "hello",
     },
     "ref": null,
-    "rendered": "Movies",
+    "rendered": "hello",
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -174,10 +174,10 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "Movies",
+        "children": "hello",
       },
       "ref": null,
-      "rendered": "Movies",
+      "rendered": "hello",
       "type": "div",
     },
   ],

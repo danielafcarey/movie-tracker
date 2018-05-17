@@ -7,11 +7,11 @@ import {
 import { fetchMovies } from '../../apiCalls';
 import { cleanMovieData } from '../../cleaner';
 import './App.css';
-import { Favorites } from '../Favorites/Favorites';
-import { Movies } from '../Movies/Movies';
-import { Login } from '../Login/Login';
-import { SignUp } from '../SignUp/SignUp';
-import { Header } from '../Header/Header';
+// import Favorites from '../Favorites/Favorites';
+import Movies from '../Movies/Movies';
+// import Login from '../Login/Login';
+// import SignUp from '../SignUp/SignUp';
+import Header from '../Header/Header';
 import { Route, Switch } from 'react-router-dom';
 
 class App extends Component {
@@ -30,12 +30,11 @@ class App extends Component {
       <div className="App">
         <Header />
         <Switch>
-          <Route exact path='/' component={ Movies }/>
-          <Route exact path='/favorites' component={ Favorites }/>
+          <Route exact path='/' render={() => <Movies />}/>
+          {/* <Route exact path='/favorites' component={ Favorites }/>
           <Route exact path='/login' component={ Login }/>
-          <Route exact path='/signup' component={ SignUp }/>
+          <Route exact path='/signup' component={ SignUp }/> */}
         </Switch>
-       
       </div>
     );
   }
