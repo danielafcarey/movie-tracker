@@ -36,14 +36,14 @@ ShallowWrapper {
           name="password"
           onChange={[Function]}
           placeholder="Password"
-          type="text"
+          type="password"
           value=""
 />,
         <input
           name="verification"
           onChange={[Function]}
           placeholder="Retype password"
-          type="text"
+          type="password"
           value=""
 />,
         <button>
@@ -92,7 +92,7 @@ ShallowWrapper {
           "name": "password",
           "onChange": [Function],
           "placeholder": "Password",
-          "type": "text",
+          "type": "password",
           "value": "",
         },
         "ref": null,
@@ -107,7 +107,7 @@ ShallowWrapper {
           "name": "verification",
           "onChange": [Function],
           "placeholder": "Retype password",
-          "type": "text",
+          "type": "password",
           "value": "",
         },
         "ref": null,
@@ -153,14 +153,14 @@ ShallowWrapper {
             name="password"
             onChange={[Function]}
             placeholder="Password"
-            type="text"
+            type="password"
             value=""
 />,
           <input
             name="verification"
             onChange={[Function]}
             placeholder="Retype password"
-            type="text"
+            type="password"
             value=""
 />,
           <button>
@@ -209,7 +209,7 @@ ShallowWrapper {
             "name": "password",
             "onChange": [Function],
             "placeholder": "Password",
-            "type": "text",
+            "type": "password",
             "value": "",
           },
           "ref": null,
@@ -224,7 +224,7 @@ ShallowWrapper {
             "name": "verification",
             "onChange": [Function],
             "placeholder": "Retype password",
-            "type": "text",
+            "type": "password",
             "value": "",
           },
           "ref": null,

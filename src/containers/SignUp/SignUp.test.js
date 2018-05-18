@@ -105,6 +105,7 @@ describe('SignUp', () => {
     it('should call fetch with the correct arguments', () => {
       window.fetch = jest.fn();
       const mockState = {
+        name: 'nincompoop',
         email: 'nincompooping@gmail.com',
         password: 'ilovebabiesandgarbage',
       }
@@ -128,9 +129,10 @@ describe('SignUp', () => {
     it('calls verifyPassword', () => {
       const wrapperInst = wrapper.instance();
       wrapperInst.verifyPassword = jest.fn();
+      wrapperInst.props.updateCurrentUser = jest.fn();
 
-      wrapperInst.handleSubmit();
-      
+      wrapper.find('form').simulate('submit', { preventDefault() {} });
+
       expect(wrapperInst.verifyPassword).toHaveBeenCalled(); 
     })
 
@@ -144,11 +146,22 @@ describe('SignUp', () => {
     })
 
     it('calls postUser with the correct arguments if password has been verified', () => {
-      // fetch
+      const wrapperInst = wrapper.instance();
+       
+      wrapperInst.postUser = jest.fn();
+
+      wrapper.find('form').simulate('submit', { preventDefault() {} });
+
+      expect(wrapperInst.postUser).toHaveBeenCalled(); 
     })
 
     it('calls alert if password has not been verified', () => {
-    
+      window.alert = jest.fn();
+      wrapper.verifyPassword = jest.fn().mockImplementation(() => false);
+
+      wrapper.find('form').simulate('submit', { preventDefault() {} });
+
+      expect(window.alert).toHaveBeenCalled(); 
     })
 
   })

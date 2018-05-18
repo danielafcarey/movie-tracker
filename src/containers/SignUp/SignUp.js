@@ -17,30 +17,40 @@ class SignUp extends Component {
 
   handleChange = (event) => {
     const { name, value } = event.target;
+    const newValue = value.toLowerCase();
     
-    this.setState({ [name]: value })
+    this.setState({ [name]: newValue })
   }
 
   verifyPassword = () => this.state.password === this.state.verification;
 
   postUser = () => {
-    const { email, password } = this.state;
-    const newUserData = { email, password };
+    const { name, email, password } = this.state;
+    const newUserData = { name, email, password };
     const url = 'http://localhost:3000/api/users/new';
     const optionsObject = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(newUserData)
     }
-    fetch(url, optionsObject) 
+    try {
+      fetch(url, optionsObject) 
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   handleSubmit = (event) => {
     event.preventDefault();
     const verified = this.verifyPassword();
-    const userId = Date.now();
-    this.props.updateCurrentUser(userId);
-    // this.postUser(userId)
+
+    if (verified) {
+      const userId = Date.now();
+      this.props.updateCurrentUser(userId);
+      this.postUser();
+    } else {
+      alert('Check yo self');
+    }
   }
 
   render() {
@@ -63,14 +73,14 @@ class SignUp extends Component {
           onChange={ this.handleChange }
         />
         <input 
-          type='text'
+          type='password'
           value={ this.state.password }
           name='password'
           placeholder='Password'
           onChange={ this.handleChange }
         />
         <input 
-          type='text'
+          type='password'
           value={ this.state.verification }
           name='verification'
           placeholder='Retype password'
