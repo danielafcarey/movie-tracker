@@ -5,7 +5,15 @@ const populateMovies = (movies) => {
   }
 }
 
+const updateCurrentUser = (id) => {
+  return {
+    type: 'UPDATE_CURRENT_USER',
+    id
+  }
+}
+
 
 export {
-  populateMovies
+  populateMovies,
+  updateCurrentUser
 }
