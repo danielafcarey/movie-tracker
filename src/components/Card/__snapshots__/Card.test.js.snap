@@ -24,12 +24,12 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h1>
-          The Mighty Gasbag
-</h1>,
         <img
           src="www.flatulence.com/image/123132.png"
 />,
+        <h2>
+          The Mighty Gasbag
+</h2>,
         <h3>
           Rating: 
           100
@@ -38,20 +38,10 @@ ShallowWrapper {
           Favorite
 </button>,
       ],
+      "className": "card",
     },
     "ref": null,
     "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "The Mighty Gasbag",
-        },
-        "ref": null,
-        "rendered": "The Mighty Gasbag",
-        "type": "h1",
-      },
       Object {
         "instance": null,
         "key": undefined,
@@ -62,6 +52,17 @@ ShallowWrapper {
         "ref": null,
         "rendered": null,
         "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "The Mighty Gasbag",
+        },
+        "ref": null,
+        "rendered": "The Mighty Gasbag",
+        "type": "h2",
       },
       Object {
         "instance": null,
@@ -101,12 +102,12 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h1>
-            The Mighty Gasbag
-</h1>,
           <img
             src="www.flatulence.com/image/123132.png"
 />,
+          <h2>
+            The Mighty Gasbag
+</h2>,
           <h3>
             Rating: 
             100
@@ -115,20 +116,10 @@ ShallowWrapper {
             Favorite
 </button>,
         ],
+        "className": "card",
       },
       "ref": null,
       "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "The Mighty Gasbag",
-          },
-          "ref": null,
-          "rendered": "The Mighty Gasbag",
-          "type": "h1",
-        },
         Object {
           "instance": null,
           "key": undefined,
@@ -139,6 +130,17 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "The Mighty Gasbag",
+          },
+          "ref": null,
+          "rendered": "The Mighty Gasbag",
+          "type": "h2",
         },
         Object {
           "instance": null,

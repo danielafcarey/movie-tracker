@@ -7,11 +7,11 @@ describe('Login', () => {
 
   beforeEach(() => {
     wrapper = shallow(<Login />);
-  })
+  });
 
   it('should match the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
-  })
+  });
 
   
-})
+});

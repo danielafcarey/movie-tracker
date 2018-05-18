@@ -51,7 +51,6 @@ describe('apiCalls', () => {
       const expected = Error('Fetch failed');
       const result = fetchMovies();
       
-      console.log(result)
       expect(result).rejects.toEqual(expected);
     })
 
