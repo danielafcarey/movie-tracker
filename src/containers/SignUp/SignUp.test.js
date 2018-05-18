@@ -1,6 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { SignUp } from './SignUp';
+import { 
+  SignUp,
+  mapDispatchToProps
+} from './SignUp';
 
 describe('SignUp', () => {
   let wrapper;
@@ -122,18 +125,42 @@ describe('SignUp', () => {
 
   describe('handleSubmit', () => {
 
-    it('should call verifyPassword with the correct arguments', () => {
+    it('calls verifyPassword', () => {
+      const wrapperInst = wrapper.instance();
+      wrapperInst.verifyPassword = jest.fn();
 
+      wrapperInst.handleSubmit();
+      
+      expect(wrapperInst.verifyPassword).toHaveBeenCalled(); 
     })
 
-    it('should call updateCurrentUser with the correct arguments', () => {
-      // dispatched method passed the generated user id
+    it('calls updateCurrentUser with the correct arguments if password has been verified', () => {
+      const mockUpdateUser = jest.fn();
+      wrapper = shallow(<SignUp updateCurrentUser={ mockUpdateUser } />);
+
+      wrapper.find('form').simulate('submit', { preventDefault() {} })
+
+      expect(mockUpdateUser).toHaveBeenCalled();
     })
 
-    it('should call postUser with the correct arguments', () => {
+    it('calls postUser with the correct arguments if password has been verified', () => {
       // fetch
     })
 
+    it('calls alert if password has not been verified', () => {
+    
+    })
+
+  })
+
+  describe('mapDispatchToProps', () => {
+    
+    it('returns an object with a updateCurrentUser function', () => {
+      const dispatch = jest.fn();
+      const result = mapDispatchToProps(dispatch);
+
+      expect(typeof result.updateCurrentUser).toEqual('function');
+    })
   })
 
 

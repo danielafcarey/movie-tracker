@@ -38,6 +38,10 @@ describe('App', () => {
       
       expect(typeof result.populateMovies).toEqual('function');
     });
+
+    it('calls dispatch with the correct arguments', () => {
+
+    })
     
   });
   

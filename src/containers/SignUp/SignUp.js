@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { 
+  updateCurrentUser
+} from '../../actions';
+import { connect } from 'react-redux';
 
 class SignUp extends Component {
   constructor(props) {
@@ -31,14 +35,19 @@ class SignUp extends Component {
     fetch(url, optionsObject) 
   }
 
-  handleSubmit = () => {
-    // const userId = 
-    //
+  handleSubmit = (event) => {
+    event.preventDefault();
+    const verified = this.verifyPassword();
+    const userId = Date.now();
+    this.props.updateCurrentUser(userId);
+    // this.postUser(userId)
   }
 
   render() {
     return (
-      <form>
+      <form
+        onSubmit={ this.handleSubmit } 
+      >
         <input 
           type='text'
           value={ this.state.name }
@@ -74,20 +83,18 @@ class SignUp extends Component {
   }
 };
 
+const mapDispatchToProps = (dispatch) => {
+  return {
+    updateCurrentUser: (id) => dispatch(updateCurrentUser(id))
+  }
+}
+
+
 export {
-  SignUp
+  SignUp,
+  mapDispatchToProps
 };
 
+export default connect(null, mapDispatchToProps)(SignUp);
 
-// render a form with 4 inputs and a submit button: name, email, password, password verification
-// dispatch: addUser (add to store....not to backend)
-// state for onChange of input
-// verify password inputs
-// handleSubmit
-// handleChange
-// fetch(POST) - from the apiCalls.js
-//
-// onSubmit: 
-// - verify passwords
-// - fetch(POST) new user to backend
-// - send user object to store
+

@@ -50,6 +50,7 @@ ShallowWrapper {
           Sign up
 </button>,
       ],
+      "onSubmit": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -166,6 +167,7 @@ ShallowWrapper {
             Sign up
 </button>,
         ],
+        "onSubmit": [Function],
       },
       "ref": null,
       "rendered": Array [
