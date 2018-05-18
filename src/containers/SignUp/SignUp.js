@@ -7,7 +7,7 @@ class SignUp extends Component {
       name: '',
       email: '',
       password: '',
-      verification: ''
+      verification: '',
     }
   }
 
@@ -20,7 +20,20 @@ class SignUp extends Component {
   verifyPassword = () => this.state.password === this.state.verification;
 
   postUser = () => {
-    
+    const { email, password } = this.state;
+    const newUserData = { email, password };
+    const url = 'http://localhost:3000/api/users/new';
+    const optionsObject = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(newUserData)
+    }
+    fetch(url, optionsObject) 
+  }
+
+  handleSubmit = () => {
+    // const userId = 
+    //
   }
 
   render() {

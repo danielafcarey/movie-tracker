@@ -94,6 +94,30 @@ describe('SignUp', () => {
       expect(result).toEqual(false);
 
     })
+
+  })
+
+  describe('postUser', () => {
+
+    it('should call fetch with the correct arguments', () => {
+      window.fetch = jest.fn();
+      const mockState = {
+        email: 'nincompooping@gmail.com',
+        password: 'ilovebabiesandgarbage',
+      }
+      const expectedUrl = 'http://localhost:3000/api/users/new';
+      const expectedOptionsObject = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(mockState) 
+      };
+      
+      wrapper.setState({ ...mockState });
+      wrapper.instance().postUser();
+
+      expect(window.fetch).toHaveBeenCalledWith(expectedUrl, expectedOptionsObject);
+    })
+
   })
 
   describe('handleSubmit', () => {
@@ -102,8 +126,8 @@ describe('SignUp', () => {
 
     })
 
-    it('should call addUser with the correct arguments', () => {
-      // dispatched method
+    it('should call updateCurrentUser with the correct arguments', () => {
+      // dispatched method passed the generated user id
     })
 
     it('should call postUser with the correct arguments', () => {
