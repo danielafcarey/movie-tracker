@@ -82,9 +82,9 @@ class SignUp extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const verified = this.verifyPassword();
-
-    if (verified) {
+    const verifiedPassword = this.verifyPassword();
+    const verifiedEmail = this.verifyEmail();
+    if (verifiedPassword && verifiedEmail) {
       const userId = Date.now();
       this.props.updateCurrentUser(userId);
       this.postUser();
