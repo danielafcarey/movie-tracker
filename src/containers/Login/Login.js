@@ -37,7 +37,7 @@ class Login extends Component {
   
   handleSubmit = async (event) => {
     event.preventDefault();
-    const id = this.verifyUser();
+    const id = await this.verifyUser();
     if (id) {
       this.props.updateCurrentUser(id);
       const favorites = await fetchFavorites(id);

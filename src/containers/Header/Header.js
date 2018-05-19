@@ -1,20 +1,38 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { Component } from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import { updateCurrentUser, updateFavorites} from '../../actions';
 
-const Header = () => {
+class Header extends Component {
+  constructor(props) {
+    super(props)
+  }
+  
+  handleClick = () => {
+    this.props.updateCurrentUser(null);
+    this.props.updateFavorites([])
+  }
 
-  return (
-    <header>
-      <NavLink to='/'>Movies</NavLink>
-      <NavLink to='/favorites'>Favorites</NavLink>
-      <NavLink to='/login'>LogIn</NavLink>
-      <NavLink to='/signup'>SignUp</NavLink>
-    </header>
-  );
+  render() {
+    return (
+      <header>
+        <NavLink to='/'>Movies</NavLink>
+        <NavLink to='/favorites'>Favorites</NavLink>
+        <NavLink to='/signup'>Sign Up</NavLink>
+        <NavLink to='/login'>Log In</NavLink>
+        <Link to='/' onClick={this.handleClick}>Log Out</Link>
+      </header>
+    );
+  }
 };
 
+const mapDispatchToProps = (dispatch) => ({
+  updateCurrentUser: (id) => dispatch(updateCurrentUser(id)),
+  updateFavorites: (favorites) => dispatch(updateFavorites(favorites))
+})
+
 export {
-  Header
+  Header,
+  mapDispatchToProps
 };
 
 export default Header;

@@ -117,12 +117,12 @@ describe('Login', () => {
       expect(wrapperInst.verifyUser).toHaveBeenCalled();
     })
 
-    it('calls props.updateCurrentUser with the correct arguments if user has been verified', () => {
+    it('calls props.updateCurrentUser with the correct arguments if user has been verified', async () => {
       const wrapperInst = wrapper.instance();
       wrapperInst.verifyUser = jest.fn().mockImplementation(() => 1);
       apiCalls.fetchFavorites = jest.fn();
 
-      wrapperInst.handleSubmit(mockEvent);
+      await wrapperInst.handleSubmit(mockEvent);
 
       expect(wrapperInst.props.updateCurrentUser).toHaveBeenCalledWith(1)
     })
@@ -162,12 +162,12 @@ describe('Login', () => {
       expect(wrapper.state('verified')).toEqual(true)
     })
 
-    it('calls alert if verifyUser returns undefined', () => {
+    it('calls alert if verifyUser returns undefined', async () => {
       const wrapperInst = wrapper.instance();
       wrapperInst.verifyUser = jest.fn().mockImplementation(() => undefined);
       window.alert = jest.fn();
 
-      wrapperInst.handleSubmit(mockEvent);
+      await wrapperInst.handleSubmit(mockEvent);
 
       expect(window.alert).toHaveBeenCalled();
 

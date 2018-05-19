@@ -131,7 +131,7 @@ describe('apiCalls', () => {
       expect(result).toEqual(expected);
     });
 
-    it.only('should throw an error if the status is not ok', () => {
+    it('should throw an error if the status is not ok', () => {
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         status: 500
       }));
