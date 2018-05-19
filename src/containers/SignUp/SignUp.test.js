@@ -209,7 +209,7 @@ describe('SignUp', () => {
 
   describe('mapDispatchToProps', () => {
     
-    it('returns an object with a updateCurrentUser function', () => {
+    it('returns an object with an updateCurrentUser function', () => {
       const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
 

@@ -103,7 +103,7 @@ describe('apiCalls', () => {
   describe('fetchFavorites', () => {
 
     it('should call fetch with the correct arguments', async () => {
-
+      
     });
 
     it('should return the correct data', async () => {

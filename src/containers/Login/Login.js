@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { fetchUsers } from '../../apiCalls'
+import { fetchUsers } from '../../apiCalls';
+import { updateCurrentUser } from '../../actions';
+import { connect } from 'react-redux'
 
 class Login extends Component {
   constructor(props){
@@ -7,7 +9,8 @@ class Login extends Component {
 
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      id: null
     }
   }
 
@@ -24,13 +27,29 @@ class Login extends Component {
         return user
       }
     })
-    return userMatch ? userMatch.id : undefined
+    if (userMatch) {
+      this.setState({ id: userMatch.id })
+      return userMatch.id
+    } else {
+      return undefined;
+    }
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    const userId = this.verifyUser();
+    if (userId) {
+      this.props.updateCurrentUser(userId);
+    } else {
+      alert('User Does Not Exist')
+    }
   }
 
   render() {
     return(
       <form
         type='submit'
+        onSubmit={this.handleSubmit}
       >
         <input 
           type='text'
@@ -51,6 +70,14 @@ class Login extends Component {
     )
   }
 }
+
+const mapDispatchToProps = (dispatch) => ({
+  updateCurrentUser: (id) => dispatch(updateCurrentUser(id))
+})
+
 export {
-  Login
+  Login,
+  mapDispatchToProps
 };
+
+export default connect(null, mapDispatchToProps)(Login)
