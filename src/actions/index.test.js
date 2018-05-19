@@ -1,6 +1,7 @@
 import { 
   populateMovies,
-  updateCurrentUser
+  updateCurrentUser,
+  updateFavorites
 } from './index.js';
 
 describe('Action creators', () => {
@@ -33,5 +34,17 @@ describe('Action creators', () => {
     })
   })
 
+  describe('updateFavorites', () => {
 
+    it('creates an action with correct payload and type', () => {
+      const expected = {
+        type: 'UPDATE_FAVORITES',
+        favorites: ['favorites']
+      }
+
+      const result = updateFavorites(expected.favorites)
+
+      expect(result).toEqual(expected);
+    })
+  })
 })

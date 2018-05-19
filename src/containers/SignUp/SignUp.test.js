@@ -4,6 +4,7 @@ import {
   SignUp,
   mapDispatchToProps
 } from './SignUp';
+import * as apiCalls from '../../apiCalls';
 
 describe('SignUp', () => {
   let wrapper;
@@ -218,40 +219,20 @@ describe('SignUp', () => {
   });
 
   describe('verifyEmail', () => {
-    let mockUserData;
-    let url;
 
-    beforeEach( () => {
-      url = 'http://localhost:3000/api/users';
-    
-      mockUserData = {
-        "status": "success",
-        "data": [{
-          "id": 1,
-          "name": "Taylor",
-          "password": "password",
-          "email": "tman2272@aol.com"
-        },
-        {
-          "id": 2,
-          "name": "daniela",
-          "password": "hi",
-          "email": "d@g.com"
-        }
-        ],
-        "message": "Retrieved All Users"
-      };
-
-      window.fetch = jest.fn().mockImplementation( () => Promise.resolve( {
-        status: 200,
-        json: () => Promise.resolve(mockUserData)
-      } ));
-    });
-
-
-    it('calls fetch with the correct arguments', () => {
-      wrapper.instance().verifyEmail();
-      expect(window.fetch).toHaveBeenCalledWith(url);
+    it('calls fetchUsers', async () => {
+      apiCalls.fetchUsers = jest.fn().mockImplementation(() => {
+        return [
+          {
+            id: 1,
+            email: 'garbageman@gmail.com',
+            password: 'ismellbad',
+            name: 'jerry'
+          }
+        ]
+      })
+      await wrapper.instance().verifyEmail();
+      expect(apiCalls.fetchUsers).toHaveBeenCalled()
     });
 
     it('returns true if the user\'s email is not yet taken', async () => {
@@ -263,33 +244,13 @@ describe('SignUp', () => {
     });
 
     it('return false if the user\'s email is taken', async () => {
-      wrapper.setState({ email: 'tman2272@aol.com' });
+      wrapper.setState({ email: 'garbageman@gmail.com' });
 
       const result =  await wrapper.instance().verifyEmail();
 
       expect(result).toEqual(false);
     });
 
-    it('throws an error if the status is not ok', () => {
-      window.fetch = jest.fn().mockImplementation( () => Promise.resolve({
-        status: 500
-      }));
-
-      const result = wrapper.instance().verifyEmail();
-      const expected = Error('Error: 500')
-
-      expect(result).rejects.toEqual(expected);
-    });
-
-    it('throws an error if the fetch failed', () => {
-      window.fetch = jest.fn().mockImplementation(() => Promise.reject(
-        'Fetch Failed' ));
-
-      const result = wrapper.instance().verifyEmail();
-      const expected = Error('Fetch Failed'); 
-
-      expect(result).rejects.toEqual(expected);
-    });
 
   });
   

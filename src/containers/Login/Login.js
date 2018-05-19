@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { fetchUsers } from '../../apiCalls';
-import { updateCurrentUser } from '../../actions';
+import { fetchUsers, fetchFavorites } from '../../apiCalls';
+import { updateCurrentUser, updateFavorites } from '../../actions';
 import { connect } from 'react-redux'
 
 class Login extends Component {
@@ -35,11 +35,12 @@ class Login extends Component {
     }
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
     const userId = this.verifyUser();
     if (userId) {
       this.props.updateCurrentUser(userId);
+      const favorites = await fetchFavorites(userId)
     } else {
       alert('User Does Not Exist')
     }
@@ -72,7 +73,8 @@ class Login extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  updateCurrentUser: (id) => dispatch(updateCurrentUser(id))
+  updateCurrentUser: (id) => dispatch(updateCurrentUser(id)),
+  updateFavorites: (favorites) => dispatch(updateFavorites(favorites)),
 })
 
 export {

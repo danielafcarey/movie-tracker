@@ -429,7 +429,23 @@ const mockUsers = {
     "message": "Retrieved All Users"
 }
 
+const mockFavorites = {
+    status: 'success',
+    data: [
+        {
+            "id": 299536,
+            "vote_average": 8.6,
+            "title": "Avengers: Infinity War",
+            "poster_path": "/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+            "release_date": "2018-04-25",
+            "userId": 1
+        }
+    ],
+    message: 'Retrieved All favorites'
+}
+
 export {
   mockMovies, 
-  mockUsers
+  mockUsers,
+  mockFavorites
 }

@@ -12,8 +12,16 @@ const updateCurrentUser = (id) => {
   }
 }
 
+const updateFavorites = (favorites) => {
+  return {
+    type: 'UPDATE_FAVORITES',
+    favorites
+  }
+}
+
 
 export {
   populateMovies,
-  updateCurrentUser
+  updateCurrentUser,
+  updateFavorites
 }

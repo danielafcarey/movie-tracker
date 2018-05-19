@@ -1,15 +1,20 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import { Login, mapDispatchToProps } from './Login';
-import * as apiCalls from '../../apiCalls'
+import * as apiCalls from '../../apiCalls';
+import { mockFavorites } from '../../mockData'
 
 describe('Login', () => {
   let wrapper;
   let mockUpdateCurrentUser;
+  let mockUpdateFavorites;
 
   beforeEach(() => {
     mockUpdateCurrentUser = jest.fn();
-    wrapper = shallow(<Login updateCurrentUser={mockUpdateCurrentUser}/>);
+    wrapper = shallow(<Login 
+      updateCurrentUser={mockUpdateCurrentUser}
+      updateFavorites={mockUpdateFavorites}
+      />);
   });
 
   it('matches the snapshot', () => {
@@ -60,9 +65,9 @@ describe('Login', () => {
       wrapper.setState(mockState);
     })
 
-    it('calls fetchUsers', () => {
+    it('calls fetchUsers', async () => {
       
-      wrapper.instance().verifyUser()
+      await wrapper.instance().verifyUser()
 
       expect(apiCalls.fetchUsers).toHaveBeenCalled();
     })
@@ -108,6 +113,7 @@ describe('Login', () => {
     it('calls verifyUser', () => {
       const wrapperInst = wrapper.instance();
       wrapperInst.verifyUser = jest.fn();
+      apiCalls.fetchFavorites = jest.fn();
 
       wrapperInst.handleSubmit(mockEvent);
 
@@ -117,14 +123,20 @@ describe('Login', () => {
     it('calls props.updateCurrentUser with the correct arguments if user has been verified', () => {
       const wrapperInst = wrapper.instance();
       wrapperInst.verifyUser = jest.fn().mockImplementation(() => 1);
+      apiCalls.fetchFavorites = jest.fn();
 
       wrapperInst.handleSubmit(mockEvent);
 
       expect(wrapperInst.props.updateCurrentUser).toHaveBeenCalledWith(1)
     })
 
-    it('calls getFavorites with correct arguments if user has been verified', () => {
+    it('calls fetchFavorites with correct arguments if user has been verified', async () => {
+      const wrapperInst = wrapper.instance();
+      wrapperInst.verifyUser = jest.fn().mockImplementation(() => 1)
 
+      await wrapperInst.handleSubmit(mockEvent);
+
+      expect(apiCalls.fetchFavorites).toHaveBeenCalledWith(1); 
     })
 
     it('calls props.updateFavorites with the correct arguments if user has been verfied', () => {
@@ -151,12 +163,50 @@ describe('Login', () => {
   
   describe('mapDispatchToProps', () => {
 
-    it('returns an object with an updateCurrentUser function', () => {
-      const dispatch = jest.fn();
-      const result = mapDispatchToProps(dispatch);
+    describe('updateCurrentUser', () => {
+      it('returns an object with an updateCurrentUser function', () => {
+        const dispatch = jest.fn();
+        const result = mapDispatchToProps(dispatch);
 
-      expect(typeof result.updateCurrentUser).toEqual('function');
-    });
+        expect(typeof result.updateCurrentUser).toEqual('function');
+      });
+
+      it('calls dispatch with the correct argument', () => {
+        const dispatch = jest.fn();
+        const mappedProps = mapDispatchToProps(dispatch)
+        const mockAction = {
+          type: 'UPDATE_CURRENT_USER',
+          id: 1
+        }
+
+        mappedProps.updateCurrentUser(mockAction.id)
+
+        expect(dispatch).toHaveBeenCalledWith(mockAction)
+      })
+    })
+
+    describe('updateFavorites', () => {
+      it('returns an object with an updateFavorites function', () => {
+        const dispatch = jest.fn();
+        const result = mapDispatchToProps(dispatch);
+
+        expect(typeof result.updateFavorites).toEqual('function');
+      });
+
+      it('calls dispatch with the correct argument', () => {
+
+        const dispatch = jest.fn();
+        const mappedProps = mapDispatchToProps(dispatch)
+        const mockAction = {
+          type: 'UPDATE_FAVORITES',
+          favorites: mockFavorites.data
+        }
+
+        mappedProps.updateFavorites(mockFavorites.data)
+
+        expect(dispatch).toHaveBeenCalledWith(mockAction)
+      })
+    })
 
   })
 });
