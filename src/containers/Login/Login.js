@@ -10,7 +10,8 @@ class Login extends Component {
     this.state = {
       email: '',
       password: '',
-      id: null
+      id: null,
+      verified: false
     }
   }
 
@@ -28,19 +29,20 @@ class Login extends Component {
       }
     })
     if (userMatch) {
-      this.setState({ id: userMatch.id })
       return userMatch.id
     } else {
       return undefined;
     }
   }
-
+  
   handleSubmit = async (event) => {
     event.preventDefault();
-    const userId = this.verifyUser();
-    if (userId) {
-      this.props.updateCurrentUser(userId);
-      const favorites = await fetchFavorites(userId)
+    const id = this.verifyUser();
+    if (id) {
+      this.props.updateCurrentUser(id);
+      const favorites = await fetchFavorites(id);
+      this.props.updateFavorites(favorites)
+      this.setState({ id, verified: true })
     } else {
       alert('User Does Not Exist')
     }

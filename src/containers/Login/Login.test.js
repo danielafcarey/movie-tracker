@@ -11,6 +11,7 @@ describe('Login', () => {
 
   beforeEach(() => {
     mockUpdateCurrentUser = jest.fn();
+    mockUpdateFavorites = jest.fn();
     wrapper = shallow(<Login 
       updateCurrentUser={mockUpdateCurrentUser}
       updateFavorites={mockUpdateFavorites}
@@ -21,11 +22,13 @@ describe('Login', () => {
     // expect(wrapper).toMatchSnapshot();
   });
 
-  it('has a default state of email, password, and id', () => {
+  it('has a default state of email, password, id, and verified', () => {
 
     expect(wrapper.state('email')).toEqual('')
     expect(wrapper.state('password')).toEqual('')
     expect(wrapper.state('id')).toEqual(null)
+    expect(wrapper.state('verified')).toEqual(false)
+    
   })
 
   it('changes email in state onChange', () => {
@@ -94,13 +97,7 @@ describe('Login', () => {
       expect(result).toEqual(expected);
     })
 
-    it('updates state with current user id', async () => {
-
-      await wrapper.instance().verifyUser();
-
-      expect(wrapper.state('id')).toEqual(1);
-
-    })
+    
   })
 
   describe('handleSubmit', () => {
@@ -133,18 +130,36 @@ describe('Login', () => {
     it('calls fetchFavorites with correct arguments if user has been verified', async () => {
       const wrapperInst = wrapper.instance();
       wrapperInst.verifyUser = jest.fn().mockImplementation(() => 1)
-
+      apiCalls.fetchFavorites = jest.fn();
+      
       await wrapperInst.handleSubmit(mockEvent);
 
       expect(apiCalls.fetchFavorites).toHaveBeenCalledWith(1); 
     })
 
-    it('calls props.updateFavorites with the correct arguments if user has been verfied', () => {
+    it('calls props.updateFavorites with the correct arguments if user has been verfied', async () => {
+      const wrapperInst = wrapper.instance();
+      wrapperInst.verifyUser = jest.fn().mockImplementation(() => 1)
+      apiCalls.fetchFavorites = jest.fn().mockImplementation(() => {
+        return ['favorite']
+      });
 
+      await wrapperInst.handleSubmit(mockEvent);
+
+      expect(wrapperInst.props.updateFavorites).toHaveBeenCalledWith(['favorite'])
     })
 
-    it('sets authenticated to true in state', () => {
+    it('updates state with current user id and verification status', async () => {
+      const wrapperInst = wrapper.instance();
+      wrapperInst.verifyUser = jest.fn().mockImplementation(() => 1)
+      apiCalls.fetchFavorites = jest.fn().mockImplementation(() => {
+        return ['favorite']
+      });
 
+      await wrapperInst.handleSubmit(mockEvent);
+      
+      expect(wrapper.state('id')).toEqual(1);
+      expect(wrapper.state('verified')).toEqual(true)
     })
 
     it('calls alert if verifyUser returns undefined', () => {
