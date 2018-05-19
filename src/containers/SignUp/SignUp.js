@@ -79,7 +79,6 @@ class SignUp extends Component {
     const verifiedEmail = await this.verifyEmail();
     if (verifiedPassword && verifiedEmail) {
       const userId = await this.postUser();
-      console.log(this.props)
       this.props.updateCurrentUser(userId);
     } else {
       alert('Check yo self');

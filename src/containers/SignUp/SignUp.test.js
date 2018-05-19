@@ -151,31 +151,58 @@ describe('SignUp', () => {
       
       it('calls updateCurrentUser with the correct arguments if password and email have been verified', async () => {
         const wrapperInst = wrapper.instance();
+  
+        wrapperInst.verifyPassword = jest.fn().mockImplementation(() => true);
+        wrapperInst.verifyEmail = jest.fn().mockImplementation(() => true);
+        wrapperInst.postUser = jest.fn().mockImplementation(() => 1);
+
+        await wrapperInst.handleSubmit(mockEvent);
+
+        expect(wrapperInst.props.updateCurrentUser).toHaveBeenCalledWith(1);
+      });
+      
+      it('calls postUser with the correct arguments if password has been verified', async () => {
+        const wrapperInst = wrapper.instance();
         wrapperInst.verifyPassword = jest.fn().mockImplementation(() => true);
         wrapperInst.verifyEmail = jest.fn().mockImplementation(() => true);
         wrapperInst.postUser = jest.fn();
+        
+        await wrapperInst.handleSubmit(mockEvent);
 
-        console.log(wrapper.props.updateCurrentUser)
+        expect(wrapperInst.postUser).toHaveBeenCalled();
+      });
+      
+      it('calls alert if password has not been verified', async () => {
+        const wrapperInst = wrapper.instance();
+        wrapperInst.verifyPassword = jest.fn().mockImplementation(() => false);
+        wrapperInst.verifyEmail = jest.fn().mockImplementation(() => true);
+        window.alert = jest.fn();
 
         await wrapperInst.handleSubmit(mockEvent);
-        
-        expect(wrapperInst.props.updateCurrentUser).toHaveBeenCalled();
-      });
-      
-      it.skip('calls postUser with the correct arguments if password has been verified', () => {
-       
-      });
-      
-      it.skip('calls alert if password has not been verified', () => {
-        
+
+        expect(window.alert).toHaveBeenCalled();
       });
 
-      it.skip('calls alert if email is not verified', () => {
-       
+      it('calls alert if email is not verified', async () => {
+        const wrapperInst = wrapper.instance();
+        wrapperInst.verifyPassword = jest.fn().mockImplementation(() => true);
+        wrapperInst.verifyEmail = jest.fn().mockImplementation(() => false);
+        window.alert = jest.fn();
+
+        await wrapperInst.handleSubmit(mockEvent);
+
+        expect(window.alert).toHaveBeenCalled();
       })
 
-      it.skip('calls alert if both email and password are not verified', () => {
-        
+      it('calls alert if both email and password are not verified', async () => {
+        const wrapperInst = wrapper.instance();
+        wrapperInst.verifyPassword = jest.fn().mockImplementation(() => false);
+        wrapperInst.verifyEmail = jest.fn().mockImplementation(() => false);
+        window.alert = jest.fn();
+
+        await wrapperInst.handleSubmit(mockEvent);
+
+        expect(window.alert).toHaveBeenCalled();
       })
        
     });
