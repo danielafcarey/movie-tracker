@@ -7,9 +7,11 @@ import {
 
 describe('SignUp', () => {
   let wrapper;
+  let mockUpdateCurrentUser;
 
   beforeEach(() => {
-    wrapper = shallow(<SignUp />);
+    mockUpdateCurrentUser = jest.fn()
+    wrapper = shallow(<SignUp updateCurrentUser={mockUpdateCurrentUser}/>);
   });
 
   it('should match the snapshot', () => {
@@ -103,7 +105,12 @@ describe('SignUp', () => {
   describe('postUser', () => {
 
     it('should call fetch with the correct arguments', () => {
-      window.fetch = jest.fn();
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          status: 200,
+          json: () => Promise.resolve(1)
+        })
+      });
       const mockState = {
         name: 'nincompoop',
         email: 'nincompooping@gmail.com',
@@ -125,61 +132,46 @@ describe('SignUp', () => {
   });
 
   describe('handleSubmit', () => {
+    let mockEvent;
 
     beforeEach(() => {
-       wrapper.verifyPassword = jest.fn().mockImplementation(() => true);
-       wrapper.verifyEmail = jest.fn().mockImplementation(() => true);
-
+      mockEvent = { preventDefault : () => {}}
     })
-      
-      it.skip('calls verifyPassword', () => {
+
+      it('calls verifyPassword', () => {
         const wrapperInst = wrapper.instance();
         wrapperInst.verifyPassword = jest.fn();
-        wrapperInst.props.updateCurrentUser = jest.fn();
-        
-        wrapper.find('form').simulate('submit', { preventDefault() {} });
-        
-        expect(wrapperInst.verifyPassword).toHaveBeenCalled(); 
+        wrapperInst.verifyEmail = jest.fn();
+        wrapperInst.postUser = jest.fn();
+
+        wrapperInst.handleSubmit(mockEvent);
+
+        expect(wrapperInst.verifyPassword).toHaveBeenCalled();
       });
       
-      it.skip('calls updateCurrentUser with the correct arguments if password and email have been verified', () => {
-        const mockUpdateUser = jest.fn();
-        wrapper = shallow(<SignUp updateCurrentUser={ mockUpdateUser } />);
+      it('calls updateCurrentUser with the correct arguments if password and email have been verified', async () => {
+        const wrapperInst = wrapper.instance();
+        wrapperInst.verifyPassword = jest.fn().mockImplementation(() => true);
+        wrapperInst.verifyEmail = jest.fn().mockImplementation(() => true);
+        wrapperInst.postUser = jest.fn();
+
+        console.log(wrapper.props.updateCurrentUser)
+
+        await wrapperInst.handleSubmit(mockEvent);
         
-        wrapper.find('form').simulate('submit', { preventDefault() {} });
-        
-        expect(mockUpdateUser).toHaveBeenCalled();
-        
+        expect(wrapperInst.props.updateCurrentUser).toHaveBeenCalled();
       });
       
       it.skip('calls postUser with the correct arguments if password has been verified', () => {
-        const wrapperInst = wrapper.instance();
-        
-        wrapperInst.postUser = jest.fn();
-        
-        wrapper.find('form').simulate('submit', { preventDefault() {} });
-        
-        expect(wrapperInst.postUser).toHaveBeenCalled(); 
+       
       });
       
       it.skip('calls alert if password has not been verified', () => {
-        window.alert = jest.fn();
-        wrapper.verifyPassword = jest.fn().mockImplementation(() => false);
         
-        wrapper.find('form').simulate('submit', { preventDefault() {} });
-        
-        expect(window.alert).toHaveBeenCalled(); 
       });
 
       it.skip('calls alert if email is not verified', () => {
-        window.alert = jest.fn();
-        wrapper.verifyPassword = jest.fn().mockImplementation(() => false);
-
-        wrapper.find('form').simulate('submit', {
-          preventDefault() {}
-        });
-
-        expect(window.alert).toHaveBeenCalled();
+       
       })
 
       it.skip('calls alert if both email and password are not verified', () => {

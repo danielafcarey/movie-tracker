@@ -109,7 +109,7 @@ describe('Login', () => {
 
     })
 
-    it()
+    it('sets authenticated to true in state')
   })
   
 });

@@ -69,7 +69,7 @@ class SignUp extends Component {
       const data = await response.json();
       return data.id
     } catch (error) {
-      console.log(error);
+      throw Error(error);
     }
   }
 
@@ -77,11 +77,9 @@ class SignUp extends Component {
     event.preventDefault();
     const verifiedPassword = this.verifyPassword();
     const verifiedEmail = await this.verifyEmail();
-    console.log(verifiedEmail)
     if (verifiedPassword && verifiedEmail) {
       const userId = await this.postUser();
-      // const userId = getUserId(this.state.email)
-      console.log(userId)
+      console.log(this.props)
       this.props.updateCurrentUser(userId);
     } else {
       alert('Check yo self');
