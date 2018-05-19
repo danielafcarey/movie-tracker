@@ -64,7 +64,7 @@ describe('apiCalls', () => {
         status: 200,
         json: () => Promise.resolve(mockUsers)
       }));
-      const expected = 'http://localhost/3000/api/users';
+      const expected = 'http://localhost:3000/api/users';
 
       fetchUsers();
 

@@ -16,7 +16,7 @@ const fetchMovies = async () => {
 }; 
 
 const fetchUsers = async () => {
-  const url = 'http://localhost/3000/api/users';
+  const url = 'http://localhost:3000/api/users';
   try {
     const response = await fetch(url);
     if (response.status === 200) {
