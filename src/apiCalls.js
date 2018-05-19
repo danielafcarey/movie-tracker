@@ -6,15 +6,33 @@ const fetchMovies = async () => {
     const response = await fetch(url);
     if (response.status === 200) {
       const data = await response.json();
-      return data
+      return data;
     } else {
-      throw new Error(`Status failure: ${response.status}`)
+      throw Error(`Status failure: ${response.status}`);
     }
   } catch (error) {
     throw error;
   }
-} 
+}; 
+
+const fetchUsers = async () => {
+  const url = 'http://localhost/3000/api/users';
+  try {
+    const response = await fetch(url);
+    if (response.status === 200) {
+      const data = await response.json();
+      return data.data;
+    } else {
+      throw Error(response.status);
+    }
+  } catch (error) {
+    throw error;
+  }
+
+};
 
 export {
   fetchMovies,
-}
+  fetchUsers
+};
+
