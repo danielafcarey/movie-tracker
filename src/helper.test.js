@@ -22,7 +22,7 @@ describe('getUserId', () => {
     expect(apiCalls.fetchUsers).toHaveBeenCalled()
   })
 
-  it('returns a user id', () => {
+  it('returns a user id', async () => {
     const mockUsers = [
       {
         id: 1,
@@ -37,7 +37,7 @@ describe('getUserId', () => {
 
     const expected = mockUsers[0].id;
 
-    const result = getUserId('notabunnylover@gmail.com')
+    const result = await getUserId('notabunnylover@gmail.com')
 
     expect(result).toEqual(expected);
   })

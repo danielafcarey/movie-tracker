@@ -26,7 +26,7 @@ const fetchUsers = async () => {
       throw Error(response.status);
     }
   } catch (error) {
-    throw error;
+    throw Error(error);
   }
 
 };

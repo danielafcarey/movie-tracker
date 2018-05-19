@@ -83,7 +83,7 @@ describe('apiCalls', () => {
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         status: 500
       }));
-      const expected = Error('500');
+      const expected = Error('Error: 500');
       const result = fetchUsers()
 
       expect(result).rejects.toEqual(expected)
@@ -92,7 +92,7 @@ describe('apiCalls', () => {
     it('throws an error if the fetch failed', () => {
       window.fetch = jest.fn().mockImplementation(() => Promise.reject('Fetch Failed'));
 
-      const expected = 'Fetch Failed';
+      const expected = Error('Fetch Failed');
       const result = fetchUsers()
 
       expect(result).rejects.toEqual(expected)
