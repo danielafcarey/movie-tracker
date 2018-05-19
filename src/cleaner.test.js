@@ -11,7 +11,8 @@ describe('Cleaner', () => {
         title: 'Avengers: Infinity War',
         image: 'http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg',
         rating: 8.6,
-        favorite: false
+        favorite: false,
+        releaseDate: '2018-04-25'
       }]
 
       const result = cleanMovieData(mockMovies.results.slice(0, 1))

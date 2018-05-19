@@ -4,7 +4,9 @@ exports[`SignUp should match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <SignUp />,
+  Symbol(enzyme.__unrendered__): <SignUp
+    updateCurrentUser={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -25,7 +27,6 @@ ShallowWrapper {
           type="text"
           value=""
 />,
-        " ",
         <input
           name="email"
           onChange={[Function]}
@@ -33,7 +34,6 @@ ShallowWrapper {
           type="text"
           value=""
 />,
-        " ",
         <input
           name="password"
           onChange={[Function]}
@@ -41,7 +41,6 @@ ShallowWrapper {
           type="password"
           value=""
 />,
-        " ",
         <input
           name="verification"
           onChange={[Function]}
@@ -49,11 +48,9 @@ ShallowWrapper {
           type="password"
           value=""
 />,
-        " ",
         <button>
-           Sign up 
+          Sign Up
 </button>,
-        " ",
       ],
       "onSubmit": [Function],
     },
@@ -74,7 +71,6 @@ ShallowWrapper {
         "rendered": null,
         "type": "input",
       },
-      " ",
       Object {
         "instance": null,
         "key": undefined,
@@ -90,7 +86,6 @@ ShallowWrapper {
         "rendered": null,
         "type": "input",
       },
-      " ",
       Object {
         "instance": null,
         "key": undefined,
@@ -106,7 +101,6 @@ ShallowWrapper {
         "rendered": null,
         "type": "input",
       },
-      " ",
       Object {
         "instance": null,
         "key": undefined,
@@ -122,19 +116,17 @@ ShallowWrapper {
         "rendered": null,
         "type": "input",
       },
-      " ",
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": " Sign up ",
+          "children": "Sign Up",
         },
         "ref": null,
-        "rendered": " Sign up ",
+        "rendered": "Sign Up",
         "type": "button",
       },
-      " ",
     ],
     "type": "form",
   },
@@ -152,7 +144,6 @@ ShallowWrapper {
             type="text"
             value=""
 />,
-          " ",
           <input
             name="email"
             onChange={[Function]}
@@ -160,7 +151,6 @@ ShallowWrapper {
             type="text"
             value=""
 />,
-          " ",
           <input
             name="password"
             onChange={[Function]}
@@ -168,7 +158,6 @@ ShallowWrapper {
             type="password"
             value=""
 />,
-          " ",
           <input
             name="verification"
             onChange={[Function]}
@@ -176,11 +165,9 @@ ShallowWrapper {
             type="password"
             value=""
 />,
-          " ",
           <button>
-             Sign up 
+            Sign Up
 </button>,
-          " ",
         ],
         "onSubmit": [Function],
       },
@@ -201,7 +188,6 @@ ShallowWrapper {
           "rendered": null,
           "type": "input",
         },
-        " ",
         Object {
           "instance": null,
           "key": undefined,
@@ -217,7 +203,6 @@ ShallowWrapper {
           "rendered": null,
           "type": "input",
         },
-        " ",
         Object {
           "instance": null,
           "key": undefined,
@@ -233,7 +218,6 @@ ShallowWrapper {
           "rendered": null,
           "type": "input",
         },
-        " ",
         Object {
           "instance": null,
           "key": undefined,
@@ -249,19 +233,17 @@ ShallowWrapper {
           "rendered": null,
           "type": "input",
         },
-        " ",
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": " Sign up ",
+            "children": "Sign Up",
           },
           "ref": null,
-          "rendered": " Sign up ",
+          "rendered": "Sign Up",
           "type": "button",
         },
-        " ",
       ],
       "type": "form",
     },

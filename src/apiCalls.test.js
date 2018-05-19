@@ -2,16 +2,19 @@ import React from 'react';
 import { apiKey } from './apiKey.js'; 
 import { 
   mockMovies,
-  mockUsers 
+  mockUsers, 
+  mockFavorites
 } from './mockData';
 import { 
   fetchMovies,
-  fetchUsers 
+  fetchUsers,
+  fetchFavorites
 } from './apiCalls';
 
 describe('apiCalls', () => {
 
   describe('fetchMovies', () => {
+
     beforeEach(() => {
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         status: 200,
@@ -64,7 +67,7 @@ describe('apiCalls', () => {
         status: 200,
         json: () => Promise.resolve(mockUsers)
       }));
-      const expected = 'http://localhost/3000/api/users';
+      const expected = 'http://localhost:3000/api/users';
 
       fetchUsers();
 
@@ -83,7 +86,7 @@ describe('apiCalls', () => {
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         status: 500
       }));
-      const expected = Error('500');
+      const expected = Error('Error: 500');
       const result = fetchUsers()
 
       expect(result).rejects.toEqual(expected)
@@ -92,7 +95,7 @@ describe('apiCalls', () => {
     it('throws an error if the fetch failed', () => {
       window.fetch = jest.fn().mockImplementation(() => Promise.reject('Fetch Failed'));
 
-      const expected = 'Fetch Failed';
+      const expected = Error('Fetch Failed');
       const result = fetchUsers()
 
       expect(result).rejects.toEqual(expected)
@@ -101,23 +104,51 @@ describe('apiCalls', () => {
   });
 
   describe('fetchFavorites', () => {
+    let url;
+    let id;
+
+    beforeEach(() => {
+      id = 1
+      url = `http://localhost:3000/api/users/${id}/favorites`
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        status: 200,
+        json: () => Promise.resolve(mockFavorites)
+      }));
+    }); 
 
     it('should call fetch with the correct arguments', async () => {
 
+      fetchFavorites(id);
+
+      expect(window.fetch).toHaveBeenCalledWith(url)
     });
 
     it('should return the correct data', async () => {
+      const expected = mockFavorites.data
 
+      const result = await fetchFavorites(id);
+
+      expect(result).toEqual(expected);
     });
 
     it('should throw an error if the status is not ok', () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        status: 500
+      }));
+      const expected = Error('Error: 500');
+      const result = fetchFavorites(id)
 
+      expect(result).rejects.toEqual(expected)
     });
 
     it('should throw an error if the fetch failed', () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.reject('Fetch Failed'));
 
+      const expected = Error('Fetch Failed');
+      const result = fetchFavorites()
+
+      expect(result).rejects.toEqual(expected)
     });
-
   });
 
   describe('addUser', () => {

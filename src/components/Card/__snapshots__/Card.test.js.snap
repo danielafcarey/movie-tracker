@@ -34,6 +34,9 @@ ShallowWrapper {
           Rating: 
           100
 </h3>,
+        <h3>
+          Release Date: 
+</h3>,
         <button>
           Favorite
 </button>,
@@ -86,6 +89,23 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": Array [
+            "Release Date: ",
+            undefined,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Release Date: ",
+          undefined,
+        ],
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
           "children": "Favorite",
         },
         "ref": null,
@@ -111,6 +131,9 @@ ShallowWrapper {
           <h3>
             Rating: 
             100
+</h3>,
+          <h3>
+            Release Date: 
 </h3>,
           <button>
             Favorite
@@ -156,6 +179,23 @@ ShallowWrapper {
           "rendered": Array [
             "Rating: ",
             100,
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Release Date: ",
+              undefined,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Release Date: ",
+            undefined,
           ],
           "type": "h3",
         },

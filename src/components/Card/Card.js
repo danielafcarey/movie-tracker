@@ -6,7 +6,8 @@ const Card = (props) => {
     title,
     rating,
     image,
-    favorite
+    releaseDate,
+    favorite,
   } = props;
 
   return(
@@ -14,6 +15,7 @@ const Card = (props) => {
       <img src={image} />
       <h2>{title}</h2>
       <h3>Rating: {rating}</h3>
+      <h3>Release Date: {releaseDate}</h3>
       <button>Favorite</button>
     </div>
   )

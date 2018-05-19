@@ -7,6 +7,8 @@ import {
 import {
   connect
 } from 'react-redux';
+import { getUserId } from '../../helper'
+import { fetchUsers } from '../../apiCalls'
 
 class SignUp extends Component {
   constructor(props) {
@@ -34,27 +36,16 @@ class SignUp extends Component {
   verifyPassword = () => this.state.password === this.state.verification;
 
   verifyEmail = async () => {
-    try {
-      const response = await fetch('http://localhost:3000/api/users');
-      if (response.status === 200) {
-        const data = await response.json();
-        const emailMatch = data.data.find(user => {
-          return user.email === this.state.email;
-        });
-        if (emailMatch) {
-          return false;
-        } else {
-          return true;
-        }
-      } else {
-        throw Error( response.status)
-      }
-    } catch (error) {
-      throw Error(error);
+    const users = await fetchUsers();
+    const emailMatch = users.find(user => user.email === this.state.email)
+    if (emailMatch) {
+      return false;
+    } else {
+      return true;
     }
   }
 
-  postUser = () => {
+  postUser = async () => {
     const {
       name,
       email,
@@ -74,73 +65,59 @@ class SignUp extends Component {
       body: JSON.stringify(newUserData)
     };
     try {
-      fetch(url, optionsObject);
+      const response = await fetch(url, optionsObject);
+      const data = await response.json();
+      return data.id
     } catch (error) {
-      console.log(error);
+      throw Error(error);
     }
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
     const verifiedPassword = this.verifyPassword();
-    const verifiedEmail = this.verifyEmail();
+    const verifiedEmail = await this.verifyEmail();
     if (verifiedPassword && verifiedEmail) {
-      // call findUserId(email) which calls fetchUser() and returns the id that matches the email.fet
+      const userId = await this.postUser();
       this.props.updateCurrentUser(userId);
-      this.postUser();
     } else {
       alert('Check yo self');
     }
   }
 
   render() {
-    return ( <
-      form onSubmit = {
-        this.handleSubmit
-      } >
-      <
-      input type = 'text'
-      value = {
-        this.state.name
-      }
-      name = 'name'
-      placeholder = 'Name'
-      onChange = {
-        this.handleChange
-      }
-      /> <
-      input type = 'text'
-      value = {
-        this.state.email
-      }
-      name = 'email'
-      placeholder = 'Email'
-      onChange = {
-        this.handleChange
-      }
-      /> <
-      input type = 'password'
-      value = {
-        this.state.password
-      }
-      name = 'password'
-      placeholder = 'Password'
-      onChange = {
-        this.handleChange
-      }
-      /> <
-      input type = 'password'
-      value = {
-        this.state.verification
-      }
-      name = 'verification'
-      placeholder = 'Retype password'
-      onChange = {
-        this.handleChange
-      }
-      /> <
-      button > Sign up < /button> < /
-      form >
+    return ( 
+      <form onSubmit={this.handleSubmit}>
+        <input 
+          type='text'
+          value={this.state.name}
+          name='name'
+          placeholder='Name'
+          onChange={this.handleChange}
+        /> 
+        <input 
+          type='text'
+          value={this.state.email}
+          name='email'
+          placeholder='Email'
+          onChange={this.handleChange}
+        /> 
+        <input 
+          type='password'
+          value={this.state.password}
+          name='password'
+          placeholder='Password'
+          onChange={this.handleChange}
+        /> 
+        <input 
+          type='password'
+          value={this.state.verification}
+          name='verification'
+          placeholder='Retype password'
+          onChange={this.handleChange}
+        /> 
+        <button>Sign Up</button> 
+      </form >
     );
 
   }

@@ -2,7 +2,7 @@ import moviesReducer from './moviesReducer';
 
 describe('moviesReducer', () => {
 
-  it('should return new state when given an action type of POPULATE_MOVIES', () => {
+  it('returns new state when given an action type of POPULATE_MOVIES', () => {
     const state = [];
     const movies = ['Forrest Gump', 'The Sandlot', 'A Mighty Wind']
     const action = {
@@ -16,7 +16,7 @@ describe('moviesReducer', () => {
     expect(result).toEqual(expected);
   })
 
-  it('should return the previous state if action type is invalid', () => {
+  it('returns the previous state if action type is invalid', () => {
     const action = {
       type: 'EAT_GARBAGE'
     };

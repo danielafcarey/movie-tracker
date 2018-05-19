@@ -4,12 +4,15 @@ import {
   SignUp,
   mapDispatchToProps
 } from './SignUp';
+import * as apiCalls from '../../apiCalls';
 
 describe('SignUp', () => {
   let wrapper;
+  let mockUpdateCurrentUser;
 
   beforeEach(() => {
-    wrapper = shallow(<SignUp />);
+    mockUpdateCurrentUser = jest.fn()
+    wrapper = shallow(<SignUp updateCurrentUser={mockUpdateCurrentUser}/>);
   });
 
   it('should match the snapshot', () => {
@@ -103,7 +106,12 @@ describe('SignUp', () => {
   describe('postUser', () => {
 
     it('should call fetch with the correct arguments', () => {
-      window.fetch = jest.fn();
+      window.fetch = jest.fn().mockImplementation(() => {
+        return Promise.resolve({
+          status: 200,
+          json: () => Promise.resolve(1)
+        })
+      });
       const mockState = {
         name: 'nincompoop',
         email: 'nincompooping@gmail.com',
@@ -125,72 +133,84 @@ describe('SignUp', () => {
   });
 
   describe('handleSubmit', () => {
+    let mockEvent;
 
     beforeEach(() => {
-       wrapper.verifyPassword = jest.fn().mockImplementation(() => true);
-       wrapper.verifyEmail = jest.fn().mockImplementation(() => true);
-
+      mockEvent = { preventDefault : () => {}}
     })
-      
-      it.skip('calls verifyPassword', () => {
+
+      it('calls verifyPassword', () => {
         const wrapperInst = wrapper.instance();
         wrapperInst.verifyPassword = jest.fn();
-        wrapperInst.props.updateCurrentUser = jest.fn();
-        
-        wrapper.find('form').simulate('submit', { preventDefault() {} });
-        
-        expect(wrapperInst.verifyPassword).toHaveBeenCalled(); 
+        wrapperInst.verifyEmail = jest.fn();
+        wrapperInst.postUser = jest.fn();
+
+        wrapperInst.handleSubmit(mockEvent);
+
+        expect(wrapperInst.verifyPassword).toHaveBeenCalled();
       });
       
-      it.skip('calls updateCurrentUser with the correct arguments if password and email have been verified', () => {
-        const mockUpdateUser = jest.fn();
-        wrapper = shallow(<SignUp updateCurrentUser={ mockUpdateUser } />);
-        
-        wrapper.find('form').simulate('submit', { preventDefault() {} });
-        
-        expect(mockUpdateUser).toHaveBeenCalled();
-        
-      });
-      
-      it.skip('calls postUser with the correct arguments if password has been verified', () => {
+      it('calls updateCurrentUser with the correct arguments if password and email have been verified', async () => {
         const wrapperInst = wrapper.instance();
-        
+  
+        wrapperInst.verifyPassword = jest.fn().mockImplementation(() => true);
+        wrapperInst.verifyEmail = jest.fn().mockImplementation(() => true);
+        wrapperInst.postUser = jest.fn().mockImplementation(() => 1);
+
+        await wrapperInst.handleSubmit(mockEvent);
+
+        expect(wrapperInst.props.updateCurrentUser).toHaveBeenCalledWith(1);
+      });
+      
+      it('calls postUser with the correct arguments if password has been verified', async () => {
+        const wrapperInst = wrapper.instance();
+        wrapperInst.verifyPassword = jest.fn().mockImplementation(() => true);
+        wrapperInst.verifyEmail = jest.fn().mockImplementation(() => true);
         wrapperInst.postUser = jest.fn();
         
-        wrapper.find('form').simulate('submit', { preventDefault() {} });
-        
-        expect(wrapperInst.postUser).toHaveBeenCalled(); 
+        await wrapperInst.handleSubmit(mockEvent);
+
+        expect(wrapperInst.postUser).toHaveBeenCalled();
       });
       
-      it.skip('calls alert if password has not been verified', () => {
+      it('calls alert if password has not been verified', async () => {
+        const wrapperInst = wrapper.instance();
+        wrapperInst.verifyPassword = jest.fn().mockImplementation(() => false);
+        wrapperInst.verifyEmail = jest.fn().mockImplementation(() => true);
         window.alert = jest.fn();
-        wrapper.verifyPassword = jest.fn().mockImplementation(() => false);
-        
-        wrapper.find('form').simulate('submit', { preventDefault() {} });
-        
-        expect(window.alert).toHaveBeenCalled(); 
+
+        await wrapperInst.handleSubmit(mockEvent);
+
+        expect(window.alert).toHaveBeenCalled();
       });
 
-      it.skip('calls alert if email is not verified', () => {
+      it('calls alert if email is not verified', async () => {
+        const wrapperInst = wrapper.instance();
+        wrapperInst.verifyPassword = jest.fn().mockImplementation(() => true);
+        wrapperInst.verifyEmail = jest.fn().mockImplementation(() => false);
         window.alert = jest.fn();
-        wrapper.verifyPassword = jest.fn().mockImplementation(() => false);
 
-        wrapper.find('form').simulate('submit', {
-          preventDefault() {}
-        });
+        await wrapperInst.handleSubmit(mockEvent);
 
         expect(window.alert).toHaveBeenCalled();
       })
 
-      it.skip('calls alert if both email and password are not verified', () => {
-        
+      it('calls alert if both email and password are not verified', async () => {
+        const wrapperInst = wrapper.instance();
+        wrapperInst.verifyPassword = jest.fn().mockImplementation(() => false);
+        wrapperInst.verifyEmail = jest.fn().mockImplementation(() => false);
+        window.alert = jest.fn();
+
+        await wrapperInst.handleSubmit(mockEvent);
+
+        expect(window.alert).toHaveBeenCalled();
       })
        
     });
 
   describe('mapDispatchToProps', () => {
     
-    it('returns an object with a updateCurrentUser function', () => {
+    it('returns an object with an updateCurrentUser function', () => {
       const dispatch = jest.fn();
       const result = mapDispatchToProps(dispatch);
 
@@ -199,40 +219,20 @@ describe('SignUp', () => {
   });
 
   describe('verifyEmail', () => {
-    let mockUserData;
-    let url;
 
-    beforeEach( () => {
-      url = 'http://localhost:3000/api/users';
-    
-      mockUserData = {
-        "status": "success",
-        "data": [{
-          "id": 1,
-          "name": "Taylor",
-          "password": "password",
-          "email": "tman2272@aol.com"
-        },
-        {
-          "id": 2,
-          "name": "daniela",
-          "password": "hi",
-          "email": "d@g.com"
-        }
-        ],
-        "message": "Retrieved All Users"
-      };
-
-      window.fetch = jest.fn().mockImplementation( () => Promise.resolve( {
-        status: 200,
-        json: () => Promise.resolve(mockUserData)
-      } ));
-    });
-
-
-    it('calls fetch with the correct arguments', () => {
-      wrapper.instance().verifyEmail();
-      expect(window.fetch).toHaveBeenCalledWith(url);
+    it('calls fetchUsers', async () => {
+      apiCalls.fetchUsers = jest.fn().mockImplementation(() => {
+        return [
+          {
+            id: 1,
+            email: 'garbageman@gmail.com',
+            password: 'ismellbad',
+            name: 'jerry'
+          }
+        ]
+      })
+      await wrapper.instance().verifyEmail();
+      expect(apiCalls.fetchUsers).toHaveBeenCalled()
     });
 
     it('returns true if the user\'s email is not yet taken', async () => {
@@ -244,33 +244,13 @@ describe('SignUp', () => {
     });
 
     it('return false if the user\'s email is taken', async () => {
-      wrapper.setState({ email: 'tman2272@aol.com' });
+      wrapper.setState({ email: 'garbageman@gmail.com' });
 
       const result =  await wrapper.instance().verifyEmail();
 
       expect(result).toEqual(false);
     });
 
-    it('throws an error if the status is not ok', () => {
-      window.fetch = jest.fn().mockImplementation( () => Promise.resolve({
-        status: 500
-      }));
-
-      const result = wrapper.instance().verifyEmail();
-      const expected = Error('Error: 500')
-
-      expect(result).rejects.toEqual(expected);
-    });
-
-    it('throws an error if the fetch failed', () => {
-      window.fetch = jest.fn().mockImplementation(() => Promise.reject(
-        'Fetch Failed' ));
-
-      const result = wrapper.instance().verifyEmail();
-      const expected = Error('Fetch Failed'); 
-
-      expect(result).rejects.toEqual(expected);
-    });
 
   });
   

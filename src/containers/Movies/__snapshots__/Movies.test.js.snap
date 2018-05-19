@@ -12,6 +12,7 @@ ShallowWrapper {
               "id": 299536,
               "image": "http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
               "rating": 8.6,
+              "releaseDate": "2018-04-25",
               "title": "Avengers: Infinity War",
             },
             Object {
@@ -19,6 +20,7 @@ ShallowWrapper {
               "id": 427641,
               "image": "http://image.tmdb.org/t/p/original/30oXQKwibh0uANGMs0Sytw3uN22.jpg",
               "rating": 5.9,
+              "releaseDate": "2018-04-12",
               "title": "Rampage",
             },
             Object {
@@ -26,6 +28,7 @@ ShallowWrapper {
               "id": 333339,
               "image": "http://image.tmdb.org/t/p/original/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg",
               "rating": 7.8,
+              "releaseDate": "2018-03-28",
               "title": "Ready Player One",
             },
             Object {
@@ -33,6 +36,7 @@ ShallowWrapper {
               "id": 445571,
               "image": "http://image.tmdb.org/t/p/original/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg",
               "rating": 7.1,
+              "releaseDate": "2018-02-22",
               "title": "Game Night",
             },
             Object {
@@ -40,6 +44,7 @@ ShallowWrapper {
               "id": 401981,
               "image": "http://image.tmdb.org/t/p/original/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg",
               "rating": 6.5,
+              "releaseDate": "2018-03-01",
               "title": "Red Sparrow",
             },
             Object {
@@ -47,6 +52,7 @@ ShallowWrapper {
               "id": 447332,
               "image": "http://image.tmdb.org/t/p/original/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
               "rating": 7.3,
+              "releaseDate": "2018-04-05",
               "title": "A Quiet Place",
             },
             Object {
@@ -54,6 +60,7 @@ ShallowWrapper {
               "id": 399035,
               "image": "http://image.tmdb.org/t/p/original/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg",
               "rating": 5.8,
+              "releaseDate": "2018-01-11",
               "title": "The Commuter",
             },
             Object {
@@ -61,6 +68,7 @@ ShallowWrapper {
               "id": 353486,
               "image": "http://image.tmdb.org/t/p/original/bXrZ5iHBEjH7WMidbUDQ0U2xbmr.jpg",
               "rating": 6.6,
+              "releaseDate": "2017-12-09",
               "title": "Jumanji: Welcome to the Jungle",
             },
             Object {
@@ -68,6 +76,7 @@ ShallowWrapper {
               "id": 476926,
               "image": "http://image.tmdb.org/t/p/original/qRmQazyIBZR4pQIk9VruiZul0Au.jpg",
               "rating": 5.5,
+              "releaseDate": "2018-03-30",
               "title": "The Titan",
             },
             Object {
@@ -75,6 +84,7 @@ ShallowWrapper {
               "id": 396806,
               "image": "http://image.tmdb.org/t/p/original/xhBTO9n3fxy3HJt7WlR9h9vvVmk.jpg",
               "rating": 6,
+              "releaseDate": "2018-05-03",
               "title": "Anon",
             },
             Object {
@@ -82,6 +92,7 @@ ShallowWrapper {
               "id": 453201,
               "image": "http://image.tmdb.org/t/p/original/qxJQ0VBCuJkJhJmuWzxI408ngwd.jpg",
               "rating": 5.1,
+              "releaseDate": "2018-02-02",
               "title": "The 15:17 to Paris",
             },
             Object {
@@ -89,6 +100,7 @@ ShallowWrapper {
               "id": 429351,
               "image": "http://image.tmdb.org/t/p/original/j18021qCeRi3yUBtqd2UFj1c0RQ.jpg",
               "rating": 4.8,
+              "releaseDate": "2018-01-18",
               "title": "12 Strong",
             },
             Object {
@@ -96,6 +108,7 @@ ShallowWrapper {
               "id": 384680,
               "image": "http://image.tmdb.org/t/p/original/rqoezyB51GfhiloOB5ZErg5HXas.jpg",
               "rating": 6.4,
+              "releaseDate": "2017-12-22",
               "title": "Hostiles",
             },
             Object {
@@ -103,6 +116,7 @@ ShallowWrapper {
               "id": 449443,
               "image": "http://image.tmdb.org/t/p/original/AfybH6GbGFw1F9bcETe2yu25mIE.jpg",
               "rating": 6.4,
+              "releaseDate": "2018-01-18",
               "title": "Den of Thieves",
             },
             Object {
@@ -110,6 +124,7 @@ ShallowWrapper {
               "id": 437557,
               "image": "http://image.tmdb.org/t/p/original/cx0LpfM6Drla8uzFfMT09uqKPRu.jpg",
               "rating": 6.5,
+              "releaseDate": "2018-03-30",
               "title": "Blockers",
             },
             Object {
@@ -117,6 +132,7 @@ ShallowWrapper {
               "id": 446354,
               "image": "http://image.tmdb.org/t/p/original/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg",
               "rating": 7,
+              "releaseDate": "2018-01-11",
               "title": "The Post",
             },
             Object {
@@ -124,6 +140,7 @@ ShallowWrapper {
               "id": 460019,
               "image": "http://image.tmdb.org/t/p/original/zbvziwnZa91AJD78Si0hUb5JP5X.jpg",
               "rating": 6.1,
+              "releaseDate": "2018-04-12",
               "title": "Truth or Dare",
             },
             Object {
@@ -131,6 +148,7 @@ ShallowWrapper {
               "id": 396371,
               "image": "http://image.tmdb.org/t/p/original/h9hUP5ZJGsjL2wbERrGlj4dMjZq.jpg",
               "rating": 7,
+              "releaseDate": "2017-12-21",
               "title": "Molly's Game",
             },
             Object {
@@ -138,6 +156,7 @@ ShallowWrapper {
               "id": 268896,
               "image": "http://image.tmdb.org/t/p/original/v5HlmJK9bdeHxN2QhaFP1ivjX3U.jpg",
               "rating": 5.9,
+              "releaseDate": "2018-03-21",
               "title": "Pacific Rim: Uprising",
             },
             Object {
@@ -145,6 +164,7 @@ ShallowWrapper {
               "id": 300668,
               "image": "http://image.tmdb.org/t/p/original/d3qcpfNwbAMCNqWDHzPQsUYiUgS.jpg",
               "rating": 6.3,
+              "releaseDate": "2018-02-22",
               "title": "Annihilation",
             },
           ]
@@ -168,6 +188,7 @@ ShallowWrapper {
           id={299536}
           image="http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
           rating={8.6}
+          releaseDate="2018-04-25"
           title="Avengers: Infinity War"
 />,
         <Card
@@ -175,6 +196,7 @@ ShallowWrapper {
           id={427641}
           image="http://image.tmdb.org/t/p/original/30oXQKwibh0uANGMs0Sytw3uN22.jpg"
           rating={5.9}
+          releaseDate="2018-04-12"
           title="Rampage"
 />,
         <Card
@@ -182,6 +204,7 @@ ShallowWrapper {
           id={333339}
           image="http://image.tmdb.org/t/p/original/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg"
           rating={7.8}
+          releaseDate="2018-03-28"
           title="Ready Player One"
 />,
         <Card
@@ -189,6 +212,7 @@ ShallowWrapper {
           id={445571}
           image="http://image.tmdb.org/t/p/original/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg"
           rating={7.1}
+          releaseDate="2018-02-22"
           title="Game Night"
 />,
         <Card
@@ -196,6 +220,7 @@ ShallowWrapper {
           id={401981}
           image="http://image.tmdb.org/t/p/original/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg"
           rating={6.5}
+          releaseDate="2018-03-01"
           title="Red Sparrow"
 />,
         <Card
@@ -203,6 +228,7 @@ ShallowWrapper {
           id={447332}
           image="http://image.tmdb.org/t/p/original/nAU74GmpUk7t5iklEp3bufwDq4n.jpg"
           rating={7.3}
+          releaseDate="2018-04-05"
           title="A Quiet Place"
 />,
         <Card
@@ -210,6 +236,7 @@ ShallowWrapper {
           id={399035}
           image="http://image.tmdb.org/t/p/original/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg"
           rating={5.8}
+          releaseDate="2018-01-11"
           title="The Commuter"
 />,
         <Card
@@ -217,6 +244,7 @@ ShallowWrapper {
           id={353486}
           image="http://image.tmdb.org/t/p/original/bXrZ5iHBEjH7WMidbUDQ0U2xbmr.jpg"
           rating={6.6}
+          releaseDate="2017-12-09"
           title="Jumanji: Welcome to the Jungle"
 />,
         <Card
@@ -224,6 +252,7 @@ ShallowWrapper {
           id={476926}
           image="http://image.tmdb.org/t/p/original/qRmQazyIBZR4pQIk9VruiZul0Au.jpg"
           rating={5.5}
+          releaseDate="2018-03-30"
           title="The Titan"
 />,
         <Card
@@ -231,6 +260,7 @@ ShallowWrapper {
           id={396806}
           image="http://image.tmdb.org/t/p/original/xhBTO9n3fxy3HJt7WlR9h9vvVmk.jpg"
           rating={6}
+          releaseDate="2018-05-03"
           title="Anon"
 />,
         <Card
@@ -238,6 +268,7 @@ ShallowWrapper {
           id={453201}
           image="http://image.tmdb.org/t/p/original/qxJQ0VBCuJkJhJmuWzxI408ngwd.jpg"
           rating={5.1}
+          releaseDate="2018-02-02"
           title="The 15:17 to Paris"
 />,
         <Card
@@ -245,6 +276,7 @@ ShallowWrapper {
           id={429351}
           image="http://image.tmdb.org/t/p/original/j18021qCeRi3yUBtqd2UFj1c0RQ.jpg"
           rating={4.8}
+          releaseDate="2018-01-18"
           title="12 Strong"
 />,
         <Card
@@ -252,6 +284,7 @@ ShallowWrapper {
           id={384680}
           image="http://image.tmdb.org/t/p/original/rqoezyB51GfhiloOB5ZErg5HXas.jpg"
           rating={6.4}
+          releaseDate="2017-12-22"
           title="Hostiles"
 />,
         <Card
@@ -259,6 +292,7 @@ ShallowWrapper {
           id={449443}
           image="http://image.tmdb.org/t/p/original/AfybH6GbGFw1F9bcETe2yu25mIE.jpg"
           rating={6.4}
+          releaseDate="2018-01-18"
           title="Den of Thieves"
 />,
         <Card
@@ -266,6 +300,7 @@ ShallowWrapper {
           id={437557}
           image="http://image.tmdb.org/t/p/original/cx0LpfM6Drla8uzFfMT09uqKPRu.jpg"
           rating={6.5}
+          releaseDate="2018-03-30"
           title="Blockers"
 />,
         <Card
@@ -273,6 +308,7 @@ ShallowWrapper {
           id={446354}
           image="http://image.tmdb.org/t/p/original/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg"
           rating={7}
+          releaseDate="2018-01-11"
           title="The Post"
 />,
         <Card
@@ -280,6 +316,7 @@ ShallowWrapper {
           id={460019}
           image="http://image.tmdb.org/t/p/original/zbvziwnZa91AJD78Si0hUb5JP5X.jpg"
           rating={6.1}
+          releaseDate="2018-04-12"
           title="Truth or Dare"
 />,
         <Card
@@ -287,6 +324,7 @@ ShallowWrapper {
           id={396371}
           image="http://image.tmdb.org/t/p/original/h9hUP5ZJGsjL2wbERrGlj4dMjZq.jpg"
           rating={7}
+          releaseDate="2017-12-21"
           title="Molly's Game"
 />,
         <Card
@@ -294,6 +332,7 @@ ShallowWrapper {
           id={268896}
           image="http://image.tmdb.org/t/p/original/v5HlmJK9bdeHxN2QhaFP1ivjX3U.jpg"
           rating={5.9}
+          releaseDate="2018-03-21"
           title="Pacific Rim: Uprising"
 />,
         <Card
@@ -301,6 +340,7 @@ ShallowWrapper {
           id={300668}
           image="http://image.tmdb.org/t/p/original/d3qcpfNwbAMCNqWDHzPQsUYiUgS.jpg"
           rating={6.3}
+          releaseDate="2018-02-22"
           title="Annihilation"
 />,
       ],
@@ -317,6 +357,7 @@ ShallowWrapper {
           "id": 299536,
           "image": "http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
           "rating": 8.6,
+          "releaseDate": "2018-04-25",
           "title": "Avengers: Infinity War",
         },
         "ref": null,
@@ -332,6 +373,7 @@ ShallowWrapper {
           "id": 427641,
           "image": "http://image.tmdb.org/t/p/original/30oXQKwibh0uANGMs0Sytw3uN22.jpg",
           "rating": 5.9,
+          "releaseDate": "2018-04-12",
           "title": "Rampage",
         },
         "ref": null,
@@ -347,6 +389,7 @@ ShallowWrapper {
           "id": 333339,
           "image": "http://image.tmdb.org/t/p/original/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg",
           "rating": 7.8,
+          "releaseDate": "2018-03-28",
           "title": "Ready Player One",
         },
         "ref": null,
@@ -362,6 +405,7 @@ ShallowWrapper {
           "id": 445571,
           "image": "http://image.tmdb.org/t/p/original/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg",
           "rating": 7.1,
+          "releaseDate": "2018-02-22",
           "title": "Game Night",
         },
         "ref": null,
@@ -377,6 +421,7 @@ ShallowWrapper {
           "id": 401981,
           "image": "http://image.tmdb.org/t/p/original/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg",
           "rating": 6.5,
+          "releaseDate": "2018-03-01",
           "title": "Red Sparrow",
         },
         "ref": null,
@@ -392,6 +437,7 @@ ShallowWrapper {
           "id": 447332,
           "image": "http://image.tmdb.org/t/p/original/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
           "rating": 7.3,
+          "releaseDate": "2018-04-05",
           "title": "A Quiet Place",
         },
         "ref": null,
@@ -407,6 +453,7 @@ ShallowWrapper {
           "id": 399035,
           "image": "http://image.tmdb.org/t/p/original/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg",
           "rating": 5.8,
+          "releaseDate": "2018-01-11",
           "title": "The Commuter",
         },
         "ref": null,
@@ -422,6 +469,7 @@ ShallowWrapper {
           "id": 353486,
           "image": "http://image.tmdb.org/t/p/original/bXrZ5iHBEjH7WMidbUDQ0U2xbmr.jpg",
           "rating": 6.6,
+          "releaseDate": "2017-12-09",
           "title": "Jumanji: Welcome to the Jungle",
         },
         "ref": null,
@@ -437,6 +485,7 @@ ShallowWrapper {
           "id": 476926,
           "image": "http://image.tmdb.org/t/p/original/qRmQazyIBZR4pQIk9VruiZul0Au.jpg",
           "rating": 5.5,
+          "releaseDate": "2018-03-30",
           "title": "The Titan",
         },
         "ref": null,
@@ -452,6 +501,7 @@ ShallowWrapper {
           "id": 396806,
           "image": "http://image.tmdb.org/t/p/original/xhBTO9n3fxy3HJt7WlR9h9vvVmk.jpg",
           "rating": 6,
+          "releaseDate": "2018-05-03",
           "title": "Anon",
         },
         "ref": null,
@@ -467,6 +517,7 @@ ShallowWrapper {
           "id": 453201,
           "image": "http://image.tmdb.org/t/p/original/qxJQ0VBCuJkJhJmuWzxI408ngwd.jpg",
           "rating": 5.1,
+          "releaseDate": "2018-02-02",
           "title": "The 15:17 to Paris",
         },
         "ref": null,
@@ -482,6 +533,7 @@ ShallowWrapper {
           "id": 429351,
           "image": "http://image.tmdb.org/t/p/original/j18021qCeRi3yUBtqd2UFj1c0RQ.jpg",
           "rating": 4.8,
+          "releaseDate": "2018-01-18",
           "title": "12 Strong",
         },
         "ref": null,
@@ -497,6 +549,7 @@ ShallowWrapper {
           "id": 384680,
           "image": "http://image.tmdb.org/t/p/original/rqoezyB51GfhiloOB5ZErg5HXas.jpg",
           "rating": 6.4,
+          "releaseDate": "2017-12-22",
           "title": "Hostiles",
         },
         "ref": null,
@@ -512,6 +565,7 @@ ShallowWrapper {
           "id": 449443,
           "image": "http://image.tmdb.org/t/p/original/AfybH6GbGFw1F9bcETe2yu25mIE.jpg",
           "rating": 6.4,
+          "releaseDate": "2018-01-18",
           "title": "Den of Thieves",
         },
         "ref": null,
@@ -527,6 +581,7 @@ ShallowWrapper {
           "id": 437557,
           "image": "http://image.tmdb.org/t/p/original/cx0LpfM6Drla8uzFfMT09uqKPRu.jpg",
           "rating": 6.5,
+          "releaseDate": "2018-03-30",
           "title": "Blockers",
         },
         "ref": null,
@@ -542,6 +597,7 @@ ShallowWrapper {
           "id": 446354,
           "image": "http://image.tmdb.org/t/p/original/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg",
           "rating": 7,
+          "releaseDate": "2018-01-11",
           "title": "The Post",
         },
         "ref": null,
@@ -557,6 +613,7 @@ ShallowWrapper {
           "id": 460019,
           "image": "http://image.tmdb.org/t/p/original/zbvziwnZa91AJD78Si0hUb5JP5X.jpg",
           "rating": 6.1,
+          "releaseDate": "2018-04-12",
           "title": "Truth or Dare",
         },
         "ref": null,
@@ -572,6 +629,7 @@ ShallowWrapper {
           "id": 396371,
           "image": "http://image.tmdb.org/t/p/original/h9hUP5ZJGsjL2wbERrGlj4dMjZq.jpg",
           "rating": 7,
+          "releaseDate": "2017-12-21",
           "title": "Molly's Game",
         },
         "ref": null,
@@ -587,6 +645,7 @@ ShallowWrapper {
           "id": 268896,
           "image": "http://image.tmdb.org/t/p/original/v5HlmJK9bdeHxN2QhaFP1ivjX3U.jpg",
           "rating": 5.9,
+          "releaseDate": "2018-03-21",
           "title": "Pacific Rim: Uprising",
         },
         "ref": null,
@@ -602,6 +661,7 @@ ShallowWrapper {
           "id": 300668,
           "image": "http://image.tmdb.org/t/p/original/d3qcpfNwbAMCNqWDHzPQsUYiUgS.jpg",
           "rating": 6.3,
+          "releaseDate": "2018-02-22",
           "title": "Annihilation",
         },
         "ref": null,
@@ -623,6 +683,7 @@ ShallowWrapper {
             id={299536}
             image="http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
             rating={8.6}
+            releaseDate="2018-04-25"
             title="Avengers: Infinity War"
 />,
           <Card
@@ -630,6 +691,7 @@ ShallowWrapper {
             id={427641}
             image="http://image.tmdb.org/t/p/original/30oXQKwibh0uANGMs0Sytw3uN22.jpg"
             rating={5.9}
+            releaseDate="2018-04-12"
             title="Rampage"
 />,
           <Card
@@ -637,6 +699,7 @@ ShallowWrapper {
             id={333339}
             image="http://image.tmdb.org/t/p/original/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg"
             rating={7.8}
+            releaseDate="2018-03-28"
             title="Ready Player One"
 />,
           <Card
@@ -644,6 +707,7 @@ ShallowWrapper {
             id={445571}
             image="http://image.tmdb.org/t/p/original/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg"
             rating={7.1}
+            releaseDate="2018-02-22"
             title="Game Night"
 />,
           <Card
@@ -651,6 +715,7 @@ ShallowWrapper {
             id={401981}
             image="http://image.tmdb.org/t/p/original/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg"
             rating={6.5}
+            releaseDate="2018-03-01"
             title="Red Sparrow"
 />,
           <Card
@@ -658,6 +723,7 @@ ShallowWrapper {
             id={447332}
             image="http://image.tmdb.org/t/p/original/nAU74GmpUk7t5iklEp3bufwDq4n.jpg"
             rating={7.3}
+            releaseDate="2018-04-05"
             title="A Quiet Place"
 />,
           <Card
@@ -665,6 +731,7 @@ ShallowWrapper {
             id={399035}
             image="http://image.tmdb.org/t/p/original/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg"
             rating={5.8}
+            releaseDate="2018-01-11"
             title="The Commuter"
 />,
           <Card
@@ -672,6 +739,7 @@ ShallowWrapper {
             id={353486}
             image="http://image.tmdb.org/t/p/original/bXrZ5iHBEjH7WMidbUDQ0U2xbmr.jpg"
             rating={6.6}
+            releaseDate="2017-12-09"
             title="Jumanji: Welcome to the Jungle"
 />,
           <Card
@@ -679,6 +747,7 @@ ShallowWrapper {
             id={476926}
             image="http://image.tmdb.org/t/p/original/qRmQazyIBZR4pQIk9VruiZul0Au.jpg"
             rating={5.5}
+            releaseDate="2018-03-30"
             title="The Titan"
 />,
           <Card
@@ -686,6 +755,7 @@ ShallowWrapper {
             id={396806}
             image="http://image.tmdb.org/t/p/original/xhBTO9n3fxy3HJt7WlR9h9vvVmk.jpg"
             rating={6}
+            releaseDate="2018-05-03"
             title="Anon"
 />,
           <Card
@@ -693,6 +763,7 @@ ShallowWrapper {
             id={453201}
             image="http://image.tmdb.org/t/p/original/qxJQ0VBCuJkJhJmuWzxI408ngwd.jpg"
             rating={5.1}
+            releaseDate="2018-02-02"
             title="The 15:17 to Paris"
 />,
           <Card
@@ -700,6 +771,7 @@ ShallowWrapper {
             id={429351}
             image="http://image.tmdb.org/t/p/original/j18021qCeRi3yUBtqd2UFj1c0RQ.jpg"
             rating={4.8}
+            releaseDate="2018-01-18"
             title="12 Strong"
 />,
           <Card
@@ -707,6 +779,7 @@ ShallowWrapper {
             id={384680}
             image="http://image.tmdb.org/t/p/original/rqoezyB51GfhiloOB5ZErg5HXas.jpg"
             rating={6.4}
+            releaseDate="2017-12-22"
             title="Hostiles"
 />,
           <Card
@@ -714,6 +787,7 @@ ShallowWrapper {
             id={449443}
             image="http://image.tmdb.org/t/p/original/AfybH6GbGFw1F9bcETe2yu25mIE.jpg"
             rating={6.4}
+            releaseDate="2018-01-18"
             title="Den of Thieves"
 />,
           <Card
@@ -721,6 +795,7 @@ ShallowWrapper {
             id={437557}
             image="http://image.tmdb.org/t/p/original/cx0LpfM6Drla8uzFfMT09uqKPRu.jpg"
             rating={6.5}
+            releaseDate="2018-03-30"
             title="Blockers"
 />,
           <Card
@@ -728,6 +803,7 @@ ShallowWrapper {
             id={446354}
             image="http://image.tmdb.org/t/p/original/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg"
             rating={7}
+            releaseDate="2018-01-11"
             title="The Post"
 />,
           <Card
@@ -735,6 +811,7 @@ ShallowWrapper {
             id={460019}
             image="http://image.tmdb.org/t/p/original/zbvziwnZa91AJD78Si0hUb5JP5X.jpg"
             rating={6.1}
+            releaseDate="2018-04-12"
             title="Truth or Dare"
 />,
           <Card
@@ -742,6 +819,7 @@ ShallowWrapper {
             id={396371}
             image="http://image.tmdb.org/t/p/original/h9hUP5ZJGsjL2wbERrGlj4dMjZq.jpg"
             rating={7}
+            releaseDate="2017-12-21"
             title="Molly's Game"
 />,
           <Card
@@ -749,6 +827,7 @@ ShallowWrapper {
             id={268896}
             image="http://image.tmdb.org/t/p/original/v5HlmJK9bdeHxN2QhaFP1ivjX3U.jpg"
             rating={5.9}
+            releaseDate="2018-03-21"
             title="Pacific Rim: Uprising"
 />,
           <Card
@@ -756,6 +835,7 @@ ShallowWrapper {
             id={300668}
             image="http://image.tmdb.org/t/p/original/d3qcpfNwbAMCNqWDHzPQsUYiUgS.jpg"
             rating={6.3}
+            releaseDate="2018-02-22"
             title="Annihilation"
 />,
         ],
@@ -772,6 +852,7 @@ ShallowWrapper {
             "id": 299536,
             "image": "http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
             "rating": 8.6,
+            "releaseDate": "2018-04-25",
             "title": "Avengers: Infinity War",
           },
           "ref": null,
@@ -787,6 +868,7 @@ ShallowWrapper {
             "id": 427641,
             "image": "http://image.tmdb.org/t/p/original/30oXQKwibh0uANGMs0Sytw3uN22.jpg",
             "rating": 5.9,
+            "releaseDate": "2018-04-12",
             "title": "Rampage",
           },
           "ref": null,
@@ -802,6 +884,7 @@ ShallowWrapper {
             "id": 333339,
             "image": "http://image.tmdb.org/t/p/original/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg",
             "rating": 7.8,
+            "releaseDate": "2018-03-28",
             "title": "Ready Player One",
           },
           "ref": null,
@@ -817,6 +900,7 @@ ShallowWrapper {
             "id": 445571,
             "image": "http://image.tmdb.org/t/p/original/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg",
             "rating": 7.1,
+            "releaseDate": "2018-02-22",
             "title": "Game Night",
           },
           "ref": null,
@@ -832,6 +916,7 @@ ShallowWrapper {
             "id": 401981,
             "image": "http://image.tmdb.org/t/p/original/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg",
             "rating": 6.5,
+            "releaseDate": "2018-03-01",
             "title": "Red Sparrow",
           },
           "ref": null,
@@ -847,6 +932,7 @@ ShallowWrapper {
             "id": 447332,
             "image": "http://image.tmdb.org/t/p/original/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
             "rating": 7.3,
+            "releaseDate": "2018-04-05",
             "title": "A Quiet Place",
           },
           "ref": null,
@@ -862,6 +948,7 @@ ShallowWrapper {
             "id": 399035,
             "image": "http://image.tmdb.org/t/p/original/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg",
             "rating": 5.8,
+            "releaseDate": "2018-01-11",
             "title": "The Commuter",
           },
           "ref": null,
@@ -877,6 +964,7 @@ ShallowWrapper {
             "id": 353486,
             "image": "http://image.tmdb.org/t/p/original/bXrZ5iHBEjH7WMidbUDQ0U2xbmr.jpg",
             "rating": 6.6,
+            "releaseDate": "2017-12-09",
             "title": "Jumanji: Welcome to the Jungle",
           },
           "ref": null,
@@ -892,6 +980,7 @@ ShallowWrapper {
             "id": 476926,
             "image": "http://image.tmdb.org/t/p/original/qRmQazyIBZR4pQIk9VruiZul0Au.jpg",
             "rating": 5.5,
+            "releaseDate": "2018-03-30",
             "title": "The Titan",
           },
           "ref": null,
@@ -907,6 +996,7 @@ ShallowWrapper {
             "id": 396806,
             "image": "http://image.tmdb.org/t/p/original/xhBTO9n3fxy3HJt7WlR9h9vvVmk.jpg",
             "rating": 6,
+            "releaseDate": "2018-05-03",
             "title": "Anon",
           },
           "ref": null,
@@ -922,6 +1012,7 @@ ShallowWrapper {
             "id": 453201,
             "image": "http://image.tmdb.org/t/p/original/qxJQ0VBCuJkJhJmuWzxI408ngwd.jpg",
             "rating": 5.1,
+            "releaseDate": "2018-02-02",
             "title": "The 15:17 to Paris",
           },
           "ref": null,
@@ -937,6 +1028,7 @@ ShallowWrapper {
             "id": 429351,
             "image": "http://image.tmdb.org/t/p/original/j18021qCeRi3yUBtqd2UFj1c0RQ.jpg",
             "rating": 4.8,
+            "releaseDate": "2018-01-18",
             "title": "12 Strong",
           },
           "ref": null,
@@ -952,6 +1044,7 @@ ShallowWrapper {
             "id": 384680,
             "image": "http://image.tmdb.org/t/p/original/rqoezyB51GfhiloOB5ZErg5HXas.jpg",
             "rating": 6.4,
+            "releaseDate": "2017-12-22",
             "title": "Hostiles",
           },
           "ref": null,
@@ -967,6 +1060,7 @@ ShallowWrapper {
             "id": 449443,
             "image": "http://image.tmdb.org/t/p/original/AfybH6GbGFw1F9bcETe2yu25mIE.jpg",
             "rating": 6.4,
+            "releaseDate": "2018-01-18",
             "title": "Den of Thieves",
           },
           "ref": null,
@@ -982,6 +1076,7 @@ ShallowWrapper {
             "id": 437557,
             "image": "http://image.tmdb.org/t/p/original/cx0LpfM6Drla8uzFfMT09uqKPRu.jpg",
             "rating": 6.5,
+            "releaseDate": "2018-03-30",
             "title": "Blockers",
           },
           "ref": null,
@@ -997,6 +1092,7 @@ ShallowWrapper {
             "id": 446354,
             "image": "http://image.tmdb.org/t/p/original/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg",
             "rating": 7,
+            "releaseDate": "2018-01-11",
             "title": "The Post",
           },
           "ref": null,
@@ -1012,6 +1108,7 @@ ShallowWrapper {
             "id": 460019,
             "image": "http://image.tmdb.org/t/p/original/zbvziwnZa91AJD78Si0hUb5JP5X.jpg",
             "rating": 6.1,
+            "releaseDate": "2018-04-12",
             "title": "Truth or Dare",
           },
           "ref": null,
@@ -1027,6 +1124,7 @@ ShallowWrapper {
             "id": 396371,
             "image": "http://image.tmdb.org/t/p/original/h9hUP5ZJGsjL2wbERrGlj4dMjZq.jpg",
             "rating": 7,
+            "releaseDate": "2017-12-21",
             "title": "Molly's Game",
           },
           "ref": null,
@@ -1042,6 +1140,7 @@ ShallowWrapper {
             "id": 268896,
             "image": "http://image.tmdb.org/t/p/original/v5HlmJK9bdeHxN2QhaFP1ivjX3U.jpg",
             "rating": 5.9,
+            "releaseDate": "2018-03-21",
             "title": "Pacific Rim: Uprising",
           },
           "ref": null,
@@ -1057,6 +1156,7 @@ ShallowWrapper {
             "id": 300668,
             "image": "http://image.tmdb.org/t/p/original/d3qcpfNwbAMCNqWDHzPQsUYiUgS.jpg",
             "rating": 6.3,
+            "releaseDate": "2018-02-22",
             "title": "Annihilation",
           },
           "ref": null,
