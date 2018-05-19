@@ -85,7 +85,7 @@ class SignUp extends Component {
     const verifiedPassword = this.verifyPassword();
     const verifiedEmail = this.verifyEmail();
     if (verifiedPassword && verifiedEmail) {
-      // call findUserId(email) which calls fetchUser() and returns the id that matches the email.
+      // call findUserId(email) which calls fetchUser() and returns the id that matches the email.fet
       this.props.updateCurrentUser(userId);
       this.postUser();
     } else {
