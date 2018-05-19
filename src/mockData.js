@@ -410,7 +410,26 @@ const mockMovies = {
     "total_pages": 51
 }
 
+const mockUsers = {
+    "status": "success",
+    "data": [
+        {
+            "id": 1,
+            "name": "Taylor",
+            "password": "password",
+            "email": "tman2272@aol.com"
+        },
+        {
+            "id": 2,
+            "name": "daniela",
+            "password": "hi",
+            "email": "d@g.com"
+        }
+    ],
+    "message": "Retrieved All Users"
+}
 
 export {
-  mockMovies,
+  mockMovies, 
+  mockUsers
 }
