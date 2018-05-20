@@ -11,7 +11,8 @@ class Login extends Component {
       email: '',
       password: '',
       id: null,
-      verified: false
+      verified: false,
+      loginError: ''
     }
   }
 
@@ -29,8 +30,10 @@ class Login extends Component {
       }
     })
     if (userMatch) {
+      this.setState({ loginError: '' })
       return userMatch.id
     } else {
+      this.setState({ loginError: 'Invalid email or password' })
       return undefined;
     }
   }
@@ -43,9 +46,7 @@ class Login extends Component {
       const favorites = await fetchFavorites(id);
       this.props.updateFavorites(favorites)
       this.setState({ id, verified: true })
-    } else {
-      alert('User Does Not Exist')
-    }
+    } 
   }
 
   render() {
@@ -60,6 +61,7 @@ class Login extends Component {
           name='email'
           value={this.state.email}
           onChange={this.handleChange}
+          required
         />
         <input
           type='password'
@@ -67,7 +69,9 @@ class Login extends Component {
           name='password'
           value={this.state.password}
           onChange={this.handleChange}          
+          required
         />
+        <p>{ this.state.loginError }</p>
         <button>Log In</button>
       </form>
     )
