@@ -15,15 +15,17 @@ describe('SignUp', () => {
     wrapper = shallow(<SignUp updateCurrentUser={mockUpdateCurrentUser}/>);
   });
 
-  it('should match the snapshot', () => {
+  it('matches the snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should have a default state of name, email, password, and verification', () => {
+  it('has a default state of name, email, password, verification, emailError, and passwordError', () => {
     expect(wrapper.state('name')).toEqual('');
     expect(wrapper.state('email')).toEqual('');
     expect(wrapper.state('password')).toEqual('');
     expect(wrapper.state('verification')).toEqual('');
+    expect(wrapper.state('emailError')).toEqual('');
+    expect(wrapper.state('passwordError')).toEqual('');
   });
 
   it('should change the name in state on change in the name input', () => {
@@ -72,21 +74,23 @@ describe('SignUp', () => {
 
   describe('verifyPassword', () => {
 
-    it('should return true if the password and verification match', () => {
+    it('returns true and sets state if the password and verification match', () => {
       const mockState = {
         name: 'Nincompoop',
         email: 'nincompooping@gmail.com',
         password: 'ilovebabiesandgarbage',
-        verification: 'ilovebabiesandgarbage'
+        verification: 'ilovebabiesandgarbage',
+        passwordError: 'Passwords must match'
       };
 
       wrapper.setState({ ...mockState });
       const result = wrapper.instance().verifyPassword();
 
       expect(result).toEqual(true);
+      expect(wrapper.state('passwordError')).toEqual('');
     });
 
-    it('should return false if the password does not match the verification', () => {
+    it('returns false and sets state if the password does not match the verification', () => {
       const mockState = {
         name: 'Nincompoop',
         email: 'nincompooping@gmail.com',
@@ -98,10 +102,52 @@ describe('SignUp', () => {
       const result = wrapper.instance().verifyPassword();
 
       expect(result).toEqual(false);
+      expect(wrapper.state('passwordError')).toEqual('Passwords must match');
 
     });
 
   });
+
+  describe('verifyEmail', () => {
+
+    it('calls fetchUsers', async () => {
+      apiCalls.fetchUsers = jest.fn().mockImplementation(() => {
+        return [
+          {
+            id: 1,
+            email: 'garbageman@gmail.com',
+            password: 'ismellbad',
+            name: 'jerry'
+          }
+        ]
+      })
+      await wrapper.instance().verifyEmail();
+      expect(apiCalls.fetchUsers).toHaveBeenCalled()
+    });
+
+    it('returns true if the user\'s email is not yet taken', async () => {
+      wrapper.setState({ 
+        email: 'foolsgold@gmail.com',
+        emailError: 'Email has already been used'
+      });
+
+      const result =  await wrapper.instance().verifyEmail();
+
+      expect(result).toEqual(true);
+      expect(wrapper.state('emailError')).toEqual('');
+    });
+
+    it('return false and sets state if the user\'s email is taken', async () => {
+      wrapper.setState({ email: 'garbageman@gmail.com' });
+
+      const result =  await wrapper.instance().verifyEmail();
+
+      expect(result).toEqual(false);
+      expect(wrapper.state('emailError')).toEqual('Email has already been used')
+    });
+
+  });
+
 
   describe('postUser', () => {
 
@@ -172,39 +218,6 @@ describe('SignUp', () => {
 
         expect(wrapperInst.postUser).toHaveBeenCalled();
       });
-      
-      it('calls alert if password has not been verified', async () => {
-        const wrapperInst = wrapper.instance();
-        wrapperInst.verifyPassword = jest.fn().mockImplementation(() => false);
-        wrapperInst.verifyEmail = jest.fn().mockImplementation(() => true);
-        window.alert = jest.fn();
-
-        await wrapperInst.handleSubmit(mockEvent);
-
-        expect(window.alert).toHaveBeenCalled();
-      });
-
-      it('calls alert if email is not verified', async () => {
-        const wrapperInst = wrapper.instance();
-        wrapperInst.verifyPassword = jest.fn().mockImplementation(() => true);
-        wrapperInst.verifyEmail = jest.fn().mockImplementation(() => false);
-        window.alert = jest.fn();
-
-        await wrapperInst.handleSubmit(mockEvent);
-
-        expect(window.alert).toHaveBeenCalled();
-      })
-
-      it('calls alert if both email and password are not verified', async () => {
-        const wrapperInst = wrapper.instance();
-        wrapperInst.verifyPassword = jest.fn().mockImplementation(() => false);
-        wrapperInst.verifyEmail = jest.fn().mockImplementation(() => false);
-        window.alert = jest.fn();
-
-        await wrapperInst.handleSubmit(mockEvent);
-
-        expect(window.alert).toHaveBeenCalled();
-      })
        
     });
 
@@ -218,41 +231,6 @@ describe('SignUp', () => {
     });
   });
 
-  describe('verifyEmail', () => {
-
-    it('calls fetchUsers', async () => {
-      apiCalls.fetchUsers = jest.fn().mockImplementation(() => {
-        return [
-          {
-            id: 1,
-            email: 'garbageman@gmail.com',
-            password: 'ismellbad',
-            name: 'jerry'
-          }
-        ]
-      })
-      await wrapper.instance().verifyEmail();
-      expect(apiCalls.fetchUsers).toHaveBeenCalled()
-    });
-
-    it('returns true if the user\'s email is not yet taken', async () => {
-      wrapper.setState({ email: 'foolsgold@gmail.com' });
-
-      const result =  await wrapper.instance().verifyEmail();
-
-      expect(result).toEqual(true);
-    });
-
-    it('return false if the user\'s email is taken', async () => {
-      wrapper.setState({ email: 'garbageman@gmail.com' });
-
-      const result =  await wrapper.instance().verifyEmail();
-
-      expect(result).toEqual(false);
-    });
-
-
-  });
   
 });
 

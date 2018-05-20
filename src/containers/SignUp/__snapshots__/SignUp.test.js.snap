@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SignUp should match the snapshot 1`] = `
+exports[`SignUp matches the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
@@ -23,31 +23,37 @@ ShallowWrapper {
         <input
           name="name"
           onChange={[Function]}
-          placeholder="Name"
+          placeholder="Name*"
+          required={true}
           type="text"
           value=""
 />,
         <input
           name="email"
           onChange={[Function]}
-          placeholder="Email"
+          placeholder="Email*"
+          required={true}
           type="text"
           value=""
 />,
+        <p />,
         <input
           name="password"
           onChange={[Function]}
-          placeholder="Password"
+          placeholder="Password*"
+          required={true}
           type="password"
           value=""
 />,
         <input
           name="verification"
           onChange={[Function]}
-          placeholder="Retype password"
+          placeholder="Retype password*"
+          required={true}
           type="password"
           value=""
 />,
+        <p />,
         <button>
           Sign Up
 </button>,
@@ -63,7 +69,8 @@ ShallowWrapper {
         "props": Object {
           "name": "name",
           "onChange": [Function],
-          "placeholder": "Name",
+          "placeholder": "Name*",
+          "required": true,
           "type": "text",
           "value": "",
         },
@@ -78,7 +85,8 @@ ShallowWrapper {
         "props": Object {
           "name": "email",
           "onChange": [Function],
-          "placeholder": "Email",
+          "placeholder": "Email*",
+          "required": true,
           "type": "text",
           "value": "",
         },
@@ -91,9 +99,21 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": "",
+        },
+        "ref": null,
+        "rendered": "",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
           "name": "password",
           "onChange": [Function],
-          "placeholder": "Password",
+          "placeholder": "Password*",
+          "required": true,
           "type": "password",
           "value": "",
         },
@@ -108,13 +128,25 @@ ShallowWrapper {
         "props": Object {
           "name": "verification",
           "onChange": [Function],
-          "placeholder": "Retype password",
+          "placeholder": "Retype password*",
+          "required": true,
           "type": "password",
           "value": "",
         },
         "ref": null,
         "rendered": null,
         "type": "input",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "",
+        },
+        "ref": null,
+        "rendered": "",
+        "type": "p",
       },
       Object {
         "instance": null,
@@ -140,31 +172,37 @@ ShallowWrapper {
           <input
             name="name"
             onChange={[Function]}
-            placeholder="Name"
+            placeholder="Name*"
+            required={true}
             type="text"
             value=""
 />,
           <input
             name="email"
             onChange={[Function]}
-            placeholder="Email"
+            placeholder="Email*"
+            required={true}
             type="text"
             value=""
 />,
+          <p />,
           <input
             name="password"
             onChange={[Function]}
-            placeholder="Password"
+            placeholder="Password*"
+            required={true}
             type="password"
             value=""
 />,
           <input
             name="verification"
             onChange={[Function]}
-            placeholder="Retype password"
+            placeholder="Retype password*"
+            required={true}
             type="password"
             value=""
 />,
+          <p />,
           <button>
             Sign Up
 </button>,
@@ -180,7 +218,8 @@ ShallowWrapper {
           "props": Object {
             "name": "name",
             "onChange": [Function],
-            "placeholder": "Name",
+            "placeholder": "Name*",
+            "required": true,
             "type": "text",
             "value": "",
           },
@@ -195,7 +234,8 @@ ShallowWrapper {
           "props": Object {
             "name": "email",
             "onChange": [Function],
-            "placeholder": "Email",
+            "placeholder": "Email*",
+            "required": true,
             "type": "text",
             "value": "",
           },
@@ -208,9 +248,21 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "children": "",
+          },
+          "ref": null,
+          "rendered": "",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
             "name": "password",
             "onChange": [Function],
-            "placeholder": "Password",
+            "placeholder": "Password*",
+            "required": true,
             "type": "password",
             "value": "",
           },
@@ -225,13 +277,25 @@ ShallowWrapper {
           "props": Object {
             "name": "verification",
             "onChange": [Function],
-            "placeholder": "Retype password",
+            "placeholder": "Retype password*",
+            "required": true,
             "type": "password",
             "value": "",
           },
           "ref": null,
           "rendered": null,
           "type": "input",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "",
+          },
+          "ref": null,
+          "rendered": "",
+          "type": "p",
         },
         Object {
           "instance": null,
