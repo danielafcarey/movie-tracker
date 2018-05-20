@@ -8,7 +8,8 @@ import {
 import { 
   fetchMovies,
   fetchUsers,
-  fetchFavorites
+  fetchFavorites,
+  postFavorite
 } from './apiCalls';
 
 describe('apiCalls', () => {
@@ -151,30 +152,69 @@ describe('apiCalls', () => {
     });
   });
 
-  describe('addUser', () => {
+  describe('postFavorite', () => {
+    let url;
+    let id;
+    let mockMovie;
+    let mockFavorite;
+    let mockOptionsObject;
+
+    beforeEach(() => {
+      id = 1
+      url = `http://localhost:3000/api/users/favorites/new`
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        status: 200,
+      }));
+
+      mockMovie = {
+        id: 9, 
+        title: 'Movie Movie',
+        rating: 100,
+        image: 'http://url.picture.com',
+        favorite: true,
+        releaseDate: '2018-10-08',
+      }
+      mockFavorite = Object.assign({}, mockMovie, { userId: id }); 
+      mockOptionsObject = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(mockFavorite)
+      } 
+    }); 
 
     it('should call fetch with the correct arguments', async () => {
 
-    });
+      await postFavorite(id, mockMovie);
 
-    it('should return the correct data', async () => {
-
+      expect(window.fetch).toHaveBeenCalledWith(url, mockOptionsObject); 
     });
 
     it('should throw an error if the status is not ok', () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        status: 500,
+      }));
 
+      const expected = Error('Error: 500');
+      const result = postFavorite(id, mockMovie); 
+
+      expect(result).rejects.toEqual(expected);
     });
 
     it('should throw an error if the fetch failed', () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.reject('Fetch Failed'));
 
+      const expected = Error('Fetch Failed');
+      const result = postFavorite(id, mockMovie);
+
+      expect(result).rejects.toEqual(expected);
     });
 
   });
 
-  describe('addFavorite', () => {
+  describe('postUser', () => {
 
     it('should call fetch with the correct arguments', async () => {
-
+      
     });
 
     it('should return the correct data', async () => {

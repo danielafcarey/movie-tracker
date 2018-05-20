@@ -32,23 +32,43 @@ const fetchUsers = async () => {
 };
 
 const fetchFavorites = async (id) => {
-  const url = `http://localhost:3000/api/users/${id}/favorites`
+  const url = `http://localhost:3000/api/users/${id}/favorites`;
   try {
-    const response = await fetch(url)
+    const response = await fetch(url);
     if (response.status === 200) {
       const data = await response.json();
-      return data.data
+      return data.data;
     } else {
-      throw Error(response.status)
+      throw Error(response.status);
     }
   } catch (error) {
-    throw Error(error)
+    throw Error(error);
+  }
+}
+
+const postFavorite = async (id, movie) => {
+  const url = `http://localhost:3000/api/users/favorites/new`;
+  const favorite = Object.assign({}, movie, { userId: id });
+  const optionsObject = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(favorite)
+  };
+
+  try {
+    const response = await fetch(url, optionsObject);  
+    if (response.status !== 200) {
+      throw Error(response.status);
+    }
+  } catch (error) {
+    throw Error(error);
   }
 }
 
 export {
   fetchMovies,
   fetchUsers,
-  fetchFavorites
+  fetchFavorites,
+  postFavorite
 };
 
