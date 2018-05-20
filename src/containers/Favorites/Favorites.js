@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../../components/Card/Card';
+import Card from '../Card/Card';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ const Favorites = (props) => {
     return <div>Get a job!</div>
   }
   const favoriteCards = props.favorites.map(favorite => {
-    return <Card { ...favorite } key={ favorite.id } />
+    return <Card { ...favorite } key={ favorite.movieId } />
   }) 
 
   return (

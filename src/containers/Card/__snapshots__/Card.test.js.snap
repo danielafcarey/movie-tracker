@@ -1,0 +1,236 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card matches the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    addFavorite={[Function]}
+    favorite={false}
+    image="www.flatulence.com/image/123132.png"
+    movieId={2342342}
+    rating={100}
+    releaseDate="tomorrow"
+    title="The Mighty Gasbag"
+    userId={1}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <img
+          src="www.flatulence.com/image/123132.png"
+/>,
+        <h2>
+          The Mighty Gasbag
+</h2>,
+        <h3>
+          Rating: 
+          100
+</h3>,
+        <h3>
+          Release Date: 
+          tomorrow
+</h3>,
+        <button
+          onClick={[Function]}
+>
+          Favorite
+</button>,
+      ],
+      "className": "card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "src": "www.flatulence.com/image/123132.png",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "The Mighty Gasbag",
+        },
+        "ref": null,
+        "rendered": "The Mighty Gasbag",
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Rating: ",
+            100,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Rating: ",
+          100,
+        ],
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Release Date: ",
+            "tomorrow",
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Release Date: ",
+          "tomorrow",
+        ],
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Favorite",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Favorite",
+        "type": "button",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <img
+            src="www.flatulence.com/image/123132.png"
+/>,
+          <h2>
+            The Mighty Gasbag
+</h2>,
+          <h3>
+            Rating: 
+            100
+</h3>,
+          <h3>
+            Release Date: 
+            tomorrow
+</h3>,
+          <button
+            onClick={[Function]}
+>
+            Favorite
+</button>,
+        ],
+        "className": "card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "src": "www.flatulence.com/image/123132.png",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "The Mighty Gasbag",
+          },
+          "ref": null,
+          "rendered": "The Mighty Gasbag",
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Rating: ",
+              100,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Rating: ",
+            100,
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Release Date: ",
+              "tomorrow",
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Release Date: ",
+            "tomorrow",
+          ],
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Favorite",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Favorite",
+          "type": "button",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

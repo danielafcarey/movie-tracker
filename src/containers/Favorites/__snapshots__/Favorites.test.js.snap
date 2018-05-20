@@ -9,160 +9,160 @@ ShallowWrapper {
         Array [
             Object {
               "favorite": false,
-              "id": 299536,
               "image": "http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+              "movieId": 299536,
               "rating": 8.6,
               "releaseDate": "2018-04-25",
               "title": "Avengers: Infinity War",
             },
             Object {
               "favorite": false,
-              "id": 427641,
               "image": "http://image.tmdb.org/t/p/original/30oXQKwibh0uANGMs0Sytw3uN22.jpg",
+              "movieId": 427641,
               "rating": 5.9,
               "releaseDate": "2018-04-12",
               "title": "Rampage",
             },
             Object {
               "favorite": false,
-              "id": 333339,
               "image": "http://image.tmdb.org/t/p/original/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg",
+              "movieId": 333339,
               "rating": 7.8,
               "releaseDate": "2018-03-28",
               "title": "Ready Player One",
             },
             Object {
               "favorite": false,
-              "id": 445571,
               "image": "http://image.tmdb.org/t/p/original/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg",
+              "movieId": 445571,
               "rating": 7.1,
               "releaseDate": "2018-02-22",
               "title": "Game Night",
             },
             Object {
               "favorite": false,
-              "id": 401981,
               "image": "http://image.tmdb.org/t/p/original/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg",
+              "movieId": 401981,
               "rating": 6.5,
               "releaseDate": "2018-03-01",
               "title": "Red Sparrow",
             },
             Object {
               "favorite": false,
-              "id": 447332,
               "image": "http://image.tmdb.org/t/p/original/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
+              "movieId": 447332,
               "rating": 7.3,
               "releaseDate": "2018-04-05",
               "title": "A Quiet Place",
             },
             Object {
               "favorite": false,
-              "id": 399035,
               "image": "http://image.tmdb.org/t/p/original/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg",
+              "movieId": 399035,
               "rating": 5.8,
               "releaseDate": "2018-01-11",
               "title": "The Commuter",
             },
             Object {
               "favorite": false,
-              "id": 353486,
               "image": "http://image.tmdb.org/t/p/original/bXrZ5iHBEjH7WMidbUDQ0U2xbmr.jpg",
+              "movieId": 353486,
               "rating": 6.6,
               "releaseDate": "2017-12-09",
               "title": "Jumanji: Welcome to the Jungle",
             },
             Object {
               "favorite": false,
-              "id": 476926,
               "image": "http://image.tmdb.org/t/p/original/qRmQazyIBZR4pQIk9VruiZul0Au.jpg",
+              "movieId": 476926,
               "rating": 5.5,
               "releaseDate": "2018-03-30",
               "title": "The Titan",
             },
             Object {
               "favorite": false,
-              "id": 396806,
               "image": "http://image.tmdb.org/t/p/original/xhBTO9n3fxy3HJt7WlR9h9vvVmk.jpg",
+              "movieId": 396806,
               "rating": 6,
               "releaseDate": "2018-05-03",
               "title": "Anon",
             },
             Object {
               "favorite": false,
-              "id": 453201,
               "image": "http://image.tmdb.org/t/p/original/qxJQ0VBCuJkJhJmuWzxI408ngwd.jpg",
+              "movieId": 453201,
               "rating": 5.1,
               "releaseDate": "2018-02-02",
               "title": "The 15:17 to Paris",
             },
             Object {
               "favorite": false,
-              "id": 429351,
               "image": "http://image.tmdb.org/t/p/original/j18021qCeRi3yUBtqd2UFj1c0RQ.jpg",
+              "movieId": 429351,
               "rating": 4.8,
               "releaseDate": "2018-01-18",
               "title": "12 Strong",
             },
             Object {
               "favorite": false,
-              "id": 384680,
               "image": "http://image.tmdb.org/t/p/original/rqoezyB51GfhiloOB5ZErg5HXas.jpg",
+              "movieId": 384680,
               "rating": 6.4,
               "releaseDate": "2017-12-22",
               "title": "Hostiles",
             },
             Object {
               "favorite": false,
-              "id": 449443,
               "image": "http://image.tmdb.org/t/p/original/AfybH6GbGFw1F9bcETe2yu25mIE.jpg",
+              "movieId": 449443,
               "rating": 6.4,
               "releaseDate": "2018-01-18",
               "title": "Den of Thieves",
             },
             Object {
               "favorite": false,
-              "id": 437557,
               "image": "http://image.tmdb.org/t/p/original/cx0LpfM6Drla8uzFfMT09uqKPRu.jpg",
+              "movieId": 437557,
               "rating": 6.5,
               "releaseDate": "2018-03-30",
               "title": "Blockers",
             },
             Object {
               "favorite": false,
-              "id": 446354,
               "image": "http://image.tmdb.org/t/p/original/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg",
+              "movieId": 446354,
               "rating": 7,
               "releaseDate": "2018-01-11",
               "title": "The Post",
             },
             Object {
               "favorite": false,
-              "id": 460019,
               "image": "http://image.tmdb.org/t/p/original/zbvziwnZa91AJD78Si0hUb5JP5X.jpg",
+              "movieId": 460019,
               "rating": 6.1,
               "releaseDate": "2018-04-12",
               "title": "Truth or Dare",
             },
             Object {
               "favorite": false,
-              "id": 396371,
               "image": "http://image.tmdb.org/t/p/original/h9hUP5ZJGsjL2wbERrGlj4dMjZq.jpg",
+              "movieId": 396371,
               "rating": 7,
               "releaseDate": "2017-12-21",
               "title": "Molly's Game",
             },
             Object {
               "favorite": false,
-              "id": 268896,
               "image": "http://image.tmdb.org/t/p/original/v5HlmJK9bdeHxN2QhaFP1ivjX3U.jpg",
+              "movieId": 268896,
               "rating": 5.9,
               "releaseDate": "2018-03-21",
               "title": "Pacific Rim: Uprising",
             },
             Object {
               "favorite": false,
-              "id": 300668,
               "image": "http://image.tmdb.org/t/p/original/d3qcpfNwbAMCNqWDHzPQsUYiUgS.jpg",
+              "movieId": 300668,
               "rating": 6.3,
               "releaseDate": "2018-02-22",
               "title": "Annihilation",
@@ -183,162 +183,162 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={299536}
           image="http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
+          movieId={299536}
           rating={8.6}
           releaseDate="2018-04-25"
           title="Avengers: Infinity War"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={427641}
           image="http://image.tmdb.org/t/p/original/30oXQKwibh0uANGMs0Sytw3uN22.jpg"
+          movieId={427641}
           rating={5.9}
           releaseDate="2018-04-12"
           title="Rampage"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={333339}
           image="http://image.tmdb.org/t/p/original/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg"
+          movieId={333339}
           rating={7.8}
           releaseDate="2018-03-28"
           title="Ready Player One"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={445571}
           image="http://image.tmdb.org/t/p/original/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg"
+          movieId={445571}
           rating={7.1}
           releaseDate="2018-02-22"
           title="Game Night"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={401981}
           image="http://image.tmdb.org/t/p/original/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg"
+          movieId={401981}
           rating={6.5}
           releaseDate="2018-03-01"
           title="Red Sparrow"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={447332}
           image="http://image.tmdb.org/t/p/original/nAU74GmpUk7t5iklEp3bufwDq4n.jpg"
+          movieId={447332}
           rating={7.3}
           releaseDate="2018-04-05"
           title="A Quiet Place"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={399035}
           image="http://image.tmdb.org/t/p/original/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg"
+          movieId={399035}
           rating={5.8}
           releaseDate="2018-01-11"
           title="The Commuter"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={353486}
           image="http://image.tmdb.org/t/p/original/bXrZ5iHBEjH7WMidbUDQ0U2xbmr.jpg"
+          movieId={353486}
           rating={6.6}
           releaseDate="2017-12-09"
           title="Jumanji: Welcome to the Jungle"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={476926}
           image="http://image.tmdb.org/t/p/original/qRmQazyIBZR4pQIk9VruiZul0Au.jpg"
+          movieId={476926}
           rating={5.5}
           releaseDate="2018-03-30"
           title="The Titan"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={396806}
           image="http://image.tmdb.org/t/p/original/xhBTO9n3fxy3HJt7WlR9h9vvVmk.jpg"
+          movieId={396806}
           rating={6}
           releaseDate="2018-05-03"
           title="Anon"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={453201}
           image="http://image.tmdb.org/t/p/original/qxJQ0VBCuJkJhJmuWzxI408ngwd.jpg"
+          movieId={453201}
           rating={5.1}
           releaseDate="2018-02-02"
           title="The 15:17 to Paris"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={429351}
           image="http://image.tmdb.org/t/p/original/j18021qCeRi3yUBtqd2UFj1c0RQ.jpg"
+          movieId={429351}
           rating={4.8}
           releaseDate="2018-01-18"
           title="12 Strong"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={384680}
           image="http://image.tmdb.org/t/p/original/rqoezyB51GfhiloOB5ZErg5HXas.jpg"
+          movieId={384680}
           rating={6.4}
           releaseDate="2017-12-22"
           title="Hostiles"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={449443}
           image="http://image.tmdb.org/t/p/original/AfybH6GbGFw1F9bcETe2yu25mIE.jpg"
+          movieId={449443}
           rating={6.4}
           releaseDate="2018-01-18"
           title="Den of Thieves"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={437557}
           image="http://image.tmdb.org/t/p/original/cx0LpfM6Drla8uzFfMT09uqKPRu.jpg"
+          movieId={437557}
           rating={6.5}
           releaseDate="2018-03-30"
           title="Blockers"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={446354}
           image="http://image.tmdb.org/t/p/original/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg"
+          movieId={446354}
           rating={7}
           releaseDate="2018-01-11"
           title="The Post"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={460019}
           image="http://image.tmdb.org/t/p/original/zbvziwnZa91AJD78Si0hUb5JP5X.jpg"
+          movieId={460019}
           rating={6.1}
           releaseDate="2018-04-12"
           title="Truth or Dare"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={396371}
           image="http://image.tmdb.org/t/p/original/h9hUP5ZJGsjL2wbERrGlj4dMjZq.jpg"
+          movieId={396371}
           rating={7}
           releaseDate="2017-12-21"
           title="Molly's Game"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={268896}
           image="http://image.tmdb.org/t/p/original/v5HlmJK9bdeHxN2QhaFP1ivjX3U.jpg"
+          movieId={268896}
           rating={5.9}
           releaseDate="2018-03-21"
           title="Pacific Rim: Uprising"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
-          id={300668}
           image="http://image.tmdb.org/t/p/original/d3qcpfNwbAMCNqWDHzPQsUYiUgS.jpg"
+          movieId={300668}
           rating={6.3}
           releaseDate="2018-02-22"
           title="Annihilation"
@@ -351,11 +351,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "299536",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 299536,
           "image": "http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+          "movieId": 299536,
           "rating": 8.6,
           "releaseDate": "2018-04-25",
           "title": "Avengers: Infinity War",
@@ -367,11 +367,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "427641",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 427641,
           "image": "http://image.tmdb.org/t/p/original/30oXQKwibh0uANGMs0Sytw3uN22.jpg",
+          "movieId": 427641,
           "rating": 5.9,
           "releaseDate": "2018-04-12",
           "title": "Rampage",
@@ -383,11 +383,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "333339",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 333339,
           "image": "http://image.tmdb.org/t/p/original/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg",
+          "movieId": 333339,
           "rating": 7.8,
           "releaseDate": "2018-03-28",
           "title": "Ready Player One",
@@ -399,11 +399,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "445571",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 445571,
           "image": "http://image.tmdb.org/t/p/original/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg",
+          "movieId": 445571,
           "rating": 7.1,
           "releaseDate": "2018-02-22",
           "title": "Game Night",
@@ -415,11 +415,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "401981",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 401981,
           "image": "http://image.tmdb.org/t/p/original/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg",
+          "movieId": 401981,
           "rating": 6.5,
           "releaseDate": "2018-03-01",
           "title": "Red Sparrow",
@@ -431,11 +431,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "447332",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 447332,
           "image": "http://image.tmdb.org/t/p/original/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
+          "movieId": 447332,
           "rating": 7.3,
           "releaseDate": "2018-04-05",
           "title": "A Quiet Place",
@@ -447,11 +447,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "399035",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 399035,
           "image": "http://image.tmdb.org/t/p/original/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg",
+          "movieId": 399035,
           "rating": 5.8,
           "releaseDate": "2018-01-11",
           "title": "The Commuter",
@@ -463,11 +463,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "353486",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 353486,
           "image": "http://image.tmdb.org/t/p/original/bXrZ5iHBEjH7WMidbUDQ0U2xbmr.jpg",
+          "movieId": 353486,
           "rating": 6.6,
           "releaseDate": "2017-12-09",
           "title": "Jumanji: Welcome to the Jungle",
@@ -479,11 +479,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "476926",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 476926,
           "image": "http://image.tmdb.org/t/p/original/qRmQazyIBZR4pQIk9VruiZul0Au.jpg",
+          "movieId": 476926,
           "rating": 5.5,
           "releaseDate": "2018-03-30",
           "title": "The Titan",
@@ -495,11 +495,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "396806",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 396806,
           "image": "http://image.tmdb.org/t/p/original/xhBTO9n3fxy3HJt7WlR9h9vvVmk.jpg",
+          "movieId": 396806,
           "rating": 6,
           "releaseDate": "2018-05-03",
           "title": "Anon",
@@ -511,11 +511,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "453201",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 453201,
           "image": "http://image.tmdb.org/t/p/original/qxJQ0VBCuJkJhJmuWzxI408ngwd.jpg",
+          "movieId": 453201,
           "rating": 5.1,
           "releaseDate": "2018-02-02",
           "title": "The 15:17 to Paris",
@@ -527,11 +527,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "429351",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 429351,
           "image": "http://image.tmdb.org/t/p/original/j18021qCeRi3yUBtqd2UFj1c0RQ.jpg",
+          "movieId": 429351,
           "rating": 4.8,
           "releaseDate": "2018-01-18",
           "title": "12 Strong",
@@ -543,11 +543,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "384680",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 384680,
           "image": "http://image.tmdb.org/t/p/original/rqoezyB51GfhiloOB5ZErg5HXas.jpg",
+          "movieId": 384680,
           "rating": 6.4,
           "releaseDate": "2017-12-22",
           "title": "Hostiles",
@@ -559,11 +559,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "449443",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 449443,
           "image": "http://image.tmdb.org/t/p/original/AfybH6GbGFw1F9bcETe2yu25mIE.jpg",
+          "movieId": 449443,
           "rating": 6.4,
           "releaseDate": "2018-01-18",
           "title": "Den of Thieves",
@@ -575,11 +575,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "437557",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 437557,
           "image": "http://image.tmdb.org/t/p/original/cx0LpfM6Drla8uzFfMT09uqKPRu.jpg",
+          "movieId": 437557,
           "rating": 6.5,
           "releaseDate": "2018-03-30",
           "title": "Blockers",
@@ -591,11 +591,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "446354",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 446354,
           "image": "http://image.tmdb.org/t/p/original/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg",
+          "movieId": 446354,
           "rating": 7,
           "releaseDate": "2018-01-11",
           "title": "The Post",
@@ -607,11 +607,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "460019",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 460019,
           "image": "http://image.tmdb.org/t/p/original/zbvziwnZa91AJD78Si0hUb5JP5X.jpg",
+          "movieId": 460019,
           "rating": 6.1,
           "releaseDate": "2018-04-12",
           "title": "Truth or Dare",
@@ -623,11 +623,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "396371",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 396371,
           "image": "http://image.tmdb.org/t/p/original/h9hUP5ZJGsjL2wbERrGlj4dMjZq.jpg",
+          "movieId": 396371,
           "rating": 7,
           "releaseDate": "2017-12-21",
           "title": "Molly's Game",
@@ -639,11 +639,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "268896",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 268896,
           "image": "http://image.tmdb.org/t/p/original/v5HlmJK9bdeHxN2QhaFP1ivjX3U.jpg",
+          "movieId": 268896,
           "rating": 5.9,
           "releaseDate": "2018-03-21",
           "title": "Pacific Rim: Uprising",
@@ -655,11 +655,11 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "300668",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
-          "id": 300668,
           "image": "http://image.tmdb.org/t/p/original/d3qcpfNwbAMCNqWDHzPQsUYiUgS.jpg",
+          "movieId": 300668,
           "rating": 6.3,
           "releaseDate": "2018-02-22",
           "title": "Annihilation",
@@ -678,162 +678,162 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={299536}
             image="http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
+            movieId={299536}
             rating={8.6}
             releaseDate="2018-04-25"
             title="Avengers: Infinity War"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={427641}
             image="http://image.tmdb.org/t/p/original/30oXQKwibh0uANGMs0Sytw3uN22.jpg"
+            movieId={427641}
             rating={5.9}
             releaseDate="2018-04-12"
             title="Rampage"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={333339}
             image="http://image.tmdb.org/t/p/original/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg"
+            movieId={333339}
             rating={7.8}
             releaseDate="2018-03-28"
             title="Ready Player One"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={445571}
             image="http://image.tmdb.org/t/p/original/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg"
+            movieId={445571}
             rating={7.1}
             releaseDate="2018-02-22"
             title="Game Night"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={401981}
             image="http://image.tmdb.org/t/p/original/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg"
+            movieId={401981}
             rating={6.5}
             releaseDate="2018-03-01"
             title="Red Sparrow"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={447332}
             image="http://image.tmdb.org/t/p/original/nAU74GmpUk7t5iklEp3bufwDq4n.jpg"
+            movieId={447332}
             rating={7.3}
             releaseDate="2018-04-05"
             title="A Quiet Place"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={399035}
             image="http://image.tmdb.org/t/p/original/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg"
+            movieId={399035}
             rating={5.8}
             releaseDate="2018-01-11"
             title="The Commuter"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={353486}
             image="http://image.tmdb.org/t/p/original/bXrZ5iHBEjH7WMidbUDQ0U2xbmr.jpg"
+            movieId={353486}
             rating={6.6}
             releaseDate="2017-12-09"
             title="Jumanji: Welcome to the Jungle"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={476926}
             image="http://image.tmdb.org/t/p/original/qRmQazyIBZR4pQIk9VruiZul0Au.jpg"
+            movieId={476926}
             rating={5.5}
             releaseDate="2018-03-30"
             title="The Titan"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={396806}
             image="http://image.tmdb.org/t/p/original/xhBTO9n3fxy3HJt7WlR9h9vvVmk.jpg"
+            movieId={396806}
             rating={6}
             releaseDate="2018-05-03"
             title="Anon"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={453201}
             image="http://image.tmdb.org/t/p/original/qxJQ0VBCuJkJhJmuWzxI408ngwd.jpg"
+            movieId={453201}
             rating={5.1}
             releaseDate="2018-02-02"
             title="The 15:17 to Paris"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={429351}
             image="http://image.tmdb.org/t/p/original/j18021qCeRi3yUBtqd2UFj1c0RQ.jpg"
+            movieId={429351}
             rating={4.8}
             releaseDate="2018-01-18"
             title="12 Strong"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={384680}
             image="http://image.tmdb.org/t/p/original/rqoezyB51GfhiloOB5ZErg5HXas.jpg"
+            movieId={384680}
             rating={6.4}
             releaseDate="2017-12-22"
             title="Hostiles"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={449443}
             image="http://image.tmdb.org/t/p/original/AfybH6GbGFw1F9bcETe2yu25mIE.jpg"
+            movieId={449443}
             rating={6.4}
             releaseDate="2018-01-18"
             title="Den of Thieves"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={437557}
             image="http://image.tmdb.org/t/p/original/cx0LpfM6Drla8uzFfMT09uqKPRu.jpg"
+            movieId={437557}
             rating={6.5}
             releaseDate="2018-03-30"
             title="Blockers"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={446354}
             image="http://image.tmdb.org/t/p/original/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg"
+            movieId={446354}
             rating={7}
             releaseDate="2018-01-11"
             title="The Post"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={460019}
             image="http://image.tmdb.org/t/p/original/zbvziwnZa91AJD78Si0hUb5JP5X.jpg"
+            movieId={460019}
             rating={6.1}
             releaseDate="2018-04-12"
             title="Truth or Dare"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={396371}
             image="http://image.tmdb.org/t/p/original/h9hUP5ZJGsjL2wbERrGlj4dMjZq.jpg"
+            movieId={396371}
             rating={7}
             releaseDate="2017-12-21"
             title="Molly's Game"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={268896}
             image="http://image.tmdb.org/t/p/original/v5HlmJK9bdeHxN2QhaFP1ivjX3U.jpg"
+            movieId={268896}
             rating={5.9}
             releaseDate="2018-03-21"
             title="Pacific Rim: Uprising"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
-            id={300668}
             image="http://image.tmdb.org/t/p/original/d3qcpfNwbAMCNqWDHzPQsUYiUgS.jpg"
+            movieId={300668}
             rating={6.3}
             releaseDate="2018-02-22"
             title="Annihilation"
@@ -846,11 +846,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "299536",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 299536,
             "image": "http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+            "movieId": 299536,
             "rating": 8.6,
             "releaseDate": "2018-04-25",
             "title": "Avengers: Infinity War",
@@ -862,11 +862,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "427641",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 427641,
             "image": "http://image.tmdb.org/t/p/original/30oXQKwibh0uANGMs0Sytw3uN22.jpg",
+            "movieId": 427641,
             "rating": 5.9,
             "releaseDate": "2018-04-12",
             "title": "Rampage",
@@ -878,11 +878,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "333339",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 333339,
             "image": "http://image.tmdb.org/t/p/original/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg",
+            "movieId": 333339,
             "rating": 7.8,
             "releaseDate": "2018-03-28",
             "title": "Ready Player One",
@@ -894,11 +894,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "445571",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 445571,
             "image": "http://image.tmdb.org/t/p/original/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg",
+            "movieId": 445571,
             "rating": 7.1,
             "releaseDate": "2018-02-22",
             "title": "Game Night",
@@ -910,11 +910,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "401981",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 401981,
             "image": "http://image.tmdb.org/t/p/original/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg",
+            "movieId": 401981,
             "rating": 6.5,
             "releaseDate": "2018-03-01",
             "title": "Red Sparrow",
@@ -926,11 +926,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "447332",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 447332,
             "image": "http://image.tmdb.org/t/p/original/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
+            "movieId": 447332,
             "rating": 7.3,
             "releaseDate": "2018-04-05",
             "title": "A Quiet Place",
@@ -942,11 +942,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "399035",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 399035,
             "image": "http://image.tmdb.org/t/p/original/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg",
+            "movieId": 399035,
             "rating": 5.8,
             "releaseDate": "2018-01-11",
             "title": "The Commuter",
@@ -958,11 +958,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "353486",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 353486,
             "image": "http://image.tmdb.org/t/p/original/bXrZ5iHBEjH7WMidbUDQ0U2xbmr.jpg",
+            "movieId": 353486,
             "rating": 6.6,
             "releaseDate": "2017-12-09",
             "title": "Jumanji: Welcome to the Jungle",
@@ -974,11 +974,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "476926",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 476926,
             "image": "http://image.tmdb.org/t/p/original/qRmQazyIBZR4pQIk9VruiZul0Au.jpg",
+            "movieId": 476926,
             "rating": 5.5,
             "releaseDate": "2018-03-30",
             "title": "The Titan",
@@ -990,11 +990,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "396806",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 396806,
             "image": "http://image.tmdb.org/t/p/original/xhBTO9n3fxy3HJt7WlR9h9vvVmk.jpg",
+            "movieId": 396806,
             "rating": 6,
             "releaseDate": "2018-05-03",
             "title": "Anon",
@@ -1006,11 +1006,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "453201",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 453201,
             "image": "http://image.tmdb.org/t/p/original/qxJQ0VBCuJkJhJmuWzxI408ngwd.jpg",
+            "movieId": 453201,
             "rating": 5.1,
             "releaseDate": "2018-02-02",
             "title": "The 15:17 to Paris",
@@ -1022,11 +1022,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "429351",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 429351,
             "image": "http://image.tmdb.org/t/p/original/j18021qCeRi3yUBtqd2UFj1c0RQ.jpg",
+            "movieId": 429351,
             "rating": 4.8,
             "releaseDate": "2018-01-18",
             "title": "12 Strong",
@@ -1038,11 +1038,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "384680",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 384680,
             "image": "http://image.tmdb.org/t/p/original/rqoezyB51GfhiloOB5ZErg5HXas.jpg",
+            "movieId": 384680,
             "rating": 6.4,
             "releaseDate": "2017-12-22",
             "title": "Hostiles",
@@ -1054,11 +1054,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "449443",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 449443,
             "image": "http://image.tmdb.org/t/p/original/AfybH6GbGFw1F9bcETe2yu25mIE.jpg",
+            "movieId": 449443,
             "rating": 6.4,
             "releaseDate": "2018-01-18",
             "title": "Den of Thieves",
@@ -1070,11 +1070,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "437557",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 437557,
             "image": "http://image.tmdb.org/t/p/original/cx0LpfM6Drla8uzFfMT09uqKPRu.jpg",
+            "movieId": 437557,
             "rating": 6.5,
             "releaseDate": "2018-03-30",
             "title": "Blockers",
@@ -1086,11 +1086,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "446354",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 446354,
             "image": "http://image.tmdb.org/t/p/original/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg",
+            "movieId": 446354,
             "rating": 7,
             "releaseDate": "2018-01-11",
             "title": "The Post",
@@ -1102,11 +1102,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "460019",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 460019,
             "image": "http://image.tmdb.org/t/p/original/zbvziwnZa91AJD78Si0hUb5JP5X.jpg",
+            "movieId": 460019,
             "rating": 6.1,
             "releaseDate": "2018-04-12",
             "title": "Truth or Dare",
@@ -1118,11 +1118,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "396371",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 396371,
             "image": "http://image.tmdb.org/t/p/original/h9hUP5ZJGsjL2wbERrGlj4dMjZq.jpg",
+            "movieId": 396371,
             "rating": 7,
             "releaseDate": "2017-12-21",
             "title": "Molly's Game",
@@ -1134,11 +1134,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "268896",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 268896,
             "image": "http://image.tmdb.org/t/p/original/v5HlmJK9bdeHxN2QhaFP1ivjX3U.jpg",
+            "movieId": 268896,
             "rating": 5.9,
             "releaseDate": "2018-03-21",
             "title": "Pacific Rim: Uprising",
@@ -1150,11 +1150,11 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "300668",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
-            "id": 300668,
             "image": "http://image.tmdb.org/t/p/original/d3qcpfNwbAMCNqWDHzPQsUYiUgS.jpg",
+            "movieId": 300668,
             "rating": 6.3,
             "releaseDate": "2018-02-22",
             "title": "Annihilation",

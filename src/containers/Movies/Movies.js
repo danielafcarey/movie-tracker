@@ -1,13 +1,13 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import Card from '../../components/Card/Card';
+import Card from '../Card/Card';
 
 const Movies = ({ movies }) => {
   const movieCards = movies.map(movie => {
    return <Card 
     {...movie}
-    key={movie.id}
+    key={movie.movieId}
     />
   })
 

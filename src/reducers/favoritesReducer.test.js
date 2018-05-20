@@ -28,4 +28,18 @@ describe('favoritesReducer', () => {
     expect(result).toEqual(expected);
   })
 
+  it('returns new state when given an action type of ADD_FAVORITE', () => {
+    const state = [{ name: 'oldMovie' }];
+    const favoriteMovie = { name: 'newMovie', favorite: true }
+    const action = {
+      type: 'ADD_FAVORITE',
+      favoriteMovie
+    }
+
+    const expected = [...state, favoriteMovie];
+    const result = favoritesReducer(state, action);
+
+    expect(result).toEqual(expected);
+  })
+
 })

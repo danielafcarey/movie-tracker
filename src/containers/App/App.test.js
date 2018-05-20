@@ -6,8 +6,8 @@ import {
   App
 } from './App';
 import { shallow } from 'enzyme';
-import { fetchMovies } from '../../apiCalls';
-import { cleanMovieData } from '../../cleaner';
+import * as apiCalls from '../../apiCalls';
+import * as cleaner from '../../cleaner';
 import { mockMovies } from '../../mockData';
 jest.mock('../../apiCalls');
  
@@ -45,14 +45,54 @@ describe('App', () => {
     
   });
   
-  // describe('componentDidMount', async () => {
-  //   it('calls cleanMovieData with the correct arguments', () => {
-  //     // console.log(cleanMovieData.toString());
-  //     const foo = cleanMovieData(mockMovies.results)
-  //     console.log(foo)
-  //     const wrapper = shallow( <App populateMovies={ jest.fn() }/> );
-  //     const spy = jest.spyOn(wrapper, 'cleanMovieData');
-  //     expect(cleanMovieData).toHaveBeenCalledWith(mockMovies.results);
-  //   });
-  // });
+  describe('componentDidMount', async () => {
+
+    it('calls fetchMovies', () => {
+      apiCalls.fetchMovies = jest.fn().mockImplementation(() => {
+        return { results: ['movies'] }
+      });
+      cleaner.cleanMovieData = jest.fn();
+      const mockPopulateMovies = jest.fn();
+      const wrapper = shallow(<App populateMovies={ mockPopulateMovies } />);
+
+      expect(apiCalls.fetchMovies).toHaveBeenCalled();
+
+    })
+
+    it('calls cleanMovieData with the correct arguments', () => {
+      apiCalls.fetchMovies = jest.fn().mockImplementation(() => {
+        return { results: ['movies'] }
+      });
+      cleaner.cleanMovieData = jest.fn();
+      const mockPopulateMovies = jest.fn();
+      const wrapper = shallow(<App populateMovies={ mockPopulateMovies } />);
+
+      expect(cleaner.cleanMovieData).toHaveBeenCalledWith(['movies']);
+    });
+
+    it('calls props.populateMovies with the correct arguments', () => {
+      apiCalls.fetchMovies = jest.fn().mockImplementation(() => {
+        return { results: ['movies'] }
+      });
+      cleaner.cleanMovieData = jest.fn().mockImplementation(() => ['movies']);
+      const mockPopulateMovies = jest.fn();
+      const wrapper = shallow(<App populateMovies={ mockPopulateMovies } />);
+
+      expect(wrapper.instance().props.populateMovies).toHaveBeenCalledWith(['movies']);
+
+    })
+
+  });
 });
+
+
+
+
+
+
+
+
+
+
+
+

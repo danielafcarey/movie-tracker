@@ -3,6 +3,7 @@ import { fetchUsers, fetchFavorites } from '../../apiCalls';
 import { updateCurrentUser, updateFavorites } from '../../actions';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router';
+import { cleanFavorites } from '../../cleaner';
 
 class Login extends Component {
   constructor(props){
@@ -44,9 +45,10 @@ class Login extends Component {
     const id = await this.verifyUser();
     if (id) {
       this.props.updateCurrentUser(id);
-      const favorites = await fetchFavorites(id);
-      this.props.updateFavorites(favorites)
-      this.setState({ id, verified: true })
+      const fetchedFavorites = await fetchFavorites(id);
+      const cleanedFavorites = cleanFavorites(fetchedFavorites); 
+      this.props.updateFavorites(cleanedFavorites);
+      this.setState({ id, verified: true });
     } 
   }
 

@@ -1,15 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card matches the snapshot 1`] = `
+exports[`Login matches the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Card
-    favorite={true}
-    id={2342342}
-    image="www.flatulence.com/image/123132.png"
-    rating={100}
-    title="The Mighty Gasbag"
+  Symbol(enzyme.__unrendered__): <Login
+    updateCurrentUser={[Function]}
+    updateFavorites={[Function]}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -24,24 +21,29 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <img
-          src="www.flatulence.com/image/123132.png"
+        <input
+          name="email"
+          onChange={[Function]}
+          placeholder="Email"
+          required={true}
+          type="text"
+          value=""
 />,
-        <h2>
-          The Mighty Gasbag
-</h2>,
-        <h3>
-          Rating: 
-          100
-</h3>,
-        <h3>
-          Release Date: 
-</h3>,
+        <input
+          name="password"
+          onChange={[Function]}
+          placeholder="Password"
+          required={true}
+          type="password"
+          value=""
+/>,
+        <p />,
         <button>
-          Favorite
+          Log In
 </button>,
       ],
-      "className": "card",
+      "onSubmit": [Function],
+      "type": "submit",
     },
     "ref": null,
     "rendered": Array [
@@ -50,70 +52,57 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "src": "www.flatulence.com/image/123132.png",
+          "name": "email",
+          "onChange": [Function],
+          "placeholder": "Email",
+          "required": true,
+          "type": "text",
+          "value": "",
         },
         "ref": null,
         "rendered": null,
-        "type": "img",
+        "type": "input",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "The Mighty Gasbag",
+          "name": "password",
+          "onChange": [Function],
+          "placeholder": "Password",
+          "required": true,
+          "type": "password",
+          "value": "",
         },
         "ref": null,
-        "rendered": "The Mighty Gasbag",
-        "type": "h2",
+        "rendered": null,
+        "type": "input",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            "Rating: ",
-            100,
-          ],
+          "children": "",
         },
         "ref": null,
-        "rendered": Array [
-          "Rating: ",
-          100,
-        ],
-        "type": "h3",
+        "rendered": "",
+        "type": "p",
       },
       Object {
         "instance": null,
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            "Release Date: ",
-            undefined,
-          ],
+          "children": "Log In",
         },
         "ref": null,
-        "rendered": Array [
-          "Release Date: ",
-          undefined,
-        ],
-        "type": "h3",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Favorite",
-        },
-        "ref": null,
-        "rendered": "Favorite",
+        "rendered": "Log In",
         "type": "button",
       },
     ],
-    "type": "div",
+    "type": "form",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
@@ -122,24 +111,29 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <img
-            src="www.flatulence.com/image/123132.png"
+          <input
+            name="email"
+            onChange={[Function]}
+            placeholder="Email"
+            required={true}
+            type="text"
+            value=""
 />,
-          <h2>
-            The Mighty Gasbag
-</h2>,
-          <h3>
-            Rating: 
-            100
-</h3>,
-          <h3>
-            Release Date: 
-</h3>,
+          <input
+            name="password"
+            onChange={[Function]}
+            placeholder="Password"
+            required={true}
+            type="password"
+            value=""
+/>,
+          <p />,
           <button>
-            Favorite
+            Log In
 </button>,
         ],
-        "className": "card",
+        "onSubmit": [Function],
+        "type": "submit",
       },
       "ref": null,
       "rendered": Array [
@@ -148,70 +142,57 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "src": "www.flatulence.com/image/123132.png",
+            "name": "email",
+            "onChange": [Function],
+            "placeholder": "Email",
+            "required": true,
+            "type": "text",
+            "value": "",
           },
           "ref": null,
           "rendered": null,
-          "type": "img",
+          "type": "input",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "The Mighty Gasbag",
+            "name": "password",
+            "onChange": [Function],
+            "placeholder": "Password",
+            "required": true,
+            "type": "password",
+            "value": "",
           },
           "ref": null,
-          "rendered": "The Mighty Gasbag",
-          "type": "h2",
+          "rendered": null,
+          "type": "input",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              "Rating: ",
-              100,
-            ],
+            "children": "",
           },
           "ref": null,
-          "rendered": Array [
-            "Rating: ",
-            100,
-          ],
-          "type": "h3",
+          "rendered": "",
+          "type": "p",
         },
         Object {
           "instance": null,
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              "Release Date: ",
-              undefined,
-            ],
+            "children": "Log In",
           },
           "ref": null,
-          "rendered": Array [
-            "Release Date: ",
-            undefined,
-          ],
-          "type": "h3",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "Favorite",
-          },
-          "ref": null,
-          "rendered": "Favorite",
+          "rendered": "Log In",
           "type": "button",
         },
       ],
-      "type": "div",
+      "type": "form",
     },
   ],
   Symbol(enzyme.__options__): Object {
