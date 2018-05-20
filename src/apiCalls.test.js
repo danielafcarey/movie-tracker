@@ -173,6 +173,7 @@ describe('apiCalls', () => {
         poster_path: 'http://url.picture.com',
         favorite: true,
         release_date: '2018-10-08',
+        overview: ''
       }
       mockFavorite = Object.assign({}, mockMovie, { user_id: userId }); 
       mockOptionsObject = {

@@ -48,7 +48,7 @@ const fetchFavorites = async (id) => {
 
 const postFavorite = async (userId, movie) => {
   const url = `http://localhost:3000/api/users/favorites/new`;
-  const favorite = Object.assign({}, movie, { user_id: userId });
+  const favorite = Object.assign({}, movie, { user_id: userId, overview: '' });
   const optionsObject = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },

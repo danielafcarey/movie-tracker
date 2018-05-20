@@ -25,7 +25,6 @@ class Card extends Component {
       releaseDate: this.props.releaseDate,
       favorite: this.props.favorite
     }
-    console.log(movieToStore);
 
     apiCalls.postFavorite(this.props.userId, movieToPost);
     this.props.addFavorite(movieToStore); 

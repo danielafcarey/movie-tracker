@@ -19,6 +19,29 @@ const cleanMovieData = (movies) => {
   return cleanMovies
 } 
 
+const cleanFavorites = (fetchedFavorites) => {
+  const cleanedFavorites = fetchedFavorites.map(({
+    id,
+    movie_id: movieId,
+    title,
+    poster_path: image,
+    release_date: releaseDate,
+    vote_average: rating
+  }) => {
+    return {
+      movieId,
+      title,
+      rating,
+      image,
+      favorite: true,
+      releaseDate
+    }
+  })
+
+  return cleanedFavorites; 
+}
+
 export {
-  cleanMovieData
+  cleanMovieData,
+  cleanFavorites
 }

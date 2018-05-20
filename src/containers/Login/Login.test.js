@@ -3,6 +3,7 @@ import { shallow } from 'enzyme';
 import { Login, mapDispatchToProps } from './Login';
 import * as apiCalls from '../../apiCalls';
 import { mockFavorites } from '../../mockData'
+import * as cleaner from '../../cleaner';
 
 describe('Login', () => {
   let wrapper;
@@ -114,6 +115,7 @@ describe('Login', () => {
       const wrapperInst = wrapper.instance();
       wrapperInst.verifyUser = jest.fn();
       apiCalls.fetchFavorites = jest.fn();
+      cleaner.cleanFavorites = jest.fn();
 
       wrapperInst.handleSubmit(mockEvent);
 
@@ -140,12 +142,23 @@ describe('Login', () => {
       expect(apiCalls.fetchFavorites).toHaveBeenCalledWith(1); 
     })
 
+    it('calls cleanFavorites with correct arguments if user has been verified', async () => {
+      const wrapperInst = wrapper.instance();
+      wrapperInst.verifyUser = jest.fn().mockImplementation(() => 1)
+      apiCalls.fetchFavorites = jest.fn().mockImplementation(() => ['favorites']);
+      cleaner.cleanFavorites = jest.fn();
+      
+      await wrapperInst.handleSubmit(mockEvent);
+
+      expect(cleaner.cleanFavorites).toHaveBeenCalledWith(['favorites']); 
+
+    })
+
     it('calls props.updateFavorites with the correct arguments if user has been verfied', async () => {
       const wrapperInst = wrapper.instance();
       wrapperInst.verifyUser = jest.fn().mockImplementation(() => 1)
-      apiCalls.fetchFavorites = jest.fn().mockImplementation(() => {
-        return ['favorite']
-      });
+      apiCalls.fetchFavorites = jest.fn();
+      cleaner.cleanFavorites = jest.fn().mockImplementation(() => ['favorite'])
 
       await wrapperInst.handleSubmit(mockEvent);
 
