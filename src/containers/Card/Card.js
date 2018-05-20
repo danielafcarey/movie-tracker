@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import * as apiCalls from '../../apiCalls';
 
 const Card = (props) => {
@@ -22,4 +23,18 @@ const Card = (props) => {
   )
 }
 
-export default Card
+const mapStateToProps = (state) => ({
+  userId: state.currentUser  
+})
+
+const mapDispatchToProps = (dispatch) => ({
+
+})
+
+export {
+  Card,
+  mapStateToProps,
+  mapDispatchToProps
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Card);

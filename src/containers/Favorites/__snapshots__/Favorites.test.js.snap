@@ -183,7 +183,7 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
           movieId={299536}
@@ -191,7 +191,7 @@ ShallowWrapper {
           releaseDate="2018-04-25"
           title="Avengers: Infinity War"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/30oXQKwibh0uANGMs0Sytw3uN22.jpg"
           movieId={427641}
@@ -199,7 +199,7 @@ ShallowWrapper {
           releaseDate="2018-04-12"
           title="Rampage"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg"
           movieId={333339}
@@ -207,7 +207,7 @@ ShallowWrapper {
           releaseDate="2018-03-28"
           title="Ready Player One"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg"
           movieId={445571}
@@ -215,7 +215,7 @@ ShallowWrapper {
           releaseDate="2018-02-22"
           title="Game Night"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg"
           movieId={401981}
@@ -223,7 +223,7 @@ ShallowWrapper {
           releaseDate="2018-03-01"
           title="Red Sparrow"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/nAU74GmpUk7t5iklEp3bufwDq4n.jpg"
           movieId={447332}
@@ -231,7 +231,7 @@ ShallowWrapper {
           releaseDate="2018-04-05"
           title="A Quiet Place"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg"
           movieId={399035}
@@ -239,7 +239,7 @@ ShallowWrapper {
           releaseDate="2018-01-11"
           title="The Commuter"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/bXrZ5iHBEjH7WMidbUDQ0U2xbmr.jpg"
           movieId={353486}
@@ -247,7 +247,7 @@ ShallowWrapper {
           releaseDate="2017-12-09"
           title="Jumanji: Welcome to the Jungle"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/qRmQazyIBZR4pQIk9VruiZul0Au.jpg"
           movieId={476926}
@@ -255,7 +255,7 @@ ShallowWrapper {
           releaseDate="2018-03-30"
           title="The Titan"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/xhBTO9n3fxy3HJt7WlR9h9vvVmk.jpg"
           movieId={396806}
@@ -263,7 +263,7 @@ ShallowWrapper {
           releaseDate="2018-05-03"
           title="Anon"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/qxJQ0VBCuJkJhJmuWzxI408ngwd.jpg"
           movieId={453201}
@@ -271,7 +271,7 @@ ShallowWrapper {
           releaseDate="2018-02-02"
           title="The 15:17 to Paris"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/j18021qCeRi3yUBtqd2UFj1c0RQ.jpg"
           movieId={429351}
@@ -279,7 +279,7 @@ ShallowWrapper {
           releaseDate="2018-01-18"
           title="12 Strong"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/rqoezyB51GfhiloOB5ZErg5HXas.jpg"
           movieId={384680}
@@ -287,7 +287,7 @@ ShallowWrapper {
           releaseDate="2017-12-22"
           title="Hostiles"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/AfybH6GbGFw1F9bcETe2yu25mIE.jpg"
           movieId={449443}
@@ -295,7 +295,7 @@ ShallowWrapper {
           releaseDate="2018-01-18"
           title="Den of Thieves"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/cx0LpfM6Drla8uzFfMT09uqKPRu.jpg"
           movieId={437557}
@@ -303,7 +303,7 @@ ShallowWrapper {
           releaseDate="2018-03-30"
           title="Blockers"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg"
           movieId={446354}
@@ -311,7 +311,7 @@ ShallowWrapper {
           releaseDate="2018-01-11"
           title="The Post"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/zbvziwnZa91AJD78Si0hUb5JP5X.jpg"
           movieId={460019}
@@ -319,7 +319,7 @@ ShallowWrapper {
           releaseDate="2018-04-12"
           title="Truth or Dare"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/h9hUP5ZJGsjL2wbERrGlj4dMjZq.jpg"
           movieId={396371}
@@ -327,7 +327,7 @@ ShallowWrapper {
           releaseDate="2017-12-21"
           title="Molly's Game"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/v5HlmJK9bdeHxN2QhaFP1ivjX3U.jpg"
           movieId={268896}
@@ -335,7 +335,7 @@ ShallowWrapper {
           releaseDate="2018-03-21"
           title="Pacific Rim: Uprising"
 />,
-        <Card
+        <Connect(Card)
           favorite={false}
           image="http://image.tmdb.org/t/p/original/d3qcpfNwbAMCNqWDHzPQsUYiUgS.jpg"
           movieId={300668}
@@ -351,7 +351,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "299536",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
@@ -367,7 +367,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "427641",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/30oXQKwibh0uANGMs0Sytw3uN22.jpg",
@@ -383,7 +383,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "333339",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg",
@@ -399,7 +399,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "445571",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg",
@@ -415,7 +415,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "401981",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg",
@@ -431,7 +431,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "447332",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
@@ -447,7 +447,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "399035",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg",
@@ -463,7 +463,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "353486",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/bXrZ5iHBEjH7WMidbUDQ0U2xbmr.jpg",
@@ -479,7 +479,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "476926",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/qRmQazyIBZR4pQIk9VruiZul0Au.jpg",
@@ -495,7 +495,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "396806",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/xhBTO9n3fxy3HJt7WlR9h9vvVmk.jpg",
@@ -511,7 +511,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "453201",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/qxJQ0VBCuJkJhJmuWzxI408ngwd.jpg",
@@ -527,7 +527,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "429351",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/j18021qCeRi3yUBtqd2UFj1c0RQ.jpg",
@@ -543,7 +543,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "384680",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/rqoezyB51GfhiloOB5ZErg5HXas.jpg",
@@ -559,7 +559,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "449443",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/AfybH6GbGFw1F9bcETe2yu25mIE.jpg",
@@ -575,7 +575,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "437557",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/cx0LpfM6Drla8uzFfMT09uqKPRu.jpg",
@@ -591,7 +591,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "446354",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg",
@@ -607,7 +607,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "460019",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/zbvziwnZa91AJD78Si0hUb5JP5X.jpg",
@@ -623,7 +623,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "396371",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/h9hUP5ZJGsjL2wbERrGlj4dMjZq.jpg",
@@ -639,7 +639,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "268896",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/v5HlmJK9bdeHxN2QhaFP1ivjX3U.jpg",
@@ -655,7 +655,7 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": "300668",
-        "nodeType": "function",
+        "nodeType": "class",
         "props": Object {
           "favorite": false,
           "image": "http://image.tmdb.org/t/p/original/d3qcpfNwbAMCNqWDHzPQsUYiUgS.jpg",
@@ -678,7 +678,7 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
             movieId={299536}
@@ -686,7 +686,7 @@ ShallowWrapper {
             releaseDate="2018-04-25"
             title="Avengers: Infinity War"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/30oXQKwibh0uANGMs0Sytw3uN22.jpg"
             movieId={427641}
@@ -694,7 +694,7 @@ ShallowWrapper {
             releaseDate="2018-04-12"
             title="Rampage"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg"
             movieId={333339}
@@ -702,7 +702,7 @@ ShallowWrapper {
             releaseDate="2018-03-28"
             title="Ready Player One"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg"
             movieId={445571}
@@ -710,7 +710,7 @@ ShallowWrapper {
             releaseDate="2018-02-22"
             title="Game Night"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg"
             movieId={401981}
@@ -718,7 +718,7 @@ ShallowWrapper {
             releaseDate="2018-03-01"
             title="Red Sparrow"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/nAU74GmpUk7t5iklEp3bufwDq4n.jpg"
             movieId={447332}
@@ -726,7 +726,7 @@ ShallowWrapper {
             releaseDate="2018-04-05"
             title="A Quiet Place"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg"
             movieId={399035}
@@ -734,7 +734,7 @@ ShallowWrapper {
             releaseDate="2018-01-11"
             title="The Commuter"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/bXrZ5iHBEjH7WMidbUDQ0U2xbmr.jpg"
             movieId={353486}
@@ -742,7 +742,7 @@ ShallowWrapper {
             releaseDate="2017-12-09"
             title="Jumanji: Welcome to the Jungle"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/qRmQazyIBZR4pQIk9VruiZul0Au.jpg"
             movieId={476926}
@@ -750,7 +750,7 @@ ShallowWrapper {
             releaseDate="2018-03-30"
             title="The Titan"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/xhBTO9n3fxy3HJt7WlR9h9vvVmk.jpg"
             movieId={396806}
@@ -758,7 +758,7 @@ ShallowWrapper {
             releaseDate="2018-05-03"
             title="Anon"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/qxJQ0VBCuJkJhJmuWzxI408ngwd.jpg"
             movieId={453201}
@@ -766,7 +766,7 @@ ShallowWrapper {
             releaseDate="2018-02-02"
             title="The 15:17 to Paris"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/j18021qCeRi3yUBtqd2UFj1c0RQ.jpg"
             movieId={429351}
@@ -774,7 +774,7 @@ ShallowWrapper {
             releaseDate="2018-01-18"
             title="12 Strong"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/rqoezyB51GfhiloOB5ZErg5HXas.jpg"
             movieId={384680}
@@ -782,7 +782,7 @@ ShallowWrapper {
             releaseDate="2017-12-22"
             title="Hostiles"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/AfybH6GbGFw1F9bcETe2yu25mIE.jpg"
             movieId={449443}
@@ -790,7 +790,7 @@ ShallowWrapper {
             releaseDate="2018-01-18"
             title="Den of Thieves"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/cx0LpfM6Drla8uzFfMT09uqKPRu.jpg"
             movieId={437557}
@@ -798,7 +798,7 @@ ShallowWrapper {
             releaseDate="2018-03-30"
             title="Blockers"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg"
             movieId={446354}
@@ -806,7 +806,7 @@ ShallowWrapper {
             releaseDate="2018-01-11"
             title="The Post"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/zbvziwnZa91AJD78Si0hUb5JP5X.jpg"
             movieId={460019}
@@ -814,7 +814,7 @@ ShallowWrapper {
             releaseDate="2018-04-12"
             title="Truth or Dare"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/h9hUP5ZJGsjL2wbERrGlj4dMjZq.jpg"
             movieId={396371}
@@ -822,7 +822,7 @@ ShallowWrapper {
             releaseDate="2017-12-21"
             title="Molly's Game"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/v5HlmJK9bdeHxN2QhaFP1ivjX3U.jpg"
             movieId={268896}
@@ -830,7 +830,7 @@ ShallowWrapper {
             releaseDate="2018-03-21"
             title="Pacific Rim: Uprising"
 />,
-          <Card
+          <Connect(Card)
             favorite={false}
             image="http://image.tmdb.org/t/p/original/d3qcpfNwbAMCNqWDHzPQsUYiUgS.jpg"
             movieId={300668}
@@ -846,7 +846,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "299536",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
@@ -862,7 +862,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "427641",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/30oXQKwibh0uANGMs0Sytw3uN22.jpg",
@@ -878,7 +878,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "333339",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg",
@@ -894,7 +894,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "445571",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/85R8LMyn9f2Lev2YPBF8Nughrkv.jpg",
@@ -910,7 +910,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "401981",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/vLCogyfQGxVLDC1gqUdNAIkc29L.jpg",
@@ -926,7 +926,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "447332",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/nAU74GmpUk7t5iklEp3bufwDq4n.jpg",
@@ -942,7 +942,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "399035",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/rDeGK6FIUfVcXmuBdEORPAGPMNg.jpg",
@@ -958,7 +958,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "353486",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/bXrZ5iHBEjH7WMidbUDQ0U2xbmr.jpg",
@@ -974,7 +974,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "476926",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/qRmQazyIBZR4pQIk9VruiZul0Au.jpg",
@@ -990,7 +990,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "396806",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/xhBTO9n3fxy3HJt7WlR9h9vvVmk.jpg",
@@ -1006,7 +1006,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "453201",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/qxJQ0VBCuJkJhJmuWzxI408ngwd.jpg",
@@ -1022,7 +1022,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "429351",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/j18021qCeRi3yUBtqd2UFj1c0RQ.jpg",
@@ -1038,7 +1038,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "384680",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/rqoezyB51GfhiloOB5ZErg5HXas.jpg",
@@ -1054,7 +1054,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "449443",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/AfybH6GbGFw1F9bcETe2yu25mIE.jpg",
@@ -1070,7 +1070,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "437557",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/cx0LpfM6Drla8uzFfMT09uqKPRu.jpg",
@@ -1086,7 +1086,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "446354",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg",
@@ -1102,7 +1102,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "460019",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/zbvziwnZa91AJD78Si0hUb5JP5X.jpg",
@@ -1118,7 +1118,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "396371",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/h9hUP5ZJGsjL2wbERrGlj4dMjZq.jpg",
@@ -1134,7 +1134,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "268896",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/v5HlmJK9bdeHxN2QhaFP1ivjX3U.jpg",
@@ -1150,7 +1150,7 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": "300668",
-          "nodeType": "function",
+          "nodeType": "class",
           "props": Object {
             "favorite": false,
             "image": "http://image.tmdb.org/t/p/original/d3qcpfNwbAMCNqWDHzPQsUYiUgS.jpg",
