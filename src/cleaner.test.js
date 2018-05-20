@@ -7,7 +7,7 @@ describe('Cleaner', () => {
 
     it('returns a cleaned array of objects when given data', () => {
       const expected = [{
-        id: 299536,
+        movieId: 299536,
         title: 'Avengers: Infinity War',
         image: 'http://image.tmdb.org/t/p/original/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg',
         rating: 8.6,

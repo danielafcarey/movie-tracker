@@ -1,8 +1,9 @@
 import React from 'react';
+import * as apiCalls from '../../apiCalls';
 
 const Card = (props) => {
   const {
-    id,
+    movieId,
     title,
     rating,
     image,

@@ -8,7 +8,7 @@ const cleanMovieData = (movies) => {
   }) => {
     const image = `http://image.tmdb.org/t/p/original${poster_path}`
     return {
-      id,
+      movieId: id,
       title, 
       rating,
       image,

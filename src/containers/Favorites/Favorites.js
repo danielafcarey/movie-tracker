@@ -8,7 +8,7 @@ const Favorites = (props) => {
     return <div>Get a job!</div>
   }
   const favoriteCards = props.favorites.map(favorite => {
-    return <Card { ...favorite } key={ favorite.id } />
+    return <Card { ...favorite } key={ favorite.movieId } />
   }) 
 
   return (

@@ -5,7 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card
-    favorite={true}
+    favorite={false}
     id={2342342}
     image="www.flatulence.com/image/123132.png"
     rating={100}

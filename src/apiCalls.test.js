@@ -154,13 +154,13 @@ describe('apiCalls', () => {
 
   describe('postFavorite', () => {
     let url;
-    let id;
+    let userId;
     let mockMovie;
     let mockFavorite;
     let mockOptionsObject;
 
     beforeEach(() => {
-      id = 1
+      userId = 1
       url = `http://localhost:3000/api/users/favorites/new`
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         status: 200,
@@ -174,7 +174,7 @@ describe('apiCalls', () => {
         favorite: true,
         releaseDate: '2018-10-08',
       }
-      mockFavorite = Object.assign({}, mockMovie, { userId: id }); 
+      mockFavorite = Object.assign({}, mockMovie, { userId }); 
       mockOptionsObject = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -184,7 +184,7 @@ describe('apiCalls', () => {
 
     it('should call fetch with the correct arguments', async () => {
 
-      await postFavorite(id, mockMovie);
+      await postFavorite(userId, mockMovie);
 
       expect(window.fetch).toHaveBeenCalledWith(url, mockOptionsObject); 
     });
@@ -195,7 +195,7 @@ describe('apiCalls', () => {
       }));
 
       const expected = Error('Error: 500');
-      const result = postFavorite(id, mockMovie); 
+      const result = postFavorite(userId, mockMovie); 
 
       expect(result).rejects.toEqual(expected);
     });
@@ -204,7 +204,7 @@ describe('apiCalls', () => {
       window.fetch = jest.fn().mockImplementation(() => Promise.reject('Fetch Failed'));
 
       const expected = Error('Fetch Failed');
-      const result = postFavorite(id, mockMovie);
+      const result = postFavorite(userId, mockMovie);
 
       expect(result).rejects.toEqual(expected);
     });
