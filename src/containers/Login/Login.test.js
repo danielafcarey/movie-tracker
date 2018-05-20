@@ -19,15 +19,16 @@ describe('Login', () => {
   });
 
   it('matches the snapshot', () => {
-    // expect(wrapper).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   });
 
-  it('has a default state of email, password, id, and verified', () => {
+  it('has a default state of email, password, id, verified, and loginError', () => {
 
     expect(wrapper.state('email')).toEqual('')
     expect(wrapper.state('password')).toEqual('')
     expect(wrapper.state('id')).toEqual(null)
     expect(wrapper.state('verified')).toEqual(false)
+    expect(wrapper.state('loginError')).toEqual('')
     
   })
 
@@ -75,12 +76,13 @@ describe('Login', () => {
       expect(apiCalls.fetchUsers).toHaveBeenCalled();
     })
 
-    it('returns userId if there is a match', async () => {
-      
+    it('returns userId and sets state if there is a match', async () => {
+      wrapper.setState({ loginError: 'Invalid email or password' }) 
       const result = await wrapper.instance().verifyUser();
       const expected = 1;
 
       expect(result).toEqual(expected)
+      expect(wrapper.state('loginError')).toEqual('')
     })
 
     it('returns undefined if there is no match', async () => {
@@ -95,6 +97,7 @@ describe('Login', () => {
       const expected = undefined;
 
       expect(result).toEqual(expected);
+      expect(wrapper.state('loginError')).toEqual('Invalid email or password')
     })
 
     
@@ -161,18 +164,6 @@ describe('Login', () => {
       expect(wrapper.state('id')).toEqual(1);
       expect(wrapper.state('verified')).toEqual(true)
     })
-
-    it('calls alert if verifyUser returns undefined', async () => {
-      const wrapperInst = wrapper.instance();
-      wrapperInst.verifyUser = jest.fn().mockImplementation(() => undefined);
-      window.alert = jest.fn();
-
-      await wrapperInst.handleSubmit(mockEvent);
-
-      expect(window.alert).toHaveBeenCalled();
-
-    })
-
 
   })
   

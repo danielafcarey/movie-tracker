@@ -1,14 +1,9 @@
-import React, {
-  Component
-} from 'react';
-import {
-  updateCurrentUser
-} from '../../actions';
-import {
-  connect
-} from 'react-redux';
-import { getUserId } from '../../helper'
-import { fetchUsers } from '../../apiCalls'
+import React, { Component } from 'react';
+import { updateCurrentUser } from '../../actions';
+import { connect } from 'react-redux';
+import { getUserId } from '../../helper';
+import { fetchUsers } from '../../apiCalls';
+import { Redirect } from 'react-router';
 
 class SignUp extends Component {
   constructor(props) {
@@ -17,7 +12,10 @@ class SignUp extends Component {
       name: '',
       email: '',
       password: '',
-      verification: ''
+      verification: '',
+      emailError: '',
+      passwordError: '',
+      authenticated: false
     };
   }
 
@@ -33,14 +31,24 @@ class SignUp extends Component {
     });
   }
 
-  verifyPassword = () => this.state.password === this.state.verification;
+  verifyPassword = () => {
+    if (this.state.password === this.state.verification) {
+      this.setState({ passwordError: '' }) 
+      return true;
+    } else {
+      this.setState({ passwordError: 'Passwords must match' });
+      return false;
+    }
 
+  } 
   verifyEmail = async () => {
     const users = await fetchUsers();
     const emailMatch = users.find(user => user.email === this.state.email)
     if (emailMatch) {
+      this.setState({ emailError: 'Email has already been used' })
       return false;
     } else {
+      this.setState({ emailError: '' })
       return true;
     }
   }
@@ -80,42 +88,51 @@ class SignUp extends Component {
     if (verifiedPassword && verifiedEmail) {
       const userId = await this.postUser();
       this.props.updateCurrentUser(userId);
-    } else {
-      alert('Check yo self');
+      this.setState({ authenticated: true })
     }
   }
 
   render() {
+    if (this.state.authenticated) {
+      return <Redirect to='/' />    
+    }
+
     return ( 
       <form onSubmit={this.handleSubmit}>
         <input 
           type='text'
           value={this.state.name}
           name='name'
-          placeholder='Name'
+          placeholder='Name*'
           onChange={this.handleChange}
+          required
         /> 
         <input 
           type='text'
           value={this.state.email}
           name='email'
-          placeholder='Email'
+          placeholder='Email*'
           onChange={this.handleChange}
+          required
         /> 
+        <p>{ this.state.emailError }</p>
         <input 
           type='password'
           value={this.state.password}
           name='password'
-          placeholder='Password'
+          placeholder='Password*'
           onChange={this.handleChange}
+          required
         /> 
         <input 
           type='password'
           value={this.state.verification}
           name='verification'
-          placeholder='Retype password'
+          placeholder='Retype password*'
           onChange={this.handleChange}
+          required
         /> 
+        <p>{ this.state.passwordError }</p>
         <button>Sign Up</button> 
       </form >
     );

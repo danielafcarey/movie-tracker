@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { fetchUsers, fetchFavorites } from '../../apiCalls';
 import { updateCurrentUser, updateFavorites } from '../../actions';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router';
 
 class Login extends Component {
   constructor(props){
@@ -11,13 +12,14 @@ class Login extends Component {
       email: '',
       password: '',
       id: null,
-      verified: false
-    }
+      verified: false,
+      loginError: ''
+    };
   }
 
   handleChange = (event) => {
     const { name, value } = event.target;
-    this.setState({ [name]: value })
+    this.setState({ [name]: value });
   }
 
   verifyUser = async () => {
@@ -29,8 +31,10 @@ class Login extends Component {
       }
     })
     if (userMatch) {
+      this.setState({ loginError: '' })
       return userMatch.id
     } else {
+      this.setState({ loginError: 'Invalid email or password' })
       return undefined;
     }
   }
@@ -43,12 +47,14 @@ class Login extends Component {
       const favorites = await fetchFavorites(id);
       this.props.updateFavorites(favorites)
       this.setState({ id, verified: true })
-    } else {
-      alert('User Does Not Exist')
-    }
+    } 
   }
 
   render() {
+    if (this.state.verified) {
+      return <Redirect to='/' />    
+    }
+
     return(
       <form
         type='submit'
@@ -60,6 +66,7 @@ class Login extends Component {
           name='email'
           value={this.state.email}
           onChange={this.handleChange}
+          required
         />
         <input
           type='password'
@@ -67,7 +74,9 @@ class Login extends Component {
           name='password'
           value={this.state.password}
           onChange={this.handleChange}          
+          required
         />
+        <p>{ this.state.loginError }</p>
         <button>Log In</button>
       </form>
     )
