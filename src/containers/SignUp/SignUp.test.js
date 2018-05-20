@@ -26,6 +26,7 @@ describe('SignUp', () => {
     expect(wrapper.state('verification')).toEqual('');
     expect(wrapper.state('emailError')).toEqual('');
     expect(wrapper.state('passwordError')).toEqual('');
+    expect(wrapper.state('authenticated')).toEqual(false);
   });
 
   it('should change the name in state on change in the name input', () => {
@@ -218,6 +219,17 @@ describe('SignUp', () => {
 
         expect(wrapperInst.postUser).toHaveBeenCalled();
       });
+
+    it('sets state of authenticated to true', async () => {
+      const wrapperInst = wrapper.instance();
+      wrapperInst.verifyPassword = jest.fn().mockImplementation(() => true);
+      wrapperInst.verifyEmail = jest.fn().mockImplementation(() => true);
+      wrapperInst.postUser = jest.fn();
+
+      await wrapperInst.handleSubmit(mockEvent);
+
+      expect(wrapper.state('authenticated')).toEqual(true);
+    }) 
        
     });
 

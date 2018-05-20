@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { updateCurrentUser } from '../../actions';
-import {
-  connect
-} from 'react-redux';
-import { getUserId } from '../../helper'
-import { fetchUsers } from '../../apiCalls'
+import { connect } from 'react-redux';
+import { getUserId } from '../../helper';
+import { fetchUsers } from '../../apiCalls';
+import { Redirect } from 'react-router';
 
 class SignUp extends Component {
   constructor(props) {
@@ -15,7 +14,8 @@ class SignUp extends Component {
       password: '',
       verification: '',
       emailError: '',
-      passwordError: ''
+      passwordError: '',
+      authenticated: false
     };
   }
 
@@ -88,10 +88,15 @@ class SignUp extends Component {
     if (verifiedPassword && verifiedEmail) {
       const userId = await this.postUser();
       this.props.updateCurrentUser(userId);
+      this.setState({ authenticated: true })
     }
   }
 
   render() {
+    if (this.state.authenticated) {
+      return <Redirect to='/' />    
+    }
+
     return ( 
       <form onSubmit={this.handleSubmit}>
         <input 
