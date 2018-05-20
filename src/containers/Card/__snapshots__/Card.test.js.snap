@@ -5,11 +5,14 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card
+    addFavorite={[Function]}
     favorite={false}
     image="www.flatulence.com/image/123132.png"
     movieId={2342342}
     rating={100}
+    releaseDate="tomorrow"
     title="The Mighty Gasbag"
+    userId={1}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -36,6 +39,7 @@ ShallowWrapper {
 </h3>,
         <h3>
           Release Date: 
+          tomorrow
 </h3>,
         <button>
           Favorite
@@ -91,13 +95,13 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             "Release Date: ",
-            undefined,
+            "tomorrow",
           ],
         },
         "ref": null,
         "rendered": Array [
           "Release Date: ",
-          undefined,
+          "tomorrow",
         ],
         "type": "h3",
       },
@@ -134,6 +138,7 @@ ShallowWrapper {
 </h3>,
           <h3>
             Release Date: 
+            tomorrow
 </h3>,
           <button>
             Favorite
@@ -189,13 +194,13 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               "Release Date: ",
-              undefined,
+              "tomorrow",
             ],
           },
           "ref": null,
           "rendered": Array [
             "Release Date: ",
-            undefined,
+            "tomorrow",
           ],
           "type": "h3",
         },

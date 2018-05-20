@@ -167,14 +167,14 @@ describe('apiCalls', () => {
       }));
 
       mockMovie = {
-        id: 9, 
+        movie_id: 9, 
         title: 'Movie Movie',
-        rating: 100,
-        image: 'http://url.picture.com',
+        vote_average: 100,
+        poster_path: 'http://url.picture.com',
         favorite: true,
-        releaseDate: '2018-10-08',
+        release_date: '2018-10-08',
       }
-      mockFavorite = Object.assign({}, mockMovie, { userId }); 
+      mockFavorite = Object.assign({}, mockMovie, { user_id: userId }); 
       mockOptionsObject = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
