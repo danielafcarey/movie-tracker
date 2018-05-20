@@ -3,7 +3,8 @@ const favoritesReducer = (state = [], action) => {
     case 'UPDATE_FAVORITES':
       return action.favorites;
     case 'ADD_FAVORITE':
-      return [...state, action.favorite];
+      const newFavorite = { ...action.favoriteMovie, favorite: true }
+      return [...state, newFavorite];
     default:
       return state;
   }

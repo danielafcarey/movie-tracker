@@ -25,6 +25,7 @@ class Card extends Component {
       releaseDate: this.props.releaseDate,
       favorite: this.props.favorite
     }
+    console.log(movieToStore);
 
     apiCalls.postFavorite(this.props.userId, movieToPost);
     this.props.addFavorite(movieToStore); 
@@ -46,7 +47,7 @@ class Card extends Component {
         <h2>{title}</h2>
         <h3>Rating: {rating}</h3>
         <h3>Release Date: {releaseDate}</h3>
-        <button>Favorite</button>
+        <button onClick={ this.handleClick }>Favorite</button>
       </div>
     )
   }
@@ -69,11 +70,3 @@ export {
 export default connect(mapStateToProps, mapDispatchToProps)(Card);
 
 
-// mockMovie = {
-//         movie_id: 9, 
-//         title: 'Movie Movie',
-//         vote_average: 100,
-//         poster_path: 'http://url.picture.com',
-//         favorite: true,
-//         release_date: '2018-10-08',
-//       }

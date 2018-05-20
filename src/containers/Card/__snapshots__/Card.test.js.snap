@@ -41,7 +41,9 @@ ShallowWrapper {
           Release Date: 
           tomorrow
 </h3>,
-        <button>
+        <button
+          onClick={[Function]}
+>
           Favorite
 </button>,
       ],
@@ -111,6 +113,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "Favorite",
+          "onClick": [Function],
         },
         "ref": null,
         "rendered": "Favorite",
@@ -140,7 +143,9 @@ ShallowWrapper {
             Release Date: 
             tomorrow
 </h3>,
-          <button>
+          <button
+            onClick={[Function]}
+>
             Favorite
 </button>,
         ],
@@ -210,6 +215,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "Favorite",
+            "onClick": [Function],
           },
           "ref": null,
           "rendered": "Favorite",
