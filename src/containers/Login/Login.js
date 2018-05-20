@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { fetchUsers, fetchFavorites } from '../../apiCalls';
 import { updateCurrentUser, updateFavorites } from '../../actions';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import { Redirect } from 'react-router';
 
 class Login extends Component {
   constructor(props){
@@ -13,12 +14,12 @@ class Login extends Component {
       id: null,
       verified: false,
       loginError: ''
-    }
+    };
   }
 
   handleChange = (event) => {
     const { name, value } = event.target;
-    this.setState({ [name]: value })
+    this.setState({ [name]: value });
   }
 
   verifyUser = async () => {
@@ -50,6 +51,10 @@ class Login extends Component {
   }
 
   render() {
+    if (this.state.verified) {
+      return <Redirect to='/' />    
+    }
+
     return(
       <form
         type='submit'
