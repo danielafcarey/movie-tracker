@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as apiCalls from '../../apiCalls';
-import { addFavorite } from '../../actions';
+import { addFavorite, deleteFavorite } from '../../actions';
 
 class Card extends Component {
   constructor(props) {
@@ -62,7 +62,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  addFavorite: (favoriteMovie) => dispatch(addFavorite(favoriteMovie))
+  addFavorite: (favoriteMovie) => dispatch(addFavorite(favoriteMovie)),
+  deleteFavorite: (movieId) => dispatch(deleteFavorite(movieId))
 })
 
 export {

@@ -117,7 +117,29 @@ describe('Card', () => {
       expect(dispatch).toHaveBeenCalledWith(mockAction);
     })
 
+    it('returns an object with a deleteFavorite function', () => {
+      const dispatch = jest.fn();
+
+      const result = mapDispatchToProps(dispatch);
+
+      expect(typeof result.deleteFavorite).toEqual('function');
+    })
+
+    it('calls dispatch with the correct arguments', () => {
+      const dispatch = jest.fn();
+      const mappedProps = mapDispatchToProps(dispatch);
+      const mockAction = {
+        type: 'DELETE_FAVORITE',
+        movieId: 1
+      }
+
+      mappedProps.deleteFavorite(mockAction.movieId);
+
+      expect(dispatch).toHaveBeenCalledWith(mockAction);
+    })
+
   })
+
 })
 
 
