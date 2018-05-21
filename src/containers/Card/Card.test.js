@@ -22,6 +22,7 @@ describe('Card', () => {
       image: 'www.flatulence.com/image/123132.png',
       favorite: false ,
       addFavorite: jest.fn(),
+      deleteFavorite: jest.fn(),
       userId: 1
     }
     wrapper = shallow(<Card {...mockProps} />)
@@ -69,11 +70,29 @@ describe('Card', () => {
     })
 
     it('calls apiCalls.removeFavorite with the correct arguments if favorite is true', () => {
+      mockProps.favorite = true;
+      wrapper = shallow(<Card {...mockProps} />)
+      const wrapperInst = wrapper.instance();
+      const mockUserId = wrapperInst.props.userId;
+      const mockMovieId = wrapperInst.props.movieId;
 
+      apiCalls.deleteFavorite = jest.fn();
+      wrapperInst.handleClick();
+
+      expect(apiCalls.deleteFavorite).toHaveBeenCalledWith(mockUserId, mockMovieId)
     })
 
-    it('calls props.removeFavorite with the correct arguments if favorite is true', () => {
+    it('calls props.deleteFavorite with the correct arguments if favorite is true', () => {
+      mockProps.favorite = true;
+      wrapper = shallow(<Card {...mockProps} />)
+      const wrapperInst = wrapper.instance();
+      const mockUserId = wrapperInst.props.userId;
+      const mockMovieId = wrapperInst.props.movieId;
+      apiCalls.deleteFavorite = jest.fn();
 
+      wrapperInst.handleClick();
+
+      expect(wrapperInst.props.deleteFavorite).toHaveBeenCalledWith(mockMovieId)
     })
 
   })

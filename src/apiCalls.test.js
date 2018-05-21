@@ -237,6 +237,7 @@ describe('apiCalls', () => {
     let userId;
     let movieId;
     let url;
+    let mockOptionsObject;
 
     beforeEach(() => {
       userId = 1;
@@ -245,12 +246,15 @@ describe('apiCalls', () => {
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         status: 200,
       }))
+      mockOptionsObject = {
+        method: 'DELETE',
+      }
     })
 
     it('calls fetch with the correct arguments', async () => {
       await deleteFavorite(userId, movieId);
 
-      expect(window.fetch).toHaveBeenCalledWith(url);
+      expect(window.fetch).toHaveBeenCalledWith(url, mockOptionsObject);
     });
 
     it('should throw an error if the status is not ok', () => {
