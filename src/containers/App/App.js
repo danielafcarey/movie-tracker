@@ -27,11 +27,11 @@ class App extends Component {
   render() { 
     return (
       <div className='App'>
-      <Header /> 
-      <Switch>
+        <Header /> 
+        <Switch>
           <Route exact path='/' component={ Movies }/>
           <Route exact path='/favorites' component={ Favorites }/>
-         <Route exact path='/login' component={ Login }/>
+          <Route exact path='/login' component={ Login }/>
           <Route exact path='/signup' component={ SignUp }/> 
         </Switch>
       </div>

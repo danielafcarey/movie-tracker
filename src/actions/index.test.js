@@ -2,7 +2,8 @@ import {
   populateMovies,
   updateCurrentUser,
   updateFavorites,
-  addFavorite
+  addFavorite,
+  deleteFavorite
 } from './index.js';
 
 describe('Action creators', () => {
@@ -69,4 +70,19 @@ describe('Action creators', () => {
       expect(result).toEqual(expected);
     })
   })
+
+  describe('deleteFavorite', () => {
+    
+    it('creates an action with correct payload and type', () => {
+      const expected = {
+        type: 'DELETE_FAVORITE',
+        movieId: 1
+      }
+
+      const result = deleteFavorite(1);
+
+      expect(result).toEqual(expected);
+    })
+  })
+
 })

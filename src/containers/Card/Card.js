@@ -26,8 +26,13 @@ class Card extends Component {
       favorite: this.props.favorite
     }
 
+    // if this.props.favorite === false
     apiCalls.postFavorite(this.props.userId, movieToPost);
     this.props.addFavorite(movieToStore); 
+
+    //else if this.props.favorite === true
+    //apiCalls.deleteFavorite(userId, movieId)
+    //this.props.removeFavorite(movie)
   }
 
   render() {

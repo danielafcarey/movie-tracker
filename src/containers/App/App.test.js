@@ -45,38 +45,15 @@ describe('App', () => {
     
   });
   
-  describe('componentDidMount', async () => {
+  describe('componentDidMount', () => {
 
-    it('calls fetchMovies', () => {
+    it.only('calls props.populateMovies with the correct arguments', async () => {
       apiCalls.fetchMovies = jest.fn().mockImplementation(() => {
-        return { results: ['movies'] }
-      });
-      cleaner.cleanMovieData = jest.fn();
-      const mockPopulateMovies = jest.fn();
-      const wrapper = shallow(<App populateMovies={ mockPopulateMovies } />);
-
-      expect(apiCalls.fetchMovies).toHaveBeenCalled();
-
-    })
-
-    it('calls cleanMovieData with the correct arguments', () => {
-      apiCalls.fetchMovies = jest.fn().mockImplementation(() => {
-        return { results: ['movies'] }
-      });
-      cleaner.cleanMovieData = jest.fn();
-      const mockPopulateMovies = jest.fn();
-      const wrapper = shallow(<App populateMovies={ mockPopulateMovies } />);
-
-      expect(cleaner.cleanMovieData).toHaveBeenCalledWith(['movies']);
-    });
-
-    it('calls props.populateMovies with the correct arguments', () => {
-      apiCalls.fetchMovies = jest.fn().mockImplementation(() => {
-        return { results: ['movies'] }
+        return Promise.resolve({ results: ['movies'] });
       });
       cleaner.cleanMovieData = jest.fn().mockImplementation(() => ['movies']);
       const mockPopulateMovies = jest.fn();
-      const wrapper = shallow(<App populateMovies={ mockPopulateMovies } />);
+      const wrapper = await shallow(<App populateMovies={ mockPopulateMovies } />);
 
       expect(wrapper.instance().props.populateMovies).toHaveBeenCalledWith(['movies']);
 
