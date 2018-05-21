@@ -242,7 +242,7 @@ describe('apiCalls', () => {
     beforeEach(() => {
       userId = 1;
       movieId = 2;
-      url = `http://localhost:3000/api/users/${userId}/favorites/${movieId}` 
+      url = `http://localhost:3000/api/users/${userId}/favorites/${movieId}/` 
       window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
         status: 200,
       }))

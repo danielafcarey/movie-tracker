@@ -2,8 +2,8 @@ import {
   populateMovies,
   updateCurrentUser,
   updateFavorites,
-  addFavorite,
-  deleteFavorite
+  addFavoriteToFavorites,
+  deleteFavoriteFromFavorites
 } from './index.js';
 
 describe('Action creators', () => {
@@ -50,11 +50,11 @@ describe('Action creators', () => {
     })
   })
 
-  describe('addFavorite', () => {
+  describe('addFavoriteToFavorites', () => {
 
     it('creates an action with correct payload and type', () => {
       const expected = {
-        type: 'ADD_FAVORITE',
+        type: 'ADD_FAVORITE_TO_FAVORITES',
         favoriteMovie: {
           movieId: 1,
           title: 'PopPop Saves the Day', 
@@ -65,21 +65,21 @@ describe('Action creators', () => {
         }
       }
 
-      const result = addFavorite(expected.favoriteMovie);
+      const result = addFavoriteToFavorites(expected.favoriteMovie);
 
       expect(result).toEqual(expected);
     })
   })
 
-  describe('deleteFavorite', () => {
+  describe('deleteFavoriteFromFavorites', () => {
     
     it('creates an action with correct payload and type', () => {
       const expected = {
-        type: 'DELETE_FAVORITE',
+        type: 'DELETE_FAVORITE_FROM_FAVORITES',
         movieId: 1
       }
 
-      const result = deleteFavorite(1);
+      const result = deleteFavoriteFromFavorites(1);
 
       expect(result).toEqual(expected);
     })

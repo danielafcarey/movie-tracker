@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as apiCalls from '../../apiCalls';
-import { addFavorite, deleteFavorite } from '../../actions';
+import { 
+  addFavoriteToFavorites, 
+  deleteFavoriteFromFavorites 
+} from '../../actions';
 
 class Card extends Component {
   constructor(props) {
@@ -28,10 +31,12 @@ class Card extends Component {
 
     if (this.props.favorite === false) {
       apiCalls.postFavorite(this.props.userId, movieToPost);
-      this.props.addFavorite(movieToStore); 
+      this.props.addFavoriteToFavorites(movieToStore); 
+      // this.props.addFavoritesToMovies(movieToStore);
     } else {
-      apiCalls.deleteFavorite(this.props.userId, this.props.movieId)
-      this.props.deleteFavorite(this.props.movieId)
+      apiCalls.deleteFavorite(this.props.userId, this.props.movieId);
+      this.props.deleteFavoriteFromFavorites(this.props.movieId);
+      //this.props.deleteFavoritesFromMovies(this.props.movieId);
     }
   }
 
@@ -62,8 +67,8 @@ const mapStateToProps = (state) => ({
 })
 
 const mapDispatchToProps = (dispatch) => ({
-  addFavorite: (favoriteMovie) => dispatch(addFavorite(favoriteMovie)),
-  deleteFavorite: (movieId) => dispatch(deleteFavorite(movieId))
+  addFavoriteToFavorites: (favoriteMovie) => dispatch(addFavoriteToFavorites(favoriteMovie)),
+  deleteFavoriteFromFavorites: (movieId) => dispatch(deleteFavoriteFromFavorites(movieId))
 })
 
 export {

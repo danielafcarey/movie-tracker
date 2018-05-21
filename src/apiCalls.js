@@ -66,8 +66,10 @@ const postFavorite = async (userId, movie) => {
 }
 
 const deleteFavorite = async (userId, movieId) => {
-  const optionsObject = { method: 'DELETE' }
-  const url = `http://localhost:3000/api/users/${userId}/favorites/${movieId}`; 
+  const optionsObject = { 
+    method: 'DELETE',
+  }
+  const url = `http://localhost:3000/api/users/${userId}/favorites/${movieId}/`; 
   try {
     const response = await fetch(url, optionsObject);
     if (response.status !== 200) {
