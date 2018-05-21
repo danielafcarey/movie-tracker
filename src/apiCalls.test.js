@@ -9,7 +9,8 @@ import {
   fetchMovies,
   fetchUsers,
   fetchFavorites,
-  postFavorite
+  postFavorite,
+  deleteFavorite
 } from './apiCalls';
 
 describe('apiCalls', () => {
@@ -233,21 +234,45 @@ describe('apiCalls', () => {
   });
 
   describe('deleteFavorite', () => {
+    let userId;
+    let movieId;
+    let url;
+    let mockOptionsObject;
 
-    it('should call fetch with the correct arguments', async () => {
+    beforeEach(() => {
+      userId = 1;
+      movieId = 2;
+      url = `http://localhost:3000/api/users/${userId}/favorites/${movieId}/` 
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        status: 200,
+      }))
+      mockOptionsObject = {
+        method: 'DELETE',
+      }
+    })
 
-    });
+    it('calls fetch with the correct arguments', async () => {
+      await deleteFavorite(userId, movieId);
 
-    it('should return the correct data', async () => {
-
+      expect(window.fetch).toHaveBeenCalledWith(url, mockOptionsObject);
     });
 
     it('should throw an error if the status is not ok', () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        status: 500
+      }))
+      const expected = Error('Error: 500');
+      const result = deleteFavorite(userId, movieId);
 
+      expect(result).rejects.toEqual(expected);
     });
 
     it('should throw an error if the fetch failed', () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.reject('Fetch failed'));
+      const expected = Error('Fetch failed');
+      const result = deleteFavorite(userId, movieId);
 
+      expect(result).rejects.toEqual(expected);
     });
 
   });

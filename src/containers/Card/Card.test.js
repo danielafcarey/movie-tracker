@@ -21,7 +21,8 @@ describe('Card', () => {
       releaseDate: 'tomorrow',
       image: 'www.flatulence.com/image/123132.png',
       favorite: false ,
-      addFavorite: jest.fn(),
+      addFavoriteToFavorites: jest.fn(),
+      deleteFavoriteFromFavorites: jest.fn(),
       userId: 1
     }
     wrapper = shallow(<Card {...mockProps} />)
@@ -59,21 +60,39 @@ describe('Card', () => {
       expect(apiCalls.postFavorite).toHaveBeenCalledWith(mockUserId, mockMovieToPost);
     })
 
-    it('calls props.addFavorite with the correct arguments if favorite is false', () => {
+    it('calls props.addFavoriteToFavorites with the correct arguments if favorite is false', () => {
       const wrapperInst = wrapper.instance();
       apiCalls.postFavorites = jest.fn();
 
       wrapperInst.handleClick();
 
-      expect(wrapperInst.props.addFavorite).toHaveBeenCalledWith(mockMovieToStore);
+      expect(wrapperInst.props.addFavoriteToFavorites).toHaveBeenCalledWith(mockMovieToStore);
     })
 
     it('calls apiCalls.removeFavorite with the correct arguments if favorite is true', () => {
+      mockProps.favorite = true;
+      wrapper = shallow(<Card {...mockProps} />)
+      const wrapperInst = wrapper.instance();
+      const mockUserId = wrapperInst.props.userId;
+      const mockMovieId = wrapperInst.props.movieId;
 
+      apiCalls.deleteFavorite = jest.fn();
+      wrapperInst.handleClick();
+
+      expect(apiCalls.deleteFavorite).toHaveBeenCalledWith(mockUserId, mockMovieId)
     })
 
-    it('calls props.removeFavorite with the correct arguments if favorite is true', () => {
+    it('calls props.deleteFavoriteFromFavorites with the correct arguments if favorite is true', () => {
+      mockProps.favorite = true;
+      wrapper = shallow(<Card {...mockProps} />)
+      const wrapperInst = wrapper.instance();
+      const mockUserId = wrapperInst.props.userId;
+      const mockMovieId = wrapperInst.props.movieId;
+      apiCalls.deleteFavorite = jest.fn();
 
+      wrapperInst.handleClick();
+
+      expect(wrapperInst.props.deleteFavoriteFromFavorites).toHaveBeenCalledWith(mockMovieId)
     })
 
   })
@@ -96,28 +115,50 @@ describe('Card', () => {
 
   describe('mapDispatchToProps', () => {
     
-    it('returns an object with an addFavorite function', () => {
+    it('returns an object with an addFavoriteToFavorites function', () => {
       const dispatch = jest.fn();
 
       const result = mapDispatchToProps(dispatch);
 
-      expect(typeof result.addFavorite).toEqual('function');
+      expect(typeof result.addFavoriteToFavorites).toEqual('function');
     })
 
     it('calls dispatch with the correct arguments', () => {
       const dispatch = jest.fn();
       const mappedProps = mapDispatchToProps(dispatch);
       const mockAction = {
-        type: 'ADD_FAVORITE',
+        type: 'ADD_FAVORITE_TO_FAVORITES',
         favoriteMovie: { name: 'movie1' }
       }
 
-      mappedProps.addFavorite(mockAction.favoriteMovie);
+      mappedProps.addFavoriteToFavorites(mockAction.favoriteMovie);
+
+      expect(dispatch).toHaveBeenCalledWith(mockAction);
+    })
+
+    it('returns an object with a deleteFavoriteFromFavorites function', () => {
+      const dispatch = jest.fn();
+
+      const result = mapDispatchToProps(dispatch);
+
+      expect(typeof result.deleteFavoriteFromFavorites).toEqual('function');
+    })
+
+    it('calls dispatch with the correct arguments', () => {
+      const dispatch = jest.fn();
+      const mappedProps = mapDispatchToProps(dispatch);
+      const mockAction = {
+        type: 'DELETE_FAVORITE_FROM_FAVORITES',
+        movieId: 1
+      }
+
+      mappedProps.deleteFavoriteFromFavorites(mockAction.movieId);
 
       expect(dispatch).toHaveBeenCalledWith(mockAction);
     })
 
   })
+
 })
 
 

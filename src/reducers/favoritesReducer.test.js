@@ -42,4 +42,25 @@ describe('favoritesReducer', () => {
     expect(result).toEqual(expected);
   })
 
+  it('returns new state when given an action type of DELETE_FAVORITE', () => {
+    const state = [
+      { movieId: 2 }, 
+      { movieId: 1 },
+      { movieId: 3 }
+    ];
+    const movieToDelete = 1;
+    const action = {
+      type: 'DELETE_FAVORITE',
+      movieId: movieToDelete
+    } 
+
+    const expected = [
+      { movieId: 2 }, 
+      { movieId: 3 }
+    ];
+    const result = favoritesReducer(state, action);
+
+    expect(result).toEqual(expected);
+  })
+
 })
