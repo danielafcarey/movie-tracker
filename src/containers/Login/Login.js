@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import { fetchUsers, fetchFavorites } from '../../apiCalls';
-import { updateCurrentUser, updateFavorites } from '../../actions';
+import { 
+  updateCurrentUser, 
+  updateMovies, 
+  updateFavorites 
+} from '../../actions';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router';
 import { cleanFavorites } from '../../cleaner';
@@ -47,6 +51,7 @@ class Login extends Component {
       const fetchedFavorites = await fetchFavorites(id);
       const cleanedFavorites = cleanFavorites(fetchedFavorites); 
       this.props.updateFavorites(cleanedFavorites);
+      this.props.updateMovies(cleanedFavorites);
       this.setState({ id, verified: true });
     } 
   };
@@ -87,6 +92,7 @@ class Login extends Component {
 
 const mapDispatchToProps = (dispatch) => ({
   updateCurrentUser: (id) => dispatch(updateCurrentUser(id)),
+  updateMovies: (favorites) => dispatch(updateMovies(favorites)),
   updateFavorites: (favorites) => dispatch(updateFavorites(favorites)),
 });
 

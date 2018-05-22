@@ -19,6 +19,27 @@ const updateFavorites = (favorites) => {
   }
 }
 
+const updateMovies = (favorites) => {
+  return {
+    type: 'UPDATE_MOVIES',
+    favorites
+  }
+}
+
+const addFavoriteToMovies = (favoriteMovie) => {
+  return {
+    type: 'ADD_FAVORITE_TO_MOVIES',
+    favoriteMovie
+  }
+}
+
+const deleteFavoriteFromMovies = (movieId) => {
+  return {
+    type: 'DELETE_FAVORITE_FROM_MOVIES',
+    movieId
+  }
+}
+
 const addFavoriteToFavorites = (favoriteMovie) => {
   return {
     type: 'ADD_FAVORITE_TO_FAVORITES',
@@ -37,6 +58,9 @@ export {
   populateMovies,
   updateCurrentUser,
   updateFavorites,
+  updateMovies,
+  addFavoriteToMovies,
+  deleteFavoriteFromMovies,
   addFavoriteToFavorites, 
   deleteFavoriteFromFavorites
 }

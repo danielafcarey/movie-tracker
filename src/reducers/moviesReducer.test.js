@@ -27,12 +27,27 @@ describe('moviesReducer', () => {
     expect(result).toEqual(expected);
   })
 
-  it('returns new state when given an action type of ADD_FAVORITE', () => {
+  it('returns new state when given an action type of UPDATE_MOVIES', () => {
+    const state = [{ movieId: 1, favorite: false }, { movieId: 2, favorite: false }];
+    const favorites = [{ movieId: 1, favorite: true }]
+    const action = {
+      type: 'UPDATE_MOVIES',
+      favorites 
+    }
+    
+    const expected = [{ movieId: 1, favorite: true }, { movieId: 2, favorite: false }];
+;
+    const result = moviesReducer(state, action);
+
+    expect(result).toEqual(expected);
+  })
+
+  it('returns new state when given an action type of ADD_FAVORITE_TO_MOVIES', () => {
     const state = [{ movieId: 1, favorite: false }]
     const favoriteMovie = { movieId: 1, favorite: true }
     
     const action = {
-      type: 'ADD_FAVORITE', 
+      type: 'ADD_FAVORITE_TO_MOVIES', 
       favoriteMovie
     }
 
@@ -42,12 +57,12 @@ describe('moviesReducer', () => {
     expect(result).toEqual(expected);
   })
 
-  it('returns new state when given an action type of DELETE_FAVORITE', () => {
+  it('returns new state when given an action type of DELETE_FAVORITE_FROM_MOVIES', () => {
     const state = [{ movieId: 1, favorite: true }]
     const movieId = 1 
     
     const action = {
-      type: 'DELETE_FAVORITE', 
+      type: 'DELETE_FAVORITE_FROM_MOVIES', 
       movieId
     }
 

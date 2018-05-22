@@ -2,6 +2,9 @@ import {
   populateMovies,
   updateCurrentUser,
   updateFavorites,
+  updateMovies,
+  addFavoriteToMovies,
+  deleteFavoriteFromMovies,
   addFavoriteToFavorites,
   deleteFavoriteFromFavorites
 } from './index.js';
@@ -45,6 +48,55 @@ describe('Action creators', () => {
       };
 
       const result = updateFavorites(expected.favorites);
+
+      expect(result).toEqual(expected);
+    })
+  })
+
+  describe('updateMovies', () => {
+
+    it('creates an action with correct payload and type', () => {
+      const expected = {
+        type: 'UPDATE_MOVIES',
+        favorites: [{ movieId: 1 }]
+      };
+
+      const result = updateMovies(expected.favorites);
+
+      expect(result).toEqual(expected);
+    })
+  })
+
+  describe('addFavoriteToMovies', () => {
+
+    it('creates an action with correct payload and type', () => {
+      const expected = {
+        type: 'ADD_FAVORITE_TO_MOVIES',
+        favoriteMovie: {
+          movieId: 1,
+          title: 'PopPop Saves the Day', 
+          rating: 1000,
+          image: 'gohere',
+          favorite: false,
+          releaseDate: 'tomorrow'
+        }
+      }
+
+      const result = addFavoriteToMovies(expected.favoriteMovie);
+
+      expect(result).toEqual(expected);
+    })
+  })
+
+  describe('deleteFavoriteFromMovies', () => {
+    
+    it('creates an action with correct payload and type', () => {
+      const expected = {
+        type: 'DELETE_FAVORITE_FROM_MOVIES',
+        movieId: 1
+      }
+
+      const result = deleteFavoriteFromMovies(1);
 
       expect(result).toEqual(expected);
     })

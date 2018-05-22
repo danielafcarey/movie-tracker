@@ -6,7 +6,9 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card
     addFavoriteToFavorites={[Function]}
+    addFavoriteToMovies={[Function]}
     deleteFavoriteFromFavorites={[Function]}
+    deleteFavoriteFromMovies={[Function]}
     favorite={false}
     image="www.flatulence.com/image/123132.png"
     movieId={2342342}

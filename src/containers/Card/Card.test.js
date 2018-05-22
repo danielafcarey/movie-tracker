@@ -21,6 +21,8 @@ describe('Card', () => {
       releaseDate: 'tomorrow',
       image: 'www.flatulence.com/image/123132.png',
       favorite: false ,
+      addFavoriteToMovies: jest.fn(),
+      deleteFavoriteFromMovies: jest.fn(),
       addFavoriteToFavorites: jest.fn(),
       deleteFavoriteFromFavorites: jest.fn(),
       userId: 1
@@ -49,6 +51,19 @@ describe('Card', () => {
   })
 
   describe('handleClick', () => {
+
+    it('notifies the user to log in or create account if they try to add a favorite while not logged in', () => {
+      mockProps.userId = null;
+      wrapper = shallow(<Card { ...mockProps } />);
+      const wrapperInst = wrapper.instance();
+      apiCalls.postFavorite = jest.fn();
+      apiCalls.deleteFavorite = jest.fn();
+      window.alert = jest.fn();
+
+      wrapperInst.handleClick();
+
+      expect(window.alert).toHaveBeenCalled();
+    })
 
     it('calls apiCalls.postFavorite with the correct arguments if favorite is false', () => {
       const wrapperInst = wrapper.instance();
