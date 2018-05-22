@@ -2,7 +2,7 @@ import rootReducer from './index.js';
 
 describe('rootReducer', () => {
 
-  it('should match snapshot', () => {
+  it('matches snapshot', () => {
     expect(rootReducer).toMatchSnapshot();
   })
 })
