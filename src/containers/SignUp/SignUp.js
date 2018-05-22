@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { updateCurrentUser } from '../../actions';
 import { connect } from 'react-redux';
-import { getUserId } from '../../helper';
 import { fetchUsers } from '../../apiCalls';
 import { Redirect } from 'react-router';
 
