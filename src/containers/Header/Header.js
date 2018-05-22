@@ -3,14 +3,11 @@ import { NavLink, Link } from 'react-router-dom';
 import { updateCurrentUser, updateFavorites} from '../../actions';
 
 class Header extends Component {
-  constructor(props) {
-    super(props)
-  }
-  
+ 
   handleClick = () => {
     this.props.updateCurrentUser(null);
-    this.props.updateFavorites([])
-  }
+    this.props.updateFavorites([]);
+  };
 
   render() {
     return (
@@ -25,13 +22,14 @@ class Header extends Component {
         </div>
       </header>
     );
-  }
+  };
+
 };
 
 const mapDispatchToProps = (dispatch) => ({
   updateCurrentUser: (id) => dispatch(updateCurrentUser(id)),
   updateFavorites: (favorites) => dispatch(updateFavorites(favorites))
-})
+});
 
 export {
   Header,
