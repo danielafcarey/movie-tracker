@@ -241,6 +241,19 @@ describe('SignUp', () => {
 
       expect(typeof result.updateCurrentUser).toEqual('function');
     });
+
+    it('calls dispatch with the correct arguments', () => {
+      const dispatch = jest.fn();
+      const mappedProps = mapDispatchToProps(dispatch);
+      const mockAction = {
+        type: 'UPDATE_CURRENT_USER',
+        id: 1
+      }
+
+      mappedProps.updateCurrentUser(mockAction.id);
+
+      expect(dispatch).toHaveBeenCalledWith(mockAction);
+    })
   });
 
 });
