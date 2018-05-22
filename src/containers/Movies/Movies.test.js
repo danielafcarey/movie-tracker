@@ -38,6 +38,5 @@ describe('Movies', () => {
     })
   })
 
-
 })
 
