@@ -9,13 +9,16 @@ describe('Login', () => {
   let wrapper;
   let mockUpdateCurrentUser;
   let mockUpdateFavorites;
+  let mockUpdateMovies;
 
   beforeEach(() => {
     mockUpdateCurrentUser = jest.fn();
     mockUpdateFavorites = jest.fn();
+    mockUpdateMovies = jest.fn();
     wrapper = shallow(<Login 
-      updateCurrentUser={mockUpdateCurrentUser}
-      updateFavorites={mockUpdateFavorites}
+      updateCurrentUser={ mockUpdateCurrentUser }
+      updateFavorites={ mockUpdateFavorites }
+      updateMovies={ mockUpdateMovies }
       />);
   });
 
@@ -165,6 +168,18 @@ describe('Login', () => {
       expect(wrapperInst.props.updateFavorites).toHaveBeenCalledWith(['favorite'])
     })
 
+    it('calls props.updateMovies with the correct arguments if user has been verified', async () => {
+       const wrapperInst = wrapper.instance();
+      wrapperInst.verifyUser = jest.fn().mockImplementation(() => 1)
+      apiCalls.fetchFavorites = jest.fn();
+      cleaner.cleanFavorites = jest.fn().mockImplementation(() => ['favorite'])
+
+      await wrapperInst.handleSubmit(mockEvent);
+
+      expect(wrapperInst.props.updateMovies).toHaveBeenCalledWith(['favorite'])
+ 
+    })
+
     it('updates state with current user id and verification status', async () => {
       const wrapperInst = wrapper.instance();
       wrapperInst.verifyUser = jest.fn().mockImplementation(() => 1)
@@ -199,6 +214,29 @@ describe('Login', () => {
         }
 
         mappedProps.updateCurrentUser(mockAction.id)
+
+        expect(dispatch).toHaveBeenCalledWith(mockAction)
+      })
+    })
+
+    describe('updateMovies', () => {
+      it('returns an object with an updateMovies function', () => {
+        const dispatch = jest.fn();
+        const result = mapDispatchToProps(dispatch);
+
+        expect(typeof result.updateMovies).toEqual('function');
+      });
+
+      it('calls dispatch with the correct argument', () => {
+
+        const dispatch = jest.fn();
+        const mappedProps = mapDispatchToProps(dispatch)
+        const mockAction = {
+          type: 'UPDATE_MOVIES',
+          favorites: [{ movieId: 1, favorite: true }] 
+        }
+
+        mappedProps.updateMovies(mockAction.favorites)
 
         expect(dispatch).toHaveBeenCalledWith(mockAction)
       })

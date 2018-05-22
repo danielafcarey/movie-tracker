@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as apiCalls from '../../apiCalls';
 import { 
+  addFavoriteToMovies, 
+  deleteFavoriteFromMovies, 
   addFavoriteToFavorites, 
   deleteFavoriteFromFavorites 
 } from '../../actions';
@@ -24,14 +26,19 @@ class Card extends Component {
       favorite: this.props.favorite
     };
 
+    if (!this.props.userId) {
+     alert('Please sign in or create an account to add favorites');
+     return;
+    }
+    
     if (this.props.favorite === false) {
       apiCalls.postFavorite(this.props.userId, movieToPost);
       this.props.addFavoriteToFavorites(movieToStore); 
-      // this.props.addFavoritesToMovies(movieToStore);
+      this.props.addFavoriteToMovies(movieToStore);
     } else {
       apiCalls.deleteFavorite(this.props.userId, this.props.movieId);
       this.props.deleteFavoriteFromFavorites(this.props.movieId);
-      //this.props.deleteFavoritesFromMovies(this.props.movieId);
+      this.props.deleteFavoriteFromMovies(this.props.movieId);
     }
   };
 
@@ -60,6 +67,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
+  addFavoriteToMovies: (favoriteMovie) => dispatch(addFavoriteToMovies(favoriteMovie)),
+  deleteFavoriteFromMovies: (movieId) => dispatch(deleteFavoriteFromMovies(movieId)),
   addFavoriteToFavorites: (favoriteMovie) => dispatch(addFavoriteToFavorites(favoriteMovie)),
   deleteFavoriteFromFavorites: (movieId) => dispatch(deleteFavoriteFromFavorites(movieId))
 });

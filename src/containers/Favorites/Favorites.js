@@ -3,8 +3,8 @@ import Card from '../Card/Card';
 import { connect } from 'react-redux';
 
 const Favorites = (props) => {
-  if (!props.favorites) {
-    return <div>Get a job!</div>;
+  if (props.favorites.length === 0) {
+    return <div>Go to movies to start adding favorites</div>;
   }
 
   const favoriteCards = props.favorites.map(favorite => {
