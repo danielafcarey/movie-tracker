@@ -10,7 +10,8 @@ import {
   fetchUsers,
   fetchFavorites,
   postFavorite,
-  deleteFavorite
+  deleteFavorite,
+  postUser
 } from './apiCalls';
 
 describe('apiCalls', () => {
@@ -101,6 +102,64 @@ describe('apiCalls', () => {
       const result = fetchUsers()
 
       expect(result).rejects.toEqual(expected)
+    });
+
+  });
+
+  describe('postUser', () => {
+    let url;
+    let mockUser;
+    let mockOptionsObject;
+    let mockData;
+
+    beforeEach(() => {
+      url = 'http://localhost:3000/api/users/new';
+      mockUser = {
+        name: 'samus the manus',
+        email: 'iamsamus@man.com',
+        password: 'z'
+      }
+      mockOptionsObject = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(mockUser)
+      }
+      mockData = { id: 2 }
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        status: 200,
+        json: () => Promise.resolve(mockData) 
+      }))
+    })
+
+    it('calls fetch with the correct arguments', async () => {
+      const result = await postUser(mockUser);
+
+      expect(window.fetch).toHaveBeenCalledWith(url, mockOptionsObject);
+    });
+
+    it('returns the correct data', async () => {
+      const expected = mockData.id;
+      const result = await postUser(mockUser);
+
+      expect(result).toEqual(expected);
+    });
+
+    it('throws an error if the status is not ok', () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+        status: 500
+      }))
+      const expected = Error('Error: 500');
+      const result = postUser(mockUser);
+
+      expect(result).rejects.toEqual(expected);
+    });
+
+    it('throws an error if the fetch failed', () => {
+      window.fetch = jest.fn().mockImplementation(() => Promise.reject('Fetch failed'))
+      const expected = Error('Fetch failed');
+      const result = postUser(mockUser);
+
+      expect(result).rejects.toEqual(expected);
     });
 
   });
@@ -209,26 +268,6 @@ describe('apiCalls', () => {
       const result = postFavorite(userId, mockMovie);
 
       expect(result).rejects.toEqual(expected);
-    });
-
-  });
-
-  describe('postUser', () => {
-
-    it('calls fetch with the correct arguments', async () => {
-      
-    });
-
-    it('returns the correct data', async () => {
-
-    });
-
-    it('throws an error if the status is not ok', () => {
-
-    });
-
-    it('throws an error if the fetch failed', () => {
-
     });
 
   });

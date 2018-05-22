@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { updateCurrentUser } from '../../actions';
 import { connect } from 'react-redux';
-import { fetchUsers } from '../../apiCalls';
+import { fetchUsers, postUser } from '../../apiCalls';
 import { Redirect } from 'react-router';
 
 class SignUp extends Component {
@@ -51,34 +51,15 @@ class SignUp extends Component {
     }
   };
 
-  postUser = async () => {
-    const { name, email, password } = this.state;
-    const newUserData = { name, email, password };
-    const url = 'http://localhost:3000/api/users/new';
-    const optionsObject = {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(newUserData)
-    };
-
-    try {
-      const response = await fetch(url, optionsObject);
-      const data = await response.json();
-      return data.id;
-    } catch (error) {
-      throw Error(error);
-    }
-  };
-
   handleSubmit = async (event) => {
     event.preventDefault();
+    const { name, email, password } = this.state;
+    const newUserData = { name, email, password };
     const verifiedPassword = this.verifyPassword();
     const verifiedEmail = await this.verifyEmail();
 
     if (verifiedPassword && verifiedEmail) {
-      const userId = await this.postUser();
+      const userId = await postUser(newUserData);
       this.props.updateCurrentUser(userId);
       this.setState({ authenticated: true });
     }

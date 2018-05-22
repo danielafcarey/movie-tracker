@@ -1,9 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { 
-  SignUp,
-  mapDispatchToProps
-} from './SignUp';
+import { SignUp, mapDispatchToProps } from './SignUp';
 import * as apiCalls from '../../apiCalls';
 
 describe('SignUp', () => {
@@ -33,7 +30,7 @@ describe('SignUp', () => {
     const mockEvent = { target: { 
       value: 'garbage', 
       name: 'name'
-    } };
+    }};
 
     wrapper.instance().handleChange(mockEvent);
 
@@ -44,7 +41,7 @@ describe('SignUp', () => {
     const mockEvent = { target: { 
       value: 'garbage', 
       name: 'email'
-    } };
+    }};
 
     wrapper.instance().handleChange(mockEvent);
 
@@ -149,36 +146,6 @@ describe('SignUp', () => {
 
   });
 
-
-  describe('postUser', () => {
-
-    it('calls fetch with the correct arguments', () => {
-      window.fetch = jest.fn().mockImplementation(() => {
-        return Promise.resolve({
-          status: 200,
-          json: () => Promise.resolve(1)
-        })
-      });
-      const mockState = {
-        name: 'nincompoop',
-        email: 'nincompooping@gmail.com',
-        password: 'ilovebabiesandgarbage'
-      };
-      const expectedUrl = 'http://localhost:3000/api/users/new';
-      const expectedOptionsObject = {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(mockState) 
-      };
-      
-      wrapper.setState({ ...mockState });
-      wrapper.instance().postUser();
-
-      expect(window.fetch).toHaveBeenCalledWith(expectedUrl, expectedOptionsObject);
-    });
-
-  });
-
   describe('handleSubmit', () => {
     let mockEvent;
 
@@ -190,7 +157,7 @@ describe('SignUp', () => {
         const wrapperInst = wrapper.instance();
         wrapperInst.verifyPassword = jest.fn();
         wrapperInst.verifyEmail = jest.fn();
-        wrapperInst.postUser = jest.fn();
+        apiCalls.postUser = jest.fn();
 
         wrapperInst.handleSubmit(mockEvent);
 
@@ -202,7 +169,7 @@ describe('SignUp', () => {
   
         wrapperInst.verifyPassword = jest.fn().mockImplementation(() => true);
         wrapperInst.verifyEmail = jest.fn().mockImplementation(() => true);
-        wrapperInst.postUser = jest.fn().mockImplementation(() => 1);
+        apiCalls.postUser = jest.fn().mockImplementation(() => 1);
 
         await wrapperInst.handleSubmit(mockEvent);
 
@@ -211,20 +178,22 @@ describe('SignUp', () => {
       
       it('calls postUser with the correct arguments if password has been verified', async () => {
         const wrapperInst = wrapper.instance();
+        const mockUser = { name: 'me', email: 'a@a.com', password: 'a' }
+        wrapper.setState({ ...mockUser })
         wrapperInst.verifyPassword = jest.fn().mockImplementation(() => true);
         wrapperInst.verifyEmail = jest.fn().mockImplementation(() => true);
-        wrapperInst.postUser = jest.fn();
-        
+        apiCalls.postUser = jest.fn();
+
         await wrapperInst.handleSubmit(mockEvent);
 
-        expect(wrapperInst.postUser).toHaveBeenCalled();
+        expect(apiCalls.postUser).toHaveBeenCalledWith(mockUser);
       });
 
     it('sets state of authenticated to true', async () => {
       const wrapperInst = wrapper.instance();
       wrapperInst.verifyPassword = jest.fn().mockImplementation(() => true);
       wrapperInst.verifyEmail = jest.fn().mockImplementation(() => true);
-      wrapperInst.postUser = jest.fn();
+      apiCalls.postUser = jest.fn();
 
       await wrapperInst.handleSubmit(mockEvent);
 
