@@ -29,7 +29,7 @@ describe('SignUp', () => {
     expect(wrapper.state('authenticated')).toEqual(false);
   });
 
-  it('should change the name in state on change in the name input', () => {
+  it('changes the name in state on change in the name input', () => {
     const mockEvent = { target: { 
       value: 'garbage', 
       name: 'name'
@@ -40,7 +40,7 @@ describe('SignUp', () => {
     expect(wrapper.state('name')).toEqual('garbage');
   });
 
-  it('should change the email in state on change in the email input', () => {
+  it('changes the email in state on change in the email input', () => {
     const mockEvent = { target: { 
       value: 'garbage', 
       name: 'email'
@@ -51,7 +51,7 @@ describe('SignUp', () => {
     expect(wrapper.state('email')).toEqual('garbage');
   });
 
-  it('should change the password in state on change in the password input', () => {
+  it('changes the password in state on change in the password input', () => {
     const mockEvent = { target: { 
       value: 'garbage', 
       name: 'password'
@@ -62,7 +62,7 @@ describe('SignUp', () => {
     expect(wrapper.state('password')).toEqual('garbage');
   });
 
-  it('should change the verification in state on change in the verification input', () => {
+  it('changes the verification in state on change in the verification input', () => {
     const mockEvent = { target: { 
       value: 'garbage', 
       name: 'verification'
@@ -138,7 +138,7 @@ describe('SignUp', () => {
       expect(wrapper.state('emailError')).toEqual('');
     });
 
-    it('return false and sets state if the user\'s email is taken', async () => {
+    it('returns false and sets state if the user\'s email is taken', async () => {
       wrapper.setState({ email: 'garbageman@gmail.com' });
 
       const result =  await wrapper.instance().verifyEmail();
@@ -152,7 +152,7 @@ describe('SignUp', () => {
 
   describe('postUser', () => {
 
-    it('should call fetch with the correct arguments', () => {
+    it('calls fetch with the correct arguments', () => {
       window.fetch = jest.fn().mockImplementation(() => {
         return Promise.resolve({
           status: 200,
@@ -243,7 +243,6 @@ describe('SignUp', () => {
     });
   });
 
-  
 });
 
 
