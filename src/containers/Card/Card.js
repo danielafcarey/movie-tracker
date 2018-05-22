@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as apiCalls from '../../apiCalls';
+import PropTypes from 'prop-types';
 import { 
   addFavoriteToMovies, 
   deleteFavoriteFromMovies, 
@@ -72,6 +73,20 @@ const mapDispatchToProps = (dispatch) => ({
   addFavoriteToFavorites: (favoriteMovie) => dispatch(addFavoriteToFavorites(favoriteMovie)),
   deleteFavoriteFromFavorites: (movieId) => dispatch(deleteFavoriteFromFavorites(movieId))
 });
+
+Card.propTypes = {
+  movieId: PropTypes.number,
+  title: PropTypes.string,
+  rating: PropTypes.number,
+  releaseDate: PropTypes.string,
+  image: PropTypes.string,
+  favorite: PropTypes.bool,
+  addFavoriteToMovies: PropTypes.func, 
+  deleteFavoriteFromMovies: PropTypes.func,
+  addFavoriteToFavorites: PropTypes.func,
+  deleteFavoriteFromFavorites: PropTypes.func,
+  userId: PropTypes.number
+}
 
 export {
   Card,

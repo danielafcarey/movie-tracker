@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Card from '../Card/Card';
 
@@ -20,6 +21,10 @@ const Movies = ({ movies }) => {
 const mapStateToProps = (state) => ({
   movies: state.movies
 });
+
+Movies.propTypes = {
+  movies: PropTypes.array
+}
 
 export {
   Movies,

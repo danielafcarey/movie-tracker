@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Card from '../Card/Card';
 import { connect } from 'react-redux';
 
@@ -21,6 +22,10 @@ const Favorites = (props) => {
 const mapStateToProps = (state) => ({
   favorites: state.favorites
 });
+
+Favorites.propTypes = {
+  favorites: PropTypes.array
+}
 
 export {
   Favorites,

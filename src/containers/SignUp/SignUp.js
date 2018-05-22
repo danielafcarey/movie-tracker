@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { updateCurrentUser } from '../../actions';
 import { connect } from 'react-redux';
 import { fetchUsers, postUser } from '../../apiCalls';
@@ -118,6 +119,10 @@ const mapDispatchToProps = (dispatch) => {
     updateCurrentUser: (id) => dispatch(updateCurrentUser(id))
   };
 };
+
+SignUp.propTypes = {
+  updateCurrentUser: PropTypes.func
+}
 
 export {
   SignUp,

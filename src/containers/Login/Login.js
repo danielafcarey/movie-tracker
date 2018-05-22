@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { fetchUsers, fetchFavorites } from '../../apiCalls';
 import { 
   updateCurrentUser, 
@@ -95,6 +96,12 @@ const mapDispatchToProps = (dispatch) => ({
   updateMovies: (favorites) => dispatch(updateMovies(favorites)),
   updateFavorites: (favorites) => dispatch(updateFavorites(favorites)),
 });
+
+Login.propTypes = {
+  updateCurrentUser: PropTypes.func,
+  updateMovies: PropTypes.func,
+  updateFavorites: PropTypes.func
+}
 
 export {
   Login,

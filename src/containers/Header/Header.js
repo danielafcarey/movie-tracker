@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { NavLink, Link } from 'react-router-dom';
 import { updateCurrentUser, updateFavorites} from '../../actions';
 
@@ -30,6 +31,11 @@ const mapDispatchToProps = (dispatch) => ({
   updateCurrentUser: (id) => dispatch(updateCurrentUser(id)),
   updateFavorites: (favorites) => dispatch(updateFavorites(favorites))
 });
+
+Header.propTypes = {
+  updateCurrentUser: PropTypes.func,
+  updateFavorites: PropTypes.func
+}
 
 export {
   Header,
