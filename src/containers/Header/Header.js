@@ -15,11 +15,14 @@ class Header extends Component {
   render() {
     return (
       <header>
-        <NavLink to='/'>Movies</NavLink>
-        <NavLink to='/favorites'>Favorites</NavLink>
-        <NavLink to='/signup'>Sign Up</NavLink>
-        <NavLink to='/login'>Log In</NavLink>
-        <Link to='/' onClick={this.handleClick}>Log Out</Link>
+        <h1 className='title'>MovieTracker and Chill</h1>
+        <div className='nav-bar'>
+          <NavLink to='/'>Movies</NavLink>
+          <NavLink to='/favorites'>Favorites</NavLink>
+          <NavLink to='/signup'>Sign Up</NavLink>
+          <NavLink to='/login'>Log In</NavLink>
+          <Link to='/' onClick={this.handleClick}>Log Out</Link>
+        </div>
       </header>
     );
   }
