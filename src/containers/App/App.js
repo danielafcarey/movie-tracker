@@ -13,6 +13,7 @@ import SignUp from '../SignUp/SignUp';
 import Header from '../Header/Header'; 
 
 class App extends Component { 
+
   async componentDidMount() { 
     const movieData = await fetchMovies(); 
     const cleanedMovies = cleanMovieData(movieData.results); 

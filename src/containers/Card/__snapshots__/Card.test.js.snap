@@ -29,6 +29,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <img
+          alt="The Mighty Gasbag poster"
           src="www.flatulence.com/image/123132.png"
 />,
         <h2>
@@ -57,6 +58,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "alt": "The Mighty Gasbag poster",
           "src": "www.flatulence.com/image/123132.png",
         },
         "ref": null,
@@ -131,6 +133,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <img
+            alt="The Mighty Gasbag poster"
             src="www.flatulence.com/image/123132.png"
 />,
           <h2>
@@ -159,6 +162,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "alt": "The Mighty Gasbag poster",
             "src": "www.flatulence.com/image/123132.png",
           },
           "ref": null,
