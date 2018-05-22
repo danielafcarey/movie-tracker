@@ -1,9 +1,20 @@
 .card {
-  width: 200px;
+  width: 430px;
   border: 1px black solid;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  border: 1px black solid;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px;
+  box-shadow: 3px 6px 16px 11px #888888; }
+  .card h2 {
+    padding: 10px;
+    word-wrap: break-word;
+    font-size: 30px; }
+  .card h3 {
+    padding: 10px; }
   .card img {
-    width: 200px; }
+    width: 100%; }
   .card button {
-    margin: 0 auto; }
+    margin: 0 auto 33px; }

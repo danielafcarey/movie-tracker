@@ -1,0 +1,28 @@
+header { 
+  background-color: #80808059;
+
+  .title {
+    display: inline-block;
+    width: calc(50% - 40px);
+    margin: 0 0 20px;
+    text-align: center;
+    font-size: 100px;
+    }
+
+.nav-bar {
+  display: inline-flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 0 20px 30px;
+  height: 200px;
+  width: 50%;
+  // background-color: #80808059;
+  a {
+    text-align: right;
+    margin: 20px 20px 0;
+    font-size: 20px;
+    text-decoration: none;
+    color: #D46A6A;
+  }
+}
+}
