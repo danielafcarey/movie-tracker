@@ -37,6 +37,4 @@ describe('Favorites', () => {
 
   })
 
-
-
 })

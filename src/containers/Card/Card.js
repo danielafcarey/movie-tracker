@@ -7,10 +7,6 @@ import {
 } from '../../actions';
 
 class Card extends Component {
-  constructor(props) {
-    super(props)
-  }
- 
   handleClick = () => {
     const movieToPost = {
       movie_id: this.props.movieId,
@@ -19,7 +15,6 @@ class Card extends Component {
       poster_path: this.props.image,
       release_date: this.props.releaseDate,
     };
-
     const movieToStore = {
       movieId: this.props.movieId,
       title: this.props.title,
@@ -27,7 +22,7 @@ class Card extends Component {
       image: this.props.image,
       releaseDate: this.props.releaseDate,
       favorite: this.props.favorite
-    }
+    };
 
     if (this.props.favorite === false) {
       apiCalls.postFavorite(this.props.userId, movieToPost);
@@ -38,44 +33,42 @@ class Card extends Component {
       this.props.deleteFavoriteFromFavorites(this.props.movieId);
       //this.props.deleteFavoritesFromMovies(this.props.movieId);
     }
-  }
+  };
 
   render() {
     const {
-      movieId,
       title,
       rating,
       image,
-      releaseDate,
-      favorite,
-    } = this.props
+      releaseDate
+    } = this.props;
 
-    return(
+    return (
       <div className='card'>
-        <img src={image} />
+        <img src={image} alt={`${title} poster`}/>
         <h2>{title}</h2>
         <h3>Rating: {rating}</h3>
         <h3>Release Date: {releaseDate}</h3>
         <button onClick={ this.handleClick }>Favorite</button>
       </div>
-    )
-  }
-}
+    );
+  };
+};
 
 const mapStateToProps = (state) => ({
   userId: state.currentUser  
-})
+});
 
 const mapDispatchToProps = (dispatch) => ({
   addFavoriteToFavorites: (favoriteMovie) => dispatch(addFavoriteToFavorites(favoriteMovie)),
   deleteFavoriteFromFavorites: (movieId) => dispatch(deleteFavoriteFromFavorites(movieId))
-})
+});
 
 export {
   Card,
   mapStateToProps,
   mapDispatchToProps,
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Card);
 

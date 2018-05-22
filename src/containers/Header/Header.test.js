@@ -18,7 +18,7 @@ describe('Header', () => {
   })
 
   it('matches the snapshot', () => {
-    // expect(wrapper).toMatchSnapshot()
+    expect(wrapper).toMatchSnapshot()
   })
 
   describe('handleClick', () => {

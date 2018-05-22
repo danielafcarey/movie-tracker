@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { dispatch } from 'redux';
 import { populateMovies } from '../../actions'; 
 import { fetchMovies } from '../../apiCalls'; 
 import { cleanMovieData } from '../../cleaner';
@@ -14,10 +13,7 @@ import SignUp from '../SignUp/SignUp';
 import Header from '../Header/Header'; 
 
 class App extends Component { 
-  constructor(props) { 
-    super(props); 
-  } 
-  
+
   async componentDidMount() { 
     const movieData = await fetchMovies(); 
     const cleanedMovies = cleanMovieData(movieData.results); 

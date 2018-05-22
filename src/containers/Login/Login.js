@@ -16,29 +16,28 @@ class Login extends Component {
       verified: false,
       loginError: ''
     };
-  }
+  };
 
   handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
-  }
+  };
 
   verifyUser = async () => {
     const { email, password } = this.state;
     const users = await fetchUsers();
     const userMatch = users.find(user => {
-      if(user.password === password && user.email === email) {
-        return user
-      }
-    })
+      return user.password === password && user.email === email;
+    });
+
     if (userMatch) {
-      this.setState({ loginError: '' })
-      return userMatch.id
+      this.setState({ loginError: '' });
+      return userMatch.id;
     } else {
-      this.setState({ loginError: 'Invalid email or password' })
+      this.setState({ loginError: 'Invalid email or password' });
       return undefined;
     }
-  }
+  };
   
   handleSubmit = async (event) => {
     event.preventDefault();
@@ -50,14 +49,14 @@ class Login extends Component {
       this.props.updateFavorites(cleanedFavorites);
       this.setState({ id, verified: true });
     } 
-  }
+  };
 
   render() {
     if (this.state.verified) {
-      return <Redirect to='/' />    
-    }
+      return <Redirect to='/' />;
+    };
 
-    return(
+    return (
       <form
         type='submit'
         onSubmit={this.handleSubmit}
@@ -81,18 +80,21 @@ class Login extends Component {
         <p>{ this.state.loginError }</p>
         <button>Log In</button>
       </form>
-    )
-  }
-}
+    );
+  };
+
+};
 
 const mapDispatchToProps = (dispatch) => ({
   updateCurrentUser: (id) => dispatch(updateCurrentUser(id)),
   updateFavorites: (favorites) => dispatch(updateFavorites(favorites)),
-})
+});
 
 export {
   Login,
   mapDispatchToProps
 };
 
-export default connect(null, mapDispatchToProps)(Login)
+export default connect(null, mapDispatchToProps)(Login);
+
+

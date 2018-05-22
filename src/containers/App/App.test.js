@@ -40,14 +40,23 @@ describe('App', () => {
     });
 
     it('calls dispatch with the correct arguments', () => {
+      const dispatch = jest.fn();
+      const mappedProps = mapDispatchToProps(dispatch);
+      const mockAction = {
+        type: 'POPULATE_MOVIES',
+        movies: ['I am a movie']
+      }
 
+      mappedProps.populateMovies(mockAction.movies);
+
+      expect(dispatch).toHaveBeenCalledWith(mockAction);
     })
     
   });
   
   describe('componentDidMount', () => {
 
-    it.only('calls props.populateMovies with the correct arguments', async () => {
+    it('calls props.populateMovies with the correct arguments', async () => {
       apiCalls.fetchMovies = jest.fn().mockImplementation(() => {
         return Promise.resolve({ results: ['movies'] });
       });

@@ -16,7 +16,7 @@ describe('Movies', () => {
     cleanMovies = cleanMovieData(mockMovies.results);
   })
 
-  it('should match the snapshot', () => {
+  it('matches the snapshot', () => {
     const wrapper = shallow(<Movies movies={ cleanMovies }/>);
 
     expect(wrapper).toMatchSnapshot();
@@ -37,7 +37,6 @@ describe('Movies', () => {
       expect(result.movies).toEqual(expected);
     })
   })
-
 
 })
 
