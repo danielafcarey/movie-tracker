@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { cleanMovieData, cleanFavorites } from './cleaner';
 import { mockMovies } from './mockData';
 

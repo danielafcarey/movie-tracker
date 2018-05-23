@@ -49,7 +49,7 @@ const postUser = async (user) => {
   } catch (error) {
     throw Error(error);
   }
-}
+};
 
 const fetchFavorites = async (id) => {
   const url = `http://localhost:3000/api/users/${id}/favorites`;
@@ -87,15 +87,15 @@ const postFavorite = async (userId, movie) => {
 
 const deleteFavorite = async (userId, movieId) => {
   const optionsObject = { 
-    method: 'DELETE',
-  }
+    method: 'DELETE'
+  };
   const url = `http://localhost:3000/api/users/${userId}/favorites/${movieId}/`; 
   try {
     const response = await fetch(url, optionsObject);
     if (response.status !== 200) {
-      throw Error(response.status)
+      throw Error(response.status);
     }
-  } catch(error) {
+  } catch (error) {
     throw Error(error);
   }
 };

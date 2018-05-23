@@ -6,7 +6,7 @@ const cleanMovieData = (movies) => {
     poster_path, 
     release_date: releaseDate
   }) => {
-    const image = `http://image.tmdb.org/t/p/original${poster_path}`
+    const image = `http://image.tmdb.org/t/p/original${poster_path}`;
     return {
       movieId: id,
       title, 
@@ -14,14 +14,13 @@ const cleanMovieData = (movies) => {
       image,
       favorite: false,
       releaseDate
-    }
-  })
-  return cleanMovies
-} 
+    };
+  });
+  return cleanMovies;
+};
 
 const cleanFavorites = (fetchedFavorites) => {
   const cleanedFavorites = fetchedFavorites.map(({
-    id,
     movie_id: movieId,
     title,
     poster_path: image,
@@ -35,13 +34,13 @@ const cleanFavorites = (fetchedFavorites) => {
       image,
       favorite: true,
       releaseDate
-    }
-  })
+    };
+  });
 
   return cleanedFavorites; 
-}
+};
 
 export {
   cleanMovieData,
   cleanFavorites
-}
+};

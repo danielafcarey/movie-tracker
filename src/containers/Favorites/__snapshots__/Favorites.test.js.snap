@@ -344,7 +344,7 @@ ShallowWrapper {
           title="Annihilation"
 />,
       ],
-      "className": "favorites-container",
+      "className": "movie-container",
     },
     "ref": null,
     "rendered": Array [
@@ -839,7 +839,7 @@ ShallowWrapper {
             title="Annihilation"
 />,
         ],
-        "className": "favorites-container",
+        "className": "movie-container",
       },
       "ref": null,
       "rendered": Array [

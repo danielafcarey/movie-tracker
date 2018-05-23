@@ -17,7 +17,7 @@ class SignUp extends Component {
       passwordError: '',
       authenticated: false
     };
-  };
+  }
 
   handleChange = (event) => {
     const {
@@ -69,7 +69,7 @@ class SignUp extends Component {
   render() {
     if (this.state.authenticated) {
       return <Redirect to='/' />;
-    };
+    }
 
     return ( 
       <div className='signup'>
@@ -112,9 +112,9 @@ class SignUp extends Component {
         </form >
       </div>
     );
-  };
+  }
 
-};
+}
 
 const mapDispatchToProps = (dispatch) => {
   return {
@@ -124,7 +124,7 @@ const mapDispatchToProps = (dispatch) => {
 
 SignUp.propTypes = {
   updateCurrentUser: PropTypes.func
-}
+};
 
 export {
   SignUp,

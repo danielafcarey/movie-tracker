@@ -16,7 +16,7 @@ class Card extends Component {
       title: this.props.title,
       vote_average: this.props.rating,
       poster_path: this.props.image,
-      release_date: this.props.releaseDate,
+      release_date: this.props.releaseDate
     };
     const movieToStore = {
       movieId: this.props.movieId,
@@ -28,8 +28,8 @@ class Card extends Component {
     };
 
     if (!this.props.userId) {
-     alert('Please sign in or create an account to add favorites');
-     return;
+      alert('Please sign in or create an account to add favorites');
+      return;
     }
     
     if (this.props.favorite === false) {
@@ -66,18 +66,26 @@ class Card extends Component {
           onClick={ this.handleClick }>☆</button>
       </div>
     );
-  };
-};
+  }
+}
 
 const mapStateToProps = (state) => ({
   userId: state.currentUser  
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  addFavoriteToMovies: (favoriteMovie) => dispatch(addFavoriteToMovies(favoriteMovie)),
-  deleteFavoriteFromMovies: (movieId) => dispatch(deleteFavoriteFromMovies(movieId)),
-  addFavoriteToFavorites: (favoriteMovie) => dispatch(addFavoriteToFavorites(favoriteMovie)),
-  deleteFavoriteFromFavorites: (movieId) => dispatch(deleteFavoriteFromFavorites(movieId))
+  addFavoriteToMovies: (favoriteMovie) => {
+    return dispatch(addFavoriteToMovies(favoriteMovie));
+  },
+  deleteFavoriteFromMovies: (movieId) => {
+    return dispatch(deleteFavoriteFromMovies(movieId));
+  },  
+  addFavoriteToFavorites: (favoriteMovie) => {
+    return dispatch(addFavoriteToFavorites(favoriteMovie));
+  },
+  deleteFavoriteFromFavorites: (movieId) => {
+    return dispatch(deleteFavoriteFromFavorites(movieId));
+  }
 });
 
 Card.propTypes = {
@@ -92,12 +100,12 @@ Card.propTypes = {
   addFavoriteToFavorites: PropTypes.func,
   deleteFavoriteFromFavorites: PropTypes.func,
   userId: PropTypes.number
-}
+};
 
 export {
   Card,
   mapStateToProps,
-  mapDispatchToProps,
+  mapDispatchToProps
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Card);

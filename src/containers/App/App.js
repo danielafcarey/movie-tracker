@@ -39,16 +39,16 @@ class App extends Component {
 const mapDispatchToProps = (dispatch) => {
   return {
     populateMovies: (movies) => dispatch(populateMovies(movies))
-  }
-}
+  };
+};
 
 App.propTypes = {
-  populateMovies: PropTypes.func,
-}
+  populateMovies: PropTypes.func
+};
 
 export {
   App,
   mapDispatchToProps
-}
+};
 
 export default withRouter(connect(null, mapDispatchToProps)(App));

@@ -21,7 +21,7 @@ class Login extends Component {
       verified: false,
       loginError: ''
     };
-  };
+  }
 
   handleChange = (event) => {
     const { name, value } = event.target;
@@ -60,7 +60,7 @@ class Login extends Component {
   render() {
     if (this.state.verified) {
       return <Redirect to='/' />;
-    };
+    }
 
     return (
       <div className='login'>
@@ -89,21 +89,21 @@ class Login extends Component {
         </form>
       </div>
     );
-  };
+  }
 
-};
+}
 
 const mapDispatchToProps = (dispatch) => ({
   updateCurrentUser: (id) => dispatch(updateCurrentUser(id)),
   updateMovies: (favorites) => dispatch(updateMovies(favorites)),
-  updateFavorites: (favorites) => dispatch(updateFavorites(favorites)),
+  updateFavorites: (favorites) => dispatch(updateFavorites(favorites))
 });
 
 Login.propTypes = {
   updateCurrentUser: PropTypes.func,
   updateMovies: PropTypes.func,
   updateFavorites: PropTypes.func
-}
+};
 
 export {
   Login,

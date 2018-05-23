@@ -21,92 +21,35 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
+      "children": <form
+        onSubmit={[Function]}
+        type="submit"
+>
         <input
-          name="email"
-          onChange={[Function]}
-          placeholder="Email"
-          required={true}
-          type="text"
-          value=""
-/>,
+                name="email"
+                onChange={[Function]}
+                placeholder="Email"
+                required={true}
+                type="text"
+                value=""
+        />
         <input
-          name="password"
-          onChange={[Function]}
-          placeholder="Password"
-          required={true}
-          type="password"
-          value=""
-/>,
-        <p />,
+                name="password"
+                onChange={[Function]}
+                placeholder="Password"
+                required={true}
+                type="password"
+                value=""
+        />
+        <p />
         <button>
-          Log In
-</button>,
-      ],
-      "onSubmit": [Function],
-      "type": "submit",
+                Log In
+        </button>
+</form>,
+      "className": "login",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "name": "email",
-          "onChange": [Function],
-          "placeholder": "Email",
-          "required": true,
-          "type": "text",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "name": "password",
-          "onChange": [Function],
-          "placeholder": "Password",
-          "required": true,
-          "type": "password",
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "",
-        },
-        "ref": null,
-        "rendered": "",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "Log In",
-        },
-        "ref": null,
-        "rendered": "Log In",
-        "type": "button",
-      },
-    ],
-    "type": "form",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
+    "rendered": Object {
       "instance": null,
       "key": undefined,
       "nodeType": "host",
@@ -194,6 +137,133 @@ ShallowWrapper {
         },
       ],
       "type": "form",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <form
+          onSubmit={[Function]}
+          type="submit"
+>
+          <input
+                    name="email"
+                    onChange={[Function]}
+                    placeholder="Email"
+                    required={true}
+                    type="text"
+                    value=""
+          />
+          <input
+                    name="password"
+                    onChange={[Function]}
+                    placeholder="Password"
+                    required={true}
+                    type="password"
+                    value=""
+          />
+          <p />
+          <button>
+                    Log In
+          </button>
+</form>,
+        "className": "login",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <input
+              name="email"
+              onChange={[Function]}
+              placeholder="Email"
+              required={true}
+              type="text"
+              value=""
+/>,
+            <input
+              name="password"
+              onChange={[Function]}
+              placeholder="Password"
+              required={true}
+              type="password"
+              value=""
+/>,
+            <p />,
+            <button>
+              Log In
+</button>,
+          ],
+          "onSubmit": [Function],
+          "type": "submit",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "name": "email",
+              "onChange": [Function],
+              "placeholder": "Email",
+              "required": true,
+              "type": "text",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "name": "password",
+              "onChange": [Function],
+              "placeholder": "Password",
+              "required": true,
+              "type": "password",
+              "value": "",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "input",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "",
+            },
+            "ref": null,
+            "rendered": "",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Log In",
+            },
+            "ref": null,
+            "rendered": "Log In",
+            "type": "button",
+          },
+        ],
+        "type": "form",
+      },
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {

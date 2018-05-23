@@ -5,17 +5,17 @@ import Card from '../Card/Card';
 
 const Movies = ({ movies }) => {
   const movieCards = movies.map(movie => {
-   return <Card 
-    {...movie}
-    key={movie.movieId}
-    />
-  })
+    return <Card 
+      {...movie}
+      key={movie.movieId}
+    />;
+  });
 
   return (
     <div className='movie-container'>
       {movieCards}
     </div>
-  )
+  );
 };
 
 const mapStateToProps = (state) => ({
@@ -24,7 +24,7 @@ const mapStateToProps = (state) => ({
 
 Movies.propTypes = {
   movies: PropTypes.array
-}
+};
 
 export {
   Movies,

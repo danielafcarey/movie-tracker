@@ -23,9 +23,9 @@ class Header extends Component {
         </div>
       </header>
     );
-  };
+  }
 
-};
+}
 
 const mapDispatchToProps = (dispatch) => ({
   updateCurrentUser: (id) => dispatch(updateCurrentUser(id)),
@@ -35,7 +35,7 @@ const mapDispatchToProps = (dispatch) => ({
 Header.propTypes = {
   updateCurrentUser: PropTypes.func,
   updateFavorites: PropTypes.func
-}
+};
 
 export {
   Header,

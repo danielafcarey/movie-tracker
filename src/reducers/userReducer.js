@@ -1,5 +1,5 @@
 const userReducer = (state = null, action) => {
-  switch(action.type) {
+  switch (action.type) {
     case 'UPDATE_CURRENT_USER':
       return action.id;
     default:
