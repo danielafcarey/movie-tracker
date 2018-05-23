@@ -22,6 +22,15 @@ describe('Favorites', () => {
     expect(wrapper).toMatchSnapshot();
   })
 
+  it('matches the snapshot if the favorites array is empty', () => {
+    mockProps = {
+      favorites: []
+    }
+    wrapper = shallow(<Favorites { ...mockProps } />);
+
+    expect(wrapper).toMatchSnapshot();
+  })
+
   describe('mapStateToProps', () => {
 
     it('updates the favorites props with favorites from state', () => {
