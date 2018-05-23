@@ -129,7 +129,49 @@ describe('Card', () => {
   })
 
   describe('mapDispatchToProps', () => {
-    
+
+     it('returns an object with an addFavoriteToMovies function', () => {
+      const dispatch = jest.fn();
+
+      const result = mapDispatchToProps(dispatch);
+
+      expect(typeof result.addFavoriteToMovies).toEqual('function');
+    })
+
+    it('calls dispatch with the correct arguments', () => {
+      const dispatch = jest.fn();
+      const mappedProps = mapDispatchToProps(dispatch);
+      const mockAction = {
+        type: 'ADD_FAVORITE_TO_MOVIES',
+        favoriteMovie: { name: 'movie1' }
+      }
+
+      mappedProps.addFavoriteToMovies(mockAction.favoriteMovie);
+
+      expect(dispatch).toHaveBeenCalledWith(mockAction);
+    })
+
+    it('returns an object with a deleteFavoriteFromMovies function', () => {
+      const dispatch = jest.fn();
+
+      const result = mapDispatchToProps(dispatch);
+
+      expect(typeof result.deleteFavoriteFromMovies).toEqual('function');
+    })
+
+    it('calls dispatch with the correct arguments', () => {
+      const dispatch = jest.fn();
+      const mappedProps = mapDispatchToProps(dispatch);
+      const mockAction = {
+        type: 'DELETE_FAVORITE_FROM_MOVIES',
+        movieId: 1
+      }
+
+      mappedProps.deleteFavoriteFromMovies(mockAction.movieId);
+
+      expect(dispatch).toHaveBeenCalledWith(mockAction);
+    })
+
     it('returns an object with an addFavoriteToFavorites function', () => {
       const dispatch = jest.fn();
 

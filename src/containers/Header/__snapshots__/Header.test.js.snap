@@ -32,6 +32,7 @@ ShallowWrapper {
           <NavLink
                     activeClassName="active"
                     ariaCurrent="true"
+                    exact={true}
                     to="/"
           >
                     Movies
@@ -90,6 +91,7 @@ ShallowWrapper {
             <NavLink
               activeClassName="active"
               ariaCurrent="true"
+              exact={true}
               to="/"
 >
               Movies
@@ -135,6 +137,7 @@ ShallowWrapper {
               "activeClassName": "active",
               "ariaCurrent": "true",
               "children": "Movies",
+              "exact": true,
               "to": "/",
             },
             "ref": null,
@@ -221,6 +224,7 @@ ShallowWrapper {
             <NavLink
                         activeClassName="active"
                         ariaCurrent="true"
+                        exact={true}
                         to="/"
             >
                         Movies
@@ -279,6 +283,7 @@ ShallowWrapper {
               <NavLink
                 activeClassName="active"
                 ariaCurrent="true"
+                exact={true}
                 to="/"
 >
                 Movies
@@ -324,6 +329,7 @@ ShallowWrapper {
                 "activeClassName": "active",
                 "ariaCurrent": "true",
                 "children": "Movies",
+                "exact": true,
                 "to": "/",
               },
               "ref": null,
