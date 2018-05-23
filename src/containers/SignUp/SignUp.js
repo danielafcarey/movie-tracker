@@ -72,43 +72,45 @@ class SignUp extends Component {
     };
 
     return ( 
-      <form onSubmit={ this.handleSubmit }>
-        <input 
-          type='text'
-          value={ this.state.name }
-          name='name'
-          placeholder='Name*'
-          onChange={ this.handleChange }
-          required
-        /> 
-        <input 
-          type='text'
-          value={ this.state.email }
-          name='email'
-          placeholder='Email*'
-          onChange={ this.handleChange }
-          required
-        /> 
-        <p>{ this.state.emailError }</p>
-        <input 
-          type='password'
-          value={ this.state.password }
-          name='password'
-          placeholder='Password*'
-          onChange={ this.handleChange }
-          required
-        /> 
-        <input 
-          type='password'
-          value={ this.state.verification }
-          name='verification'
-          placeholder='Retype password*'
-          onChange={ this.handleChange }
-          required
-        /> 
-        <p>{ this.state.passwordError }</p>
-        <button>Sign Up</button> 
-      </form >
+      <div className='signup'>
+        <form onSubmit={ this.handleSubmit } >
+          <input 
+            type='text'
+            value={ this.state.name }
+            name='name'
+            placeholder='Name*'
+            onChange={ this.handleChange }
+            required
+          /> 
+          <input 
+            type='text'
+            value={ this.state.email }
+            name='email'
+            placeholder='Email*'
+            onChange={ this.handleChange }
+            required
+          /> 
+          <p>{ this.state.emailError }</p>
+          <input 
+            type='password'
+            value={ this.state.password }
+            name='password'
+            placeholder='Password*'
+            onChange={ this.handleChange }
+            required
+          /> 
+          <input 
+            type='password'
+            value={ this.state.verification }
+            name='verification'
+            placeholder='Retype password*'
+            onChange={ this.handleChange }
+            required
+          /> 
+          <p>{ this.state.passwordError }</p>
+          <button>Sign Up</button> 
+        </form >
+      </div>
     );
   };
 

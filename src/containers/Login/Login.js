@@ -43,7 +43,7 @@ class Login extends Component {
       return undefined;
     }
   };
-  
+
   handleSubmit = async (event) => {
     event.preventDefault();
     const id = await this.verifyUser();
@@ -63,29 +63,31 @@ class Login extends Component {
     };
 
     return (
-      <form
-        type='submit'
-        onSubmit={this.handleSubmit}
-      >
-        <input 
-          type='text'
-          placeholder='Email'
-          name='email'
-          value={this.state.email}
-          onChange={this.handleChange}
-          required
-        />
-        <input
-          type='password'
-          placeholder='Password'
-          name='password'
-          value={this.state.password}
-          onChange={this.handleChange}          
-          required
-        />
-        <p>{ this.state.loginError }</p>
-        <button>Log In</button>
-      </form>
+      <div className='login'>
+        <form
+          type='submit'
+          onSubmit={this.handleSubmit}
+        >
+          <input 
+            type='text'
+            placeholder='Email'
+            name='email'
+            value={this.state.email}
+            onChange={this.handleChange}
+            required
+          />
+          <input
+            type='password'
+            placeholder='Password'
+            name='password'
+            value={this.state.password}
+            onChange={this.handleChange}          
+            required
+          />
+          <p>{ this.state.loginError }</p>
+          <button>Log In</button>
+        </form>
+      </div>
     );
   };
 

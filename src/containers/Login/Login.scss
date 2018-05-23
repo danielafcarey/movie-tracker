@@ -1,0 +1,48 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    box-shadow: 0px 0px 20px 0px black;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+
+    input {
+      display: block;
+      width: 300px;
+      font-size: 20px;
+      margin-top: 30px;
+      padding: 3px;
+
+      &::placeholder {
+        padding: 3px;
+      }
+    }
+
+    p {
+      color: #b33533;
+      margin: 3px;
+    }
+
+    button {
+      width: 305px;
+      background: #b33533;
+      color: white;
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 30px;
+      margin-top: 30px;
+      padding: 5px;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+
+  }
+}
