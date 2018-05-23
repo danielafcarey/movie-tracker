@@ -2,7 +2,7 @@
 
 ## Synopsis
 
-MovieMasher is an app allowing users to browse a database of movies. The user can create an account to save their favorite movies, for future reference. 
+Movie Tracker and Chill is an app allowing users to browse a database of movies. The user can create an account to save their favorite movies, for future reference. 
 
 ### Tools 
 
