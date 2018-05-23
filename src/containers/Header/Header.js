@@ -15,7 +15,7 @@ class Header extends Component {
       <header>
         <h1 className='title'>MovieTracker and Chill</h1>
         <div className='nav-bar'>
-          <NavLink to='/'>Movies</NavLink>
+          <NavLink exact to='/'>Movies</NavLink>
           <NavLink to='/favorites'>Favorites</NavLink>
           <NavLink to='/signup'>Sign Up</NavLink>
           <NavLink to='/login'>Log In</NavLink>

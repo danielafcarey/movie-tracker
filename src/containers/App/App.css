@@ -43,10 +43,11 @@
 .movie-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; }
+  justify-content: space-around;
+  margin-top: 30px; }
 
 header {
-  background-color: #80808059; }
+  background-color: #b33533; }
   header .title {
     display: inline-block;
     width: calc(50% - 40px);
@@ -65,4 +66,11 @@ header {
       margin: 20px 20px 0;
       font-size: 20px;
       text-decoration: none;
-      color: #D46A6A; }
+      color: black; }
+    header .nav-bar .active {
+      color: white; }
+
+.no-favorites {
+  font-size: 60px;
+  text-align: center;
+  margin-top: 30px; }

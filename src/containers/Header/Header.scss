@@ -1,5 +1,5 @@
 header { 
-  background-color: #80808059;
+  background-color: #b33533;
 
   .title {
     display: inline-block;
@@ -22,7 +22,12 @@ header {
       margin: 20px 20px 0;
       font-size: 20px;
       text-decoration: none;
-      color: #D46A6A;
+      color: black;
     }
+
+    .active {
+      color: white;
+    }
+
   }
 }
