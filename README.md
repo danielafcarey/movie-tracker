@@ -1,4 +1,4 @@
-# MovieMasher
+# Movie Tracker and Chill
 
 ## Synopsis
 
