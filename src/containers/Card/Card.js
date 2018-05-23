@@ -48,8 +48,12 @@ class Card extends Component {
       title,
       rating,
       image,
-      releaseDate
+      releaseDate,
+      favorite
     } = this.props;
+
+    let favoriteClass;
+    favorite ? favoriteClass = 'favorite' : favoriteClass = '';
 
     return (
       <div className='card'>
@@ -57,7 +61,9 @@ class Card extends Component {
         <h2>{title}</h2>
         <h3>Rating: {rating}</h3>
         <h3>Release Date: {releaseDate}</h3>
-        <button onClick={ this.handleClick }>Favorite</button>
+        <button 
+          className={ favoriteClass }
+          onClick={ this.handleClick }>☆</button>
       </div>
     );
   };

@@ -1,23 +1,44 @@
 .card {
-  width: 430px;
-  border: 1px black solid;
-  display: flex;
-  flex-direction: column;
-  border: 1px black solid;
+  width: 300px;
   display: flex;
   flex-direction: column;
   margin: 10px 20px;
-  box-shadow: 3px 6px 16px 11px #888888; }
+  box-shadow: 3px 6px 16px 11px #888888;
+  border-radius: 9px;
+  position: relative;
+  color: #535555; }
   .card h2 {
-    padding: 10px;
     word-wrap: break-word;
-    font-size: 30px; }
+    font-size: 30px;
+    margin: 10px 10px 5px 10px; }
   .card h3 {
-    padding: 10px; }
+    padding-left: 10px;
+    margin: 10px 0;
+    font-weight: 400; }
   .card img {
-    width: 100%; }
+    width: 100%;
+    border-radius: 9px 9px 0 0; }
   .card button {
-    margin: 0 auto 33px; }
+    margin: 0 auto 33px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: white;
+    border: none;
+    border-radius: 15px;
+    color: #D46A6A;
+    font-size: 19px;
+    padding: 6px; }
+    .card button:hover {
+      cursor: pointer;
+      background: #D46A6A;
+      color: white; }
+    .card button:focus {
+      outline: none;
+      border: none; }
+  .card .favorite {
+    background: #D46A6A;
+    color: white; }
 
 .movie-container {
   display: flex;
@@ -31,7 +52,7 @@ header {
     width: calc(50% - 40px);
     margin: 0 0 20px;
     text-align: center;
-    font-size: 100px; }
+    font-size: 80px; }
   header .nav-bar {
     display: inline-flex;
     justify-content: flex-end;

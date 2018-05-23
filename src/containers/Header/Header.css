@@ -5,7 +5,7 @@ header {
     width: calc(50% - 40px);
     margin: 0 0 20px;
     text-align: center;
-    font-size: 100px; }
+    font-size: 80px; }
   header .nav-bar {
     display: inline-flex;
     justify-content: flex-end;
