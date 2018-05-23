@@ -4,6 +4,7 @@ import { populateMovies } from '../../actions';
 import { fetchMovies } from '../../apiCalls'; 
 import { cleanMovieData } from '../../cleaner';
 import { Route, Switch, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './App.css';
 
 import Movies from '../Movies/Movies';
@@ -35,22 +36,19 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    movies: state.movies
-  }
-}
-
 const mapDispatchToProps = (dispatch) => {
   return {
     populateMovies: (movies) => dispatch(populateMovies(movies))
-  }
-}
+  };
+};
+
+App.propTypes = {
+  populateMovies: PropTypes.func
+};
 
 export {
   App,
-  mapStateToProps,
   mapDispatchToProps
-}
+};
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
+export default withRouter(connect(null, mapDispatchToProps)(App));

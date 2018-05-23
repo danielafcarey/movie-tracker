@@ -1,3 +1,12 @@
 @import '../Card/Card.scss';
 @import '../Movies/Movies.scss';
 @import '../Header/Header.scss';
+@import '../Favorites/Favorites.scss';
+@import '../Login/Login.scss';
+@import '../SignUp/SignUp.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}

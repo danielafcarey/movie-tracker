@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { NavLink, Link } from 'react-router-dom';
 import { updateCurrentUser, updateFavorites} from '../../actions';
 
@@ -14,7 +15,7 @@ class Header extends Component {
       <header>
         <h1 className='title'>MovieTracker and Chill</h1>
         <div className='nav-bar'>
-          <NavLink to='/'>Movies</NavLink>
+          <NavLink exact to='/'>Movies</NavLink>
           <NavLink to='/favorites'>Favorites</NavLink>
           <NavLink to='/signup'>Sign Up</NavLink>
           <NavLink to='/login'>Log In</NavLink>
@@ -22,14 +23,19 @@ class Header extends Component {
         </div>
       </header>
     );
-  };
+  }
 
-};
+}
 
 const mapDispatchToProps = (dispatch) => ({
   updateCurrentUser: (id) => dispatch(updateCurrentUser(id)),
   updateFavorites: (favorites) => dispatch(updateFavorites(favorites))
 });
+
+Header.propTypes = {
+  updateCurrentUser: PropTypes.func,
+  updateFavorites: PropTypes.func
+};
 
 export {
   Header,

@@ -1,3 +1,4 @@
+/*eslint no-case-declarations: "error"*/
 import favoritesReducer from './favoritesReducer';
 
 describe('favoritesReducer', () => {

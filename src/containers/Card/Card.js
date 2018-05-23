@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as apiCalls from '../../apiCalls';
+import PropTypes from 'prop-types';
 import { 
   addFavoriteToMovies, 
   deleteFavoriteFromMovies, 
@@ -15,7 +16,7 @@ class Card extends Component {
       title: this.props.title,
       vote_average: this.props.rating,
       poster_path: this.props.image,
-      release_date: this.props.releaseDate,
+      release_date: this.props.releaseDate
     };
     const movieToStore = {
       movieId: this.props.movieId,
@@ -27,8 +28,8 @@ class Card extends Component {
     };
 
     if (!this.props.userId) {
-     alert('Please sign in or create an account to add favorites');
-     return;
+      alert('Please sign in or create an account to add favorites');
+      return;
     }
     
     if (this.props.favorite === false) {
@@ -47,8 +48,12 @@ class Card extends Component {
       title,
       rating,
       image,
-      releaseDate
+      releaseDate,
+      favorite
     } = this.props;
+
+    let favoriteClass;
+    favorite ? favoriteClass = 'favorite' : favoriteClass = '';
 
     return (
       <div className='card'>
@@ -56,27 +61,51 @@ class Card extends Component {
         <h2>{title}</h2>
         <h3>Rating: {rating}</h3>
         <h3>Release Date: {releaseDate}</h3>
-        <button onClick={ this.handleClick }>Favorite</button>
+        <button 
+          className={ favoriteClass }
+          onClick={ this.handleClick }>☆</button>
       </div>
     );
-  };
-};
+  }
+}
 
 const mapStateToProps = (state) => ({
   userId: state.currentUser  
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  addFavoriteToMovies: (favoriteMovie) => dispatch(addFavoriteToMovies(favoriteMovie)),
-  deleteFavoriteFromMovies: (movieId) => dispatch(deleteFavoriteFromMovies(movieId)),
-  addFavoriteToFavorites: (favoriteMovie) => dispatch(addFavoriteToFavorites(favoriteMovie)),
-  deleteFavoriteFromFavorites: (movieId) => dispatch(deleteFavoriteFromFavorites(movieId))
+  addFavoriteToMovies: (favoriteMovie) => {
+    return dispatch(addFavoriteToMovies(favoriteMovie));
+  },
+  deleteFavoriteFromMovies: (movieId) => {
+    return dispatch(deleteFavoriteFromMovies(movieId));
+  },  
+  addFavoriteToFavorites: (favoriteMovie) => {
+    return dispatch(addFavoriteToFavorites(favoriteMovie));
+  },
+  deleteFavoriteFromFavorites: (movieId) => {
+    return dispatch(deleteFavoriteFromFavorites(movieId));
+  }
 });
+
+Card.propTypes = {
+  movieId: PropTypes.number,
+  title: PropTypes.string,
+  rating: PropTypes.number,
+  releaseDate: PropTypes.string,
+  image: PropTypes.string,
+  favorite: PropTypes.bool,
+  addFavoriteToMovies: PropTypes.func, 
+  deleteFavoriteFromMovies: PropTypes.func,
+  addFavoriteToFavorites: PropTypes.func,
+  deleteFavoriteFromFavorites: PropTypes.func,
+  userId: PropTypes.number
+};
 
 export {
   Card,
   mapStateToProps,
-  mapDispatchToProps,
+  mapDispatchToProps
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Card);

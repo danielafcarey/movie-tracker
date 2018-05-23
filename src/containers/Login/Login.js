@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { fetchUsers, fetchFavorites } from '../../apiCalls';
 import { 
   updateCurrentUser, 
@@ -20,7 +21,7 @@ class Login extends Component {
       verified: false,
       loginError: ''
     };
-  };
+  }
 
   handleChange = (event) => {
     const { name, value } = event.target;
@@ -42,7 +43,7 @@ class Login extends Component {
       return undefined;
     }
   };
-  
+
   handleSubmit = async (event) => {
     event.preventDefault();
     const id = await this.verifyUser();
@@ -59,42 +60,50 @@ class Login extends Component {
   render() {
     if (this.state.verified) {
       return <Redirect to='/' />;
-    };
+    }
 
     return (
-      <form
-        type='submit'
-        onSubmit={this.handleSubmit}
-      >
-        <input 
-          type='text'
-          placeholder='Email'
-          name='email'
-          value={this.state.email}
-          onChange={this.handleChange}
-          required
-        />
-        <input
-          type='password'
-          placeholder='Password'
-          name='password'
-          value={this.state.password}
-          onChange={this.handleChange}          
-          required
-        />
-        <p>{ this.state.loginError }</p>
-        <button>Log In</button>
-      </form>
+      <div className='login'>
+        <form
+          type='submit'
+          onSubmit={this.handleSubmit}
+        >
+          <input 
+            type='text'
+            placeholder='Email'
+            name='email'
+            value={this.state.email}
+            onChange={this.handleChange}
+            required
+          />
+          <input
+            type='password'
+            placeholder='Password'
+            name='password'
+            value={this.state.password}
+            onChange={this.handleChange}          
+            required
+          />
+          <p>{ this.state.loginError }</p>
+          <button>Log In</button>
+        </form>
+      </div>
     );
-  };
+  }
 
-};
+}
 
 const mapDispatchToProps = (dispatch) => ({
   updateCurrentUser: (id) => dispatch(updateCurrentUser(id)),
   updateMovies: (favorites) => dispatch(updateMovies(favorites)),
-  updateFavorites: (favorites) => dispatch(updateFavorites(favorites)),
+  updateFavorites: (favorites) => dispatch(updateFavorites(favorites))
 });
+
+Login.propTypes = {
+  updateCurrentUser: PropTypes.func,
+  updateMovies: PropTypes.func,
+  updateFavorites: PropTypes.func
+};
 
 export {
   Login,

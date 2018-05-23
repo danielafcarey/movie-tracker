@@ -1,10 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Card from '../Card/Card';
 import { connect } from 'react-redux';
 
 const Favorites = (props) => {
   if (props.favorites.length === 0) {
-    return <div>Go to movies to start adding favorites</div>;
+    return (
+      <div className='no-favorites'>
+        Click Movies to browse and add favorites
+      </div>
+    );
   }
 
   const favoriteCards = props.favorites.map(favorite => {
@@ -12,7 +17,7 @@ const Favorites = (props) => {
   }); 
 
   return (
-    <div className='favorites-container'>
+    <div className='movie-container'>
       { favoriteCards } 
     </div>
   );
@@ -21,6 +26,10 @@ const Favorites = (props) => {
 const mapStateToProps = (state) => ({
   favorites: state.favorites
 });
+
+Favorites.propTypes = {
+  favorites: PropTypes.array
+};
 
 export {
   Favorites,

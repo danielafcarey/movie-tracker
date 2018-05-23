@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { 
-  mapStateToProps,
   mapDispatchToProps,
   App
 } from './App';
@@ -13,22 +12,13 @@ jest.mock('../../apiCalls');
  
 
 describe('App', () => {
-  
-  describe('mapStateToProps', () => {
-    
-    it('updates App props with movies from state', () => {
-      const state = {
-        movies: ['Life is Beautiful', 'Singing in the Rain'],
-        puppies: 'are good'
-      };
-      
-      const expected = state.movies;
-      const result = mapStateToProps(state);
-      
-      expect(result.movies).toEqual(expected);
-    });
-    
-  });
+
+  it('matches the snapshot', () => {
+    const mockPopulateMovies = jest.fn();
+    const wrapper = shallow(<App populateMovies={ mockPopulateMovies }/>);
+
+    expect(wrapper).toMatchSnapshot();
+  })
   
   describe('mapDispatchToProps', () => {
     

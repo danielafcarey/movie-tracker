@@ -1,37 +1,59 @@
 .card {
-  width: 430px;
-  border: 1px black solid;
-  display: flex;
-  flex-direction: column;
-  border: 1px black solid;
+  width: 300px;
   display: flex;
   flex-direction: column;
   margin: 10px 20px;
-  box-shadow: 3px 6px 16px 11px #888888; }
+  box-shadow: 3px 6px 16px 11px #888888;
+  border-radius: 9px;
+  position: relative;
+  color: #535555; }
   .card h2 {
-    padding: 10px;
     word-wrap: break-word;
-    font-size: 30px; }
+    font-size: 30px;
+    margin: 10px 10px 5px 10px; }
   .card h3 {
-    padding: 10px; }
+    padding-left: 10px;
+    margin: 10px 0;
+    font-weight: 400; }
   .card img {
-    width: 100%; }
+    width: 100%;
+    border-radius: 9px 9px 0 0; }
   .card button {
-    margin: 0 auto 33px; }
+    margin: 0 auto 33px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: white;
+    border: none;
+    border-radius: 15px;
+    color: #D46A6A;
+    font-size: 19px;
+    padding: 6px; }
+    .card button:hover {
+      cursor: pointer;
+      background: #D46A6A;
+      color: white; }
+    .card button:focus {
+      outline: none;
+      border: none; }
+  .card .favorite {
+    background: #D46A6A;
+    color: white; }
 
 .movie-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around; }
+  justify-content: space-around;
+  margin-top: 30px; }
 
 header {
-  background-color: #80808059; }
+  background-color: #b33533; }
   header .title {
     display: inline-block;
     width: calc(50% - 40px);
     margin: 0 0 20px;
     text-align: center;
-    font-size: 100px; }
+    font-size: 80px; }
   header .nav-bar {
     display: inline-flex;
     justify-content: flex-end;
@@ -44,4 +66,86 @@ header {
       margin: 20px 20px 0;
       font-size: 20px;
       text-decoration: none;
-      color: #D46A6A; }
+      color: black; }
+    header .nav-bar .active {
+      color: white; }
+
+.no-favorites {
+  font-size: 44px;
+  text-align: center;
+  margin-top: 80px; }
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .login form {
+    box-shadow: 0px 0px 20px 0px black;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center; }
+    .login form input {
+      display: block;
+      width: 300px;
+      font-size: 20px;
+      margin-top: 30px;
+      padding: 3px; }
+      .login form input::placeholder {
+        padding: 3px; }
+    .login form p {
+      color: #b33533;
+      margin: 3px; }
+    .login form button {
+      width: 305px;
+      background: #b33533;
+      color: white;
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 30px;
+      margin-top: 30px;
+      padding: 5px;
+      border: none; }
+      .login form button:hover {
+        cursor: pointer;
+        opacity: 0.8; }
+
+.signup {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .signup form {
+    box-shadow: 0px 0px 20px 0px black;
+    border-radius: 5px;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center; }
+    .signup form input {
+      display: block;
+      width: 300px;
+      font-size: 20px;
+      margin-top: 30px;
+      padding: 3px; }
+      .signup form input::placeholder {
+        padding: 3px; }
+    .signup form p {
+      color: #b33533;
+      margin: 3px; }
+    .signup form button {
+      width: 305px;
+      background: #b33533;
+      color: white;
+      font-size: 20px;
+      font-weight: 400;
+      margin-bottom: 30px;
+      margin-top: 30px;
+      padding: 5px;
+      border: none; }
+      .signup form button:hover {
+        cursor: pointer;
+        opacity: 0.8; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }

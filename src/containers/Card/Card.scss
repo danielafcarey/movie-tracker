@@ -1,28 +1,56 @@
 .card {
-  width: 430px;
-  border: 1px black solid;
-  display: flex;
-  flex-direction: column;
-  border: 1px black solid;
+  width: 300px;
   display: flex;
   flex-direction: column;
   margin: 10px 20px;
   box-shadow: 3px 6px 16px 11px #888888;
+  border-radius: 9px;
+  position: relative;
+  color: #535555;
 
   h2 {
-    padding: 10px;
     word-wrap: break-word;
     font-size: 30px;
+    margin: 10px 10px 5px 10px;
   }
+
   h3 {
-    padding: 10px;
+    padding-left: 10px;
+    margin: 10px 0;
+    font-weight: 400;
   }
 
   img {
     width: 100%;
+    border-radius: 9px 9px 0 0;
   }
 
   button {
     margin: 0 auto 33px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: white;
+    border: none;
+    border-radius: 15px;
+    color: #D46A6A;
+    font-size: 19px;
+    padding: 6px;
+
+    &:hover {
+      cursor: pointer;
+      background: #D46A6A;
+      color: white;
+    }
+
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+
+  .favorite {
+    background: #D46A6A;
+    color: white;
   }
 }
